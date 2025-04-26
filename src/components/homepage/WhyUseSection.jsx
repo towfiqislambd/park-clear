@@ -12,7 +12,6 @@ const WhyUseSection = () => {
         {/* title  */}
         <TitleCommon
           subTitle="Why use ParkClear Planner?"
-          title="Why use ParkClear Planner?"
           paragraph="We know how stressful it can be when PCNs increase. Stay on top of
 parking tickets and appeals, we’ll remind you when your deadlines are to pay in
 our smart new dashboard."

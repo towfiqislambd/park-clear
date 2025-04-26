@@ -3,7 +3,7 @@ const TitleCommon = ({ subTitle, paragraph, children }) => {
     <div className="text-center">
       <p className="title--sm">{subTitle}</p>
       {children}
-      <p className="text-black w-[670px] mx-auto mt-6">{paragraph}</p>
+      <p className="text-black w-[670px] mx-auto mt-5">{paragraph}</p>
     </div>
   );
 };
