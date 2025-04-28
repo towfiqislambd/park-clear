@@ -29,7 +29,7 @@ const DashboardLayout = () => {
         <section className="flex h-screen">
 
             {/* Sidebar */}
-            <aside className="w-[320px] h-full p-7 border-r border-default-border overflow-y-auto scrollbar-hide">
+            <aside className="!w-[320px] h-full p-7 border-r border-default-border overflow-y-auto scrollbar-hide">
 
                 {/* Logo */}
                 <Link to="/">
@@ -45,7 +45,7 @@ const DashboardLayout = () => {
                             <NavLink
                                 to={to}
                                 className={({ isActive }) =>
-                                    `flex gap-2 items-center w-full text-[17px] font-medium py-2.5 px-4 rounded transition-all duration-300 ease-in-out ${isActive ? "bg-theme-orange text-white" : "text-menu-color hover:bg-gray-100 hover:shadow"
+                                    `flex gap-2  items-center w-full text-[17px] font-medium py-2.5 px-4 rounded transition-all duration-300 ease-in-out ${isActive ? "bg-theme-orange text-white" : "text-menu-color hover:bg-gray-100 hover:shadow"
                                     }`
                                 }
                             >

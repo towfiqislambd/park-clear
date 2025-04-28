@@ -22,7 +22,7 @@ const UploadYourTicket = () => {
 
     const handleBack = (e) => {
         e.preventDefault();
-        setExpandField(false); 
+        setExpandField(false);
     };
 
     const handleSubmit = (e) => {
