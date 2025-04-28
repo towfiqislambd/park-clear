@@ -56,6 +56,7 @@ const ProceedWithParkClear = () => {
                         </button>
                     </div>
 
+
                     {/* Terms and conditions */}
                     <p className="">By proceeding, you acknowledge and automatically agree to our Terms and Conditions. For more details, <span className="text-theme-orange">please review our terms here.</span></p>
                 </div>
