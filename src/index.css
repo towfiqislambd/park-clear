@@ -21,6 +21,9 @@
   --color-sidebar-card-headingTwo: #6AD167;
   --color-sidebar-card-desc: #7C7C7C;
   --color-gray-desc: #737791;
+  --color-overview-card-bg: #FAFBFC;
+  --color-upload-box: #7B91B0;
+  --color-dashboard-status: #6AD167;
 }
 
 body {

@@ -107,3 +107,18 @@ export function DashboardOverviewCardThree() {
         </svg>
     );
 }
+
+export function ChooseFileSvg() {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="47" viewBox="0 0 47 47" fill="none">
+            <g clip-path="url(#clip0_10611_6637)">
+                <path d="M12 43.6641H35V46.5391H9.125V40.7891H3.375V0.539062H22.6689L31.6982 9.56836L40.75 18.6201V20.6641H26.375V9.16406H12V43.6641ZM29.25 17.7891H35.8311L29.25 11.208V17.7891ZM9.125 37.9141V6.28906H24.3311L21.4561 3.41406H6.25V37.9141H9.125ZM39.3125 28.7051L46.4326 35.8252L44.4111 37.8467L40.75 34.208V46.5391H37.875V34.208L34.2139 37.8467L32.1924 35.8252L39.3125 28.7051ZM46.5 23.5391V26.4141H32.125V23.5391H46.5Z" fill="#737791" />
+            </g>
+            <defs>
+                <clipPath id="clip0_10611_6637">
+                    <rect width="46" height="46" fill="white" transform="translate(0.5 0.539062)" />
+                </clipPath>
+            </defs>
+        </svg>
+    );
+}
