@@ -51,3 +51,12 @@ body {
 .social-link {
   @apply w-[46px] h-[46px] flex items-center justify-center text-[20px] border border-text-gray rounded-full;
 }
+.plan-header {
+  @apply min-h-[180px] py-5 px-8 flex flex-col justify-center;
+}
+.plan-card {
+  @apply border-r border-default-border;
+}
+.plan-card:last-child {
+  @apply border-none;
+}
