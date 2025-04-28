@@ -60,3 +60,32 @@ body {
 .plan-card:last-child {
   @apply border-none;
 }
+.auth-slider .swiper-pagination {
+  @apply absolute !bottom-auto !top-[50px];
+}
+.auth-slider .swiper-pagination .swiper-pagination-bullet {
+  @apply w-[117px] rounded-[10px] bg-white opacity-100;
+}
+.auth-slider
+  .swiper-pagination
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  @apply bg-theme-orange;
+}
+.auth-input-box {
+  @apply mt-6 first:mt-0;
+}
+.auth-input-box .inner {
+  @apply relative;
+}
+.auth-input {
+  @apply p-6 pl-[72px] bg-plan-card rounded-[8px] border border-default-border w-full focus:outline-theme-orange;
+}
+.auth-input-box .inner .placeholder-icon {
+  @apply absolute top-[50%] translate-y-[-50%] left-6;
+}
+.error-message {
+  @apply text-sm mt-2 text-red-500;
+}
+.auth-input-box .inner .eye-icon{
+  @apply absolute top-[50%] translate-y-[-50%] right-6 text-[20px]
+}

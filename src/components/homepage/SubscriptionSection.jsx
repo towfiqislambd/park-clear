@@ -5,7 +5,7 @@ import PrimaryButton from "../common/PrimaryButton";
 const SubscriptionSection = () => {
   return (
     <section>
-      <Container>
+      <Container> 
         <div className="p-12 border border-default-border bg-[#FAFBFC] rounded-[8px] text-center">
           <p className="h-[64px] w-[64px] flex items-center justify-center bg-theme-orange rounded-full text-[30px] text-white mx-auto">
             <GoQuestion />
