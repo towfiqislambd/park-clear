@@ -9,17 +9,38 @@ import ChatBot from './../pages/DashboardPages/ChatBot';
 import SubscriptionServices from './../pages/DashboardPages/SubscriptionServices';
 import Settings from './../pages/DashboardPages/Settings';
 import ErrorPage from './../pages/ErrorPage/ErrorPage';
+import ErrorPage from "../pages/ErrorPages/ErrorPage";
+import AboutUsPage from "../pages/AboutUsPage";
+import TermConditionPage from "../pages/TermConditionPage";
+import SubscriptionPlanPage from "../pages/SubscriptionPlanPage";
+import AuthLayout from "../layout/AuthLayout";
+import LoginPage from "../pages/AuthPages/LoginPage";
+import VerifyOtpPage from "../pages/AuthPages/VerifyOtpPage";
+import SignupPage from "../pages/AuthPages/SignupPage";
+import TermsPage from "../pages/AuthPages/TermsPage";
 
 const router = createBrowserRouter([
   // Main Layout
   {
     path: "/",
     element: <Layout />,
-    errorElement: "error",
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
         element: <HomePage />,
+      },
+      {
+        path: "about-us",
+        element: <AboutUsPage />,
+      },
+      {
+        path: "terms-condition",
+        element: <TermConditionPage />,
+      },
+      {
+        path: "subscription-plan",
+        element: <SubscriptionPlanPage />,
       },
     ],
   },
@@ -55,6 +76,28 @@ const router = createBrowserRouter([
         element: <Settings />,
       },
     ],
+  {
+    path:"/auth",
+    element:<AuthLayout />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path:"login",
+        element:<LoginPage />
+      },
+      {
+        path:"verify-otp",
+        element:<VerifyOtpPage />
+      },
+      {
+        path:"signup",
+        element:<SignupPage />
+      },
+      {
+        path:"terms-condition",
+        element:<TermsPage />
+      },
+    ]
   }
 ]);
 

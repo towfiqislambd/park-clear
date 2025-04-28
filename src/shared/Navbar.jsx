@@ -14,17 +14,17 @@ const Navbar = () => {
     {
       id: 2,
       name: "Manage Tickets",
-      path: "manage-ticket",
+      path: "/manage-ticket",
     },
     {
       id: 3,
       name: "Driver Knowledge Hub",
-      path: "driver-knowledge",
+      path: "/driver-knowledge",
     },
     {
       id: 4,
       name: "about Us",
-      path: "about-us",
+      path: "/about-us",
     },
     {
       id: 4,
