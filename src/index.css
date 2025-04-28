@@ -14,7 +14,13 @@
   --shadow-header-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
   --color-default-border: #D6D8DB;
 
-  --color-dashboard-black: #fb5200;
+  /* For Dashboard */
+  --color-dashboard-outlet-bg: #F6FBFF;
+  --color-dashboard-common-heading: #151D48;
+  --color-sidebar-card-headingOne: #05ACC0;
+  --color-sidebar-card-headingTwo: #6AD167;
+  --color-sidebar-card-desc: #7C7C7C;
+  --color-gray-desc: #737791;
 }
 
 body {

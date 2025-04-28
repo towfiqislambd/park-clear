@@ -29,7 +29,7 @@ const DashboardLayout = () => {
         <section className="flex h-screen">
 
             {/* Sidebar */}
-            <aside className="w-[320px] h-full p-7 border-r border-[#D6D8DB] overflow-y-auto scrollbar-hide">
+            <aside className="w-[320px] h-full p-7 border-r border-default-border overflow-y-auto scrollbar-hide">
 
                 {/* Logo */}
                 <Link to="/">
@@ -45,7 +45,7 @@ const DashboardLayout = () => {
                             <NavLink
                                 to={to}
                                 className={({ isActive }) =>
-                                    `flex gap-2 items-center w-full text-[17px] font-medium py-2.5 px-4 rounded transition-all duration-300 ease-in-out ${isActive ? "bg-theme-orange text-white" : "text-[#151D48] hover:bg-gray-100 hover:shadow"
+                                    `flex gap-2 items-center w-full text-[17px] font-medium py-2.5 px-4 rounded transition-all duration-300 ease-in-out ${isActive ? "bg-theme-orange text-white" : "text-menu-color hover:bg-gray-100 hover:shadow"
                                     }`
                                 }
                             >
@@ -79,12 +79,12 @@ const DashboardLayout = () => {
                     </div>
 
                     {/* Card 2 */}
-                    <div className="text-center border border-[#D6D8DB] py-7 px-7 rounded-xl">
+                    <div className="text-center border border-default-border py-7 px-7 rounded-xl">
                         <img src={sideLogoTwo} alt="logo" className="mx-auto" />
-                        <h3 className="text-2xl text-[#151D48] py-3 font-bold">Car Screen Wash Coupon</h3>
-                        <p className="text-[#7C7C7C] mb-5">If you subscribe today you will get a free 10L of car screen wash </p>
-                        <h4 className="text-[#05ACC0] text-2xl font-bold mb-2.5">12:54:00</h4>
-                        <h4 className="text-[#6AD167] text-2xl font-bold">Activated</h4>
+                        <h3 className="text-2xl text-dashboard-common-heading py-3 font-bold">Car Screen Wash Coupon</h3>
+                        <p className="text-sidebar-card-desc mb-5">If you subscribe today you will get a free 10L of car screen wash </p>
+                        <h4 className="text-sidebar-card-headingOne text-2xl font-bold mb-2.5">12:54:00</h4>
+                        <h4 className="text-sidebar-card-headingTwo text-2xl font-bold">Activated</h4>
                     </div>
 
                     {/* Card 3 */}
@@ -106,7 +106,7 @@ const DashboardLayout = () => {
             </aside>
 
             {/* Main Content */}
-            <main className="bg-[#F6FBFF] h-full overflow-y-auto p-5 flex-grow">
+            <main className="bg-dashboard-outlet-bg h-full overflow-y-auto p-5 flex-grow">
                 <Outlet />
             </main>
         </section>
