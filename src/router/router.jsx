@@ -10,6 +10,7 @@ import LoginPage from "../pages/AuthPages/LoginPage";
 import VerifyOtpPage from "../pages/AuthPages/VerifyOtpPage";
 import SignupPage from "../pages/AuthPages/SignupPage";
 import TermsPage from "../pages/AuthPages/TermsPage";
+import PaymentPage from "../pages/PaymentPage";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "subscription-plan",
         element: <SubscriptionPlanPage />,
+      },
+      {
+        path: "payment",
+        element: <PaymentPage />,
       },
     ],
   },

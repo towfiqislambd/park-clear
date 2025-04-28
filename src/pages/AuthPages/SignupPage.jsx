@@ -147,7 +147,7 @@ const SignupPage = () => {
               name="confirm_password"
               placeholder="Confirm Password"
               {...register("confirm_password", {
-                required: "Please confirm your password.",
+                required: "Please confirm your password.", 
                 validate: (value) =>
                   value === watch("password") || "Passwords do not match",
               })}
