@@ -66,7 +66,8 @@ body {
 .driving-experience-card:before,
 .fleetRental-card:before {
   content: "";
-  @apply absolute top-0 left-0 h-full w-full bg-[rgba(0, 0, 0, 0.7)] z-[-1];
+  @apply absolute top-0 left-0 h-full w-full z-[-1];
+  /* bg-[rgba(0, 0, 0, 0.7)] */
 }
 
 .slider-btn {
