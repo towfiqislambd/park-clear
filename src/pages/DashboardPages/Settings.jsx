@@ -12,7 +12,7 @@ const Settings = () => {
         <div>
             {
                 changePassword ?
-                    <ChangePassword />
+                    <ChangePassword setChangePassword={setChangePassword} />
                     :
                     editProfile ?
                         <EditProfile />
