@@ -1,7 +1,7 @@
 const ChatBot = () => {
     return (
         <div>
-            ChatBot
+            <h2 className="text-3xl font-semibold text-theme-orange">ChatBot....</h2>
         </div>
     );
 };

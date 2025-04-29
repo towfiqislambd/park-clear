@@ -28,15 +28,6 @@
   --color-overview-card-bg: #FAFBFC;
   --color-upload-box: #7B91B0;
   --color-dashboard-status: #6AD167;
-
-  --color-theme-sky-blue: #05acc0;
-  --color-theme-orange: #f60;
-  --color-light-mastard: #fffaf1;
-  --color-dark-blue: #151d48;
-  --color-text-gray: #919191;
-  --color-menu-color: #151d48;
-  --shadow-header-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
-  --color-default-border: #d6d8db;
   --color-plan-card: #fafbfc;
 }
 
@@ -67,71 +58,90 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 .title--xxl {
   @apply text-[80px] font-bold text-theme-sky-blue;
 }
+
 .driving-experience-card:before,
 .fleetRental-card:before {
   content: "";
-  @apply absolute top-0 left-0 h-full w-full bg-[rgba(0,0,0,0.7)] z-[-1];
+  @apply absolute top-0 left-0 h-full w-full bg-[rgba(0, 0, 0, 0.7)] z-[-1];
 }
+
 .slider-btn {
   @apply h-[65px] w-[65px] flex items-center justify-center bg-white text-[30px] text-theme-orange rounded-full;
 }
+
 .swiper {
   @apply pr-[10px];
 }
+
 .footer-heading {
   @apply font-bold mb-6;
 }
+
 .footer-link {
   @apply text-[12px] text-text-gray mt-3 inline-block;
 }
+
 .footer-contact {
   @apply flex items-center gap-3 text-[12px] text-text-gray;
 }
+
 .footer-box {
   @apply max-w-[214px];
 }
+
 .social-link {
   @apply w-[46px] h-[46px] flex items-center justify-center text-[20px] border border-text-gray rounded-full;
 }
+
 .plan-header {
   @apply min-h-[180px] py-5 px-8 flex flex-col justify-center;
 }
+
 .plan-card {
   @apply border-r border-default-border;
 }
+
 .plan-card:last-child {
   @apply border-none;
 }
+
 .auth-slider .swiper-pagination {
   @apply absolute !bottom-auto !top-[50px];
 }
+
 .auth-slider .swiper-pagination .swiper-pagination-bullet {
   @apply w-[117px] rounded-[10px] bg-white opacity-100;
 }
-.auth-slider
-  .swiper-pagination
-  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+
+.auth-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   @apply bg-theme-orange;
 }
+
 .auth-input-box {
   @apply mt-6 first:mt-0;
 }
+
 .auth-input-box .inner {
   @apply relative;
 }
+
 .auth-input {
   @apply p-6 pl-[72px] bg-plan-card rounded-[8px] border border-default-border w-full focus:outline-theme-orange;
 }
+
 .auth-input-box .inner .placeholder-icon {
   @apply absolute top-[50%] translate-y-[-50%] left-6;
 }
+
 .error-message {
   @apply text-sm mt-2 text-red-500;
 }
-.auth-input-box .inner .eye-icon{
+
+.auth-input-box .inner .eye-icon {
   @apply absolute top-[50%] translate-y-[-50%] right-6 text-[20px]
 }
 
@@ -246,6 +256,7 @@ body {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }

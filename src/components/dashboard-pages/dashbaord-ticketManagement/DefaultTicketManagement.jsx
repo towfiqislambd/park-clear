@@ -1,5 +1,6 @@
 import DashboardHeader from "@/components/common/DashboardHeader";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const offers = [
     {
         price: "£26.99",
@@ -15,7 +16,7 @@ const offers = [
     }
 ];
 
-const DefaultTicketManagement = () => {
+const DefaultTicketManagement = ({ setAppeal }) => {
     const [selectedOfferIndex, setSelectedOfferIndex] = useState(null);
     return (
         <div>
@@ -107,8 +108,12 @@ const DefaultTicketManagement = () => {
 
                     {/* Btns */}
                     <div className="space-y-5">
-                        <button className='h-16 font-medium text-lg w-full block bg-theme-orange border border-theme-orange rounded-lg text-white cursor-pointer transition-all duration-500 hover:bg-transparent hover:text-theme-orange'>Pay</button>
-                        <button className='h-16 font-medium text-lg w-full block bg-sidebar-card-headingOne border border-sidebar-card-headingOne rounded-lg text-white cursor-pointer transition-all duration-500 hover:bg-transparent hover:text-sidebar-card-headingOne'>Appeal</button>
+                        {/* Pay btn */}
+                        <button onClick={() => setAppeal(true)} className='h-16 font-medium text-lg w-full block bg-theme-orange border border-theme-orange rounded-lg text-white cursor-pointer transition-all duration-500 hover:bg-transparent hover:text-theme-orange'>Pay</button>
+                        {/* Appeal btn */}
+                        <Link to='/dashboard/appeal'>
+                            <button className='h-16 font-medium text-lg w-full block bg-sidebar-card-headingOne border border-sidebar-card-headingOne rounded-lg text-white cursor-pointer transition-all duration-500 hover:bg-transparent hover:text-sidebar-card-headingOne'>Appeal</button>
+                        </Link>
                     </div>
                 </div>
             </div>

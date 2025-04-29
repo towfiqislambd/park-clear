@@ -4,11 +4,12 @@ const AppealDataTable = () => {
     const [selectedRows, setSelectedRows] = useState([]);
 
     const data = [
-        { id: 1, status: "Unpaid", charge: "$766" },
-        { id: 2, status: "Paid", charge: "$766" },
-        { id: 3, status: "Paid", charge: "$766" },
-        { id: 4, status: "Unpaid", charge: "$766" },
+        { id: 1, status: "Appeal Rejected", charge: "$766" },
+        { id: 2, status: "Appeal Accepted", charge: "$766" },
+        { id: 3, status: "Appeal Rejected", charge: "$766" },
+        { id: 4, status: "Appeal Accepted", charge: "$766" },
     ];
+
 
     const toggleRow = (id) => {
         setSelectedRows((prev) =>
@@ -75,7 +76,7 @@ const AppealDataTable = () => {
                             <td className="px-3 py-5 font-medium">{row.charge}</td>
                             <td className="px-3 py-5">
                                 <span
-                                    className={`text-sm font-semibold ${row.status === "Paid" ? "text-dashboard-status" : "text-theme-orange"}`}
+                                    className={`text-sm ${row.status !== "Appeal Rejected" ? "text-dashboard-status" : "text-theme-orange"}`}
                                 >
                                     {row.status}
                                 </span>
