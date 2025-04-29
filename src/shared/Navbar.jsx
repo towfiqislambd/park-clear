@@ -14,7 +14,7 @@ const Navbar = () => {
     {
       id: 2,
       name: "Manage Tickets",
-      path: "/manage-ticket",
+      path: "/dashboard/ticket-management",
     },
     {
       id: 3,
@@ -26,10 +26,15 @@ const Navbar = () => {
       name: "about Us",
       path: "/about-us",
     },
+    {
+      id: 4,
+      name: "dashboard",
+      path: "/dashboard/overview",
+    },
   ];
   const location = useLocation();
   return (
-    <header className="py-10 shadow-header-shadow sticky top-0 left-0 w-full z-[50] bg-white">
+    <header className="py-10 shadow-header-shadow sticky top-0 left-0 w-full z-[50] bg-white" data-aos="fade-down">
       <Container>
         <div className="flex items-center justify-between">
           {/* logo  */}
@@ -39,11 +44,11 @@ const Navbar = () => {
           {/* menu  */}
           <ul className="flex items-center gap-[72px]">
             {
-                menuItems?.map((item) => (
-                    <li key={item?.id}>
-                        <NavLink to={`${item?.path}`} className={`text-[18px] font-semibold duration-200 ease-in-out hover:text-theme-sky-blue capitalize ${item?.path === location?.pathname ? 'text-theme-sky-blue' : 'text-menu-color'}`}>{item?.name}</NavLink>
-                    </li>
-                ))
+              menuItems?.map((item) => (
+                <li key={item?.id}>
+                  <NavLink to={`${item?.path}`} className={`text-[18px] font-semibold duration-200 ease-in-out hover:text-theme-sky-blue capitalize ${item?.path === location?.pathname ? 'text-theme-sky-blue' : 'text-menu-color'}`}>{item?.name}</NavLink>
+                </li>
+              ))
             }
           </ul>
           {/* buttons  */}

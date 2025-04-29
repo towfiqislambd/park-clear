@@ -76,9 +76,6 @@ const TrustPilotReviewSlider = () => {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
-        }}
         navigation={false}
         modules={[Autoplay, Navigation]}
       >

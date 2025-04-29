@@ -7,7 +7,7 @@ const ParkClearPlanner = () => {
         
     ]
   return (
-    <div className="p-[70px] bg-white border border-default-border rounded-[16px]">
+    <div className="p-[70px] bg-white border border-default-border rounded-[16px]" data-aos="fade-in" data-aos-delay="100">
       <h4 className="text-[32px] font-semibold text-black mb-9">
         What can <span className="text-theme-orange">ParkClear Planner</span> offer you ?
       </h4>

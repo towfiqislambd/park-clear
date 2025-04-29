@@ -1,8 +1,8 @@
 import React from "react";
-import Logo from "../../assets/logo/hero-logo.svg";
-import Container from "../container/Container";
-import PrimaryButton from "../common/PrimaryButton";
 import { FaArrowRightLong } from "react-icons/fa6";
+import Logo from "../../assets/logo/hero-logo.svg";
+import PrimaryButton from "../common/PrimaryButton";
+import Container from "../container/Container";
 
 const HeroSection = () => {
   return (
@@ -10,23 +10,42 @@ const HeroSection = () => {
       <Container>
         <div className="text-center">
           {/* sub title  */}
-          <p className="flex items-center gap-5 justify-center">
+          <p
+            className="flex items-center gap-5 justify-center"
+            data-aos="fade-up"
+          >
             <span className="title--sm">
               Innovative all-in-one driver assistance platform
             </span>{" "}
-            <img className="w-[67px] h-20" src={Logo} alt="Logo" />
+            <img
+              className="w-[67px] h-20"
+              src={Logo}
+              alt="Logo"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            />
           </p>
-          <h1 className="title--xxl">
+          <h1 className="title--xxl" data-aos="fade-up" data-aos-delay="100">
             Introducing <span className="text-theme-orange">ParkClear</span>{" "}
             Planner
           </h1>
-          <p className="text-black w-[670px] mx-auto mt-6">
+          <p
+            className="text-black w-[670px] mx-auto mt-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             Take the stress out of driving with ParkClear Planner, your
             all-in-one subscription for managing life on the road. We’ve bundled
             everything you need to stay organized, prepared, and worry-free—all
             in one convenient place.
           </p>
-          <PrimaryButton text="try Our TickeTracker Dashboard" icon={<FaArrowRightLong />} className="p-5 bg-theme-orange hover:bg-transparent hover:text-theme-orange border-theme-orange w-fit text-white capitalize mx-auto mt-6"/>
+          <div data-aos="fade-up" data-aos-delay="300">
+            <PrimaryButton
+              text="try Our TickeTracker Dashboard"
+              icon={<FaArrowRightLong />}
+              className="p-5 bg-theme-orange hover:bg-transparent hover:text-theme-orange border-theme-orange w-fit text-white capitalize mx-auto mt-6"
+            />
+          </div>
         </div>
       </Container>
     </section>

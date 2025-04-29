@@ -63,17 +63,17 @@ const ParkPlanSection = () => {
           subTitle="Three powerful plans. Zero parking stress. Pick your perfect match."
           paragraph="Smarter Driving Starts Here Today – Join the ParkClear club of drivers toda"
         >
-          <h3 className="title--xxl">
+          <h3 className="title--xxl" data-aos="fade-up" data-aos-delay="100">
             Drive Smart. <span className="text-theme-orange">Park</span>{" "}
             Smarter.
           </h3>
         </TitleCommon>
         <div className="grid grid-cols-3 gap-5 mt-12">
-            {
-                cardsdata.map((card) => (
-                    <PlanCard key={card?.id} item={card} />
-                ))
-            }
+          {cardsdata.map((card, index) => (
+            <div key={card?.id} data-aos="fade-up" data-aos-delay={index * 150}>
+              <PlanCard item={card} />
+            </div>
+          ))}
         </div>
       </Container>
     </section>
