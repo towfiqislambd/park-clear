@@ -74,11 +74,10 @@ const ParkingTicketTable = () => {
                             <td className="px-3 py-5">Data</td>
                             <td className="px-3 py-5 font-medium">{row.charge}</td>
                             <td className="px-3 py-5">
-                                <span
-                                    className={`text-sm font-semibold ${row.status === "Paid" ? "text-dashboard-status" : "text-theme-orange"}`}
-                                >
-                                    {row.status}
-                                </span>
+                                <select className={`px-3 border-none outline-none`}>
+                                    <option value="Unpaid">Unpaid</option>
+                                    <option value="Paid">Paid</option>
+                                </select>
                             </td>
                             <td className="px-3 py-5">
                                 {row.status === "Paid" ? (

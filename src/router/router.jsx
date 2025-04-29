@@ -8,7 +8,6 @@ import TicketManagement from './../pages/DashboardPages/TicketManagement';
 import ChatBot from './../pages/DashboardPages/ChatBot';
 import SubscriptionServices from './../pages/DashboardPages/SubscriptionServices';
 import Settings from './../pages/DashboardPages/Settings';
-import ErrorPage from './../pages/ErrorPage/ErrorPage';
 import AboutUsPage from "../pages/AboutUsPage";
 import TermConditionPage from "../pages/TermConditionPage";
 import SubscriptionPlanPage from "../pages/SubscriptionPlanPage";
@@ -17,8 +16,10 @@ import LoginPage from "../pages/AuthPages/LoginPage";
 import VerifyOtpPage from "../pages/AuthPages/VerifyOtpPage";
 import SignupPage from "../pages/AuthPages/SignupPage";
 import TermsPage from "../pages/AuthPages/TermsPage";
+import ErrorPage from './../pages/ErrorPages/ErrorPage';
 
 const router = createBrowserRouter([
+  
   // Main Layout
   {
     path: "/",
