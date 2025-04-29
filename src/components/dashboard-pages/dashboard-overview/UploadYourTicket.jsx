@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { CameraSvg, ChooseFileSvg } from "../../svg-container/SvgContainer";
+import FixedPenaltNoticeModal from "@/components/modals/FixedPenaltNoticeModal";
 
 const UploadYourTicket = () => {
     const [ticketSection, setTicketSection] = useState(true);
@@ -9,6 +10,20 @@ const UploadYourTicket = () => {
     const [cameraError, setCameraError] = useState("");
     const cameraInputRef = useRef(null);
     const fileInputRef = useRef(null);
+    const [selectedOption, setSelectedOption] = useState("");
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleChange = (e) => {
+        const value = e.target.value;
+        setSelectedOption(value);
+
+        if (value === "Fixed penalty notice") {
+            setIsModalOpen(true);
+        } else {
+            setIsModalOpen(false);
+        }
+    };
+
 
     const handleUpload = (e) => {
         e.preventDefault();
@@ -161,15 +176,20 @@ const UploadYourTicket = () => {
                         </>
                     ) : (
                         <>
-                            <select
-                                className="block w-full px-5 py-4 rounded-lg border border-default-border outline-theme-orange bg-white"
-                            >
-                                <option>Ticket Type</option>
-                                <option className="Penalty charge notice">Penalty charge notice</option>
-                                <option className="Parking charge">Parking charge</option>
-                                <option className="Fixed penalt notice">Fixed penalt notice</option>
-                                <option className="Not sure">Not sure</option>
-                            </select>
+                            <div>
+                                <select
+                                    className="block w-full px-5 py-4 rounded-lg border border-default-border outline-theme-orange bg-white"
+                                    onChange={handleChange}
+                                    value={selectedOption}
+                                >
+                                    <option disabled value="">Ticket Type</option>
+                                    <option value="Penalty charge notice">Penalty charge notice</option>
+                                    <option value="Parking charge">Parking charge</option>
+                                    <option value="Fixed penalty notice">Fixed penalty notice</option>
+                                    <option value="Not sure">Not sure</option>
+                                </select>
+                                <FixedPenaltNoticeModal open={isModalOpen} onOpenChange={setIsModalOpen} />
+                            </div>
                             <input
                                 type="text"
                                 placeholder="Location"
