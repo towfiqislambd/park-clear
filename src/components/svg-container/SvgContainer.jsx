@@ -246,3 +246,22 @@ export function RightArrowSvg() {
         </svg>
     );
 }
+
+export function LeftSvg() {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M9.57 5.92969L3.5 11.9997L9.57 18.0697" stroke="#FF6600" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M20.4999 12H3.66992" stroke="#FF6600" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    );
+}
+
+export function LockSvg() {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <path d="M19.7906 15.4303C17.7306 17.4803 14.7806 18.1103 12.1906 17.3003L7.48063 22.0003C7.14063 22.3503 6.47063 22.5603 5.99063 22.4903L3.81063 22.1903C3.09063 22.0903 2.42063 21.4103 2.31063 20.6903L2.01063 18.5103C1.94063 18.0303 2.17063 17.3603 2.50063 17.0203L7.20063 12.3203C6.40063 9.72031 7.02063 6.77031 9.08063 4.72031C12.0306 1.77031 16.8206 1.77031 19.7806 4.72031C22.7406 7.67031 22.7406 12.4803 19.7906 15.4303Z" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6.89062 17.9902L9.19062 20.2902" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M14.5 11.5C15.3284 11.5 16 10.8284 16 10C16 9.17157 15.3284 8.5 14.5 8.5C13.6716 8.5 13 9.17157 13 10C13 10.8284 13.6716 11.5 14.5 11.5Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    );
+}
