@@ -5,7 +5,6 @@ import DashboardLayout from "../layout/DashboardLayout";
 import Overview from "../pages/DashboardPages/Overview";
 import Appeal from './../pages/DashboardPages/Appeal';
 import TicketManagement from './../pages/DashboardPages/TicketManagement';
-import ChatBot from './../pages/DashboardPages/ChatBot';
 import SubscriptionServices from './../pages/DashboardPages/SubscriptionServices';
 import Settings from './../pages/DashboardPages/Settings';
 import AboutUsPage from "../pages/AboutUsPage";
@@ -17,9 +16,10 @@ import VerifyOtpPage from "../pages/AuthPages/VerifyOtpPage";
 import SignupPage from "../pages/AuthPages/SignupPage";
 import TermsPage from "../pages/AuthPages/TermsPage";
 import ErrorPage from './../pages/ErrorPages/ErrorPage';
+import VirtualAssistant from "@/pages/DashboardPages/VirtualAssistant";
 
 const router = createBrowserRouter([
-  
+
   // Main Layout
   {
     path: "/",
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
       { path: "overview", element: <Overview /> },
       { path: "appeal", element: <Appeal /> },
       { path: "ticket-management", element: <TicketManagement /> },
-      { path: "chat-bot", element: <ChatBot /> },
+      { path: "virtual-assistant", element: <VirtualAssistant /> },
       { path: "subscription-services", element: <SubscriptionServices /> },
       { path: "settings", element: <Settings /> },
     ],
