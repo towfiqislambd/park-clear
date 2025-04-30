@@ -18,14 +18,14 @@ const DeleteAccountModal = ({ open, onOpenChange }) => {
                     <div className="flex justify-center items-center gap-4">
                         {/* Delete btn */}
                         <button
-                            className="px-7 py-3.5 rounded-lg text-red-500 border border-red-500 font-medium cursor-pointer"
+                            className="px-5 py-3 rounded-lg text-red-500 border border-red-500 font-medium cursor-pointer"
                             onClick={() => onOpenChange(false)}
                         >
                             Delete Account
                         </button>
                         {/* Cancel btn */}
                         <button
-                            className="px-7 py-3.5 rounded-lg bg-red-500 text-white font-medium cursor-pointer"
+                            className="px-5 py-3 rounded-lg bg-red-500 text-white font-medium cursor-pointer"
                             onClick={() => onOpenChange(false)}
                         >
                             Cancel

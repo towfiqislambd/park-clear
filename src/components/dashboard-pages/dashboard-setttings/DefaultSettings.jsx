@@ -13,8 +13,15 @@ import {
   TermsSvg,
 } from "@/components/svg-container/SvgContainer";
 import { Switch } from "@/components/ui/switch";
+import { useState } from "react";
+import LogoutModal from "@/components/modals/LogoutModal";
+import DeleteAccountModal from "@/components/modals/DeleteAccountModal";
+import { Link } from "react-router-dom";
 
 const DefaultSettings = ({ setChangePassword, setEditProfile, theme, handleThemeChange }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+
   return (
     <section>
       <DashboardHeader title="Settings" />
@@ -175,7 +182,7 @@ const DefaultSettings = ({ setChangePassword, setEditProfile, theme, handleTheme
             Our Policies{" "}
           </h3>
           <div className="space-y-4">
-            <div className="flex justify-between items-center border  p-7 rounded-lg border-default-border dark:border-border-gray bg-white dark:bg-black">
+            <Link to='/terms-condition' className="flex justify-between items-center border  p-7 rounded-lg border-default-border dark:border-border-gray bg-white dark:bg-black">
               <div className="flex gap-3 items-center">
                 <PrivacySvg />
                 <span className="text-dashboard-common-heading dark:text-white ">
@@ -183,8 +190,8 @@ const DefaultSettings = ({ setChangePassword, setEditProfile, theme, handleTheme
                 </span>
               </div>
               <RightArrowSvg />
-            </div>
-            <div className="flex justify-between items-center border p-7 rounded-lg border-default-border dark:border-border-gray bg-white dark:bg-black">
+            </Link>
+            <Link to='/terms-condition' className="flex justify-between items-center border p-7 rounded-lg border-default-border dark:border-border-gray bg-white dark:bg-black">
               <div className="flex gap-3 items-center">
                 <TermsSvg />
                 <span className="text-dashboard-common-heading dark:text-white">
@@ -192,7 +199,7 @@ const DefaultSettings = ({ setChangePassword, setEditProfile, theme, handleTheme
                 </span>
               </div>
               <RightArrowSvg />
-            </div>
+            </Link>
           </div>
         </div>
 
@@ -202,23 +209,29 @@ const DefaultSettings = ({ setChangePassword, setEditProfile, theme, handleTheme
             Account{" "}
           </h3>
           <div className="space-y-4">
-            <div className="flex justify-between items-center border p-7 rounded-lg border-default-border bg-white dark:border-border-gray dark:bg-black">
+            <div className="flex justify-between items-center border p-5 rounded-lg border-default-border bg-white dark:border-border-gray dark:bg-black">
               <div className="flex gap-3 items-center">
                 <LogoutSvg />
                 <span className="text-red-500">Log Out</span>
               </div>
-              <button className="px-4 py-2 bg-red-500 text-white rounded-[6px] font-medium">
+              <button onClick={() => setIsModalOpen(true)} className="px-4 py-2 cursor-pointer bg-red-500 text-white rounded-[6px] font-medium">
                 Log Out
               </button>
+
+              {/* Modal */}
+              <LogoutModal open={isModalOpen} onOpenChange={setIsModalOpen} />
             </div>
-            <div className="flex justify-between items-center border p-7 rounded-lg border-default-border f dark:border-border-gray bg-white dark:bg-black">
+            <div className="flex justify-between items-center border p-5 rounded-lg border-default-border f dark:border-border-gray bg-white dark:bg-black">
               <div className="flex gap-3 items-center">
                 <DeleteSvg />
                 <span className="text-red-500">Delete Account</span>
               </div>
-              <button className="px-5 py-2 bg-red-500 text-white rounded-[6px] font-medium">
+              <button onClick={() => setIsDeleteModalOpen(true)} className="px-5 py-2 cursor-pointer bg-red-500 text-white rounded-[6px] font-medium">
                 Delete
               </button>
+
+              {/* Modal */}
+              <DeleteAccountModal open={isDeleteModalOpen} onOpenChange={setIsDeleteModalOpen} />
             </div>
           </div>
         </div>
