@@ -5,7 +5,7 @@ import PlanCard from "./parkPlanSection/PlanCard";
 const cardsdata = [
   {
     id: 1,
-    price: "7.99",
+    price: "6.99",
     packageName: "ParkClear Polished Driver",
     discount: "50% off of the 1st month",
     status: "active",
@@ -20,7 +20,7 @@ const cardsdata = [
   },
   {
     id: 2,
-    price: "12.99",
+    price: "11.99",
     packageName: "ParkClear Premier Driver",
     discount: "50% off of the 1st month",
     packageType: "premier",
@@ -36,7 +36,7 @@ const cardsdata = [
   },
   {
     id: 3,
-    price: "18.99",
+    price: "16.99",
     packageName: "ParkClear Premier Driver ",
     discount: "50% off of the 1st month",
     packageType: "pro",

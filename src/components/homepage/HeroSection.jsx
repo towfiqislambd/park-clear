@@ -41,6 +41,7 @@ const HeroSection = () => {
           </p>
           <div data-aos="fade-up" data-aos-delay="300">
             <PrimaryButton
+              pathname={"/dashboard/overview"}
               text="try Our TickeTracker Dashboard"
               icon={<FaArrowRightLong />}
               className="p-5 bg-theme-orange hover:bg-transparent hover:text-theme-orange border-theme-orange w-fit text-white capitalize mx-auto mt-6"

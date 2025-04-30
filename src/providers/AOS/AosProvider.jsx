@@ -12,7 +12,7 @@ const AosProvider = ({ children }) => {
       offset: 0,
     });
   }, []);
-  return <div className="overflow-x-hidden">{children}</div>;
+  return <div>{children}</div>;
 };
 
 export default AosProvider;
