@@ -23,7 +23,7 @@ const navItems = [
     label: "Ticket Management",
     Icon: DashboardTicketManagement,
   },
-  { to: "/dashboard/chat-bot", label: "Chat Bot", Icon: DashboardChatBot },
+  { to: "/dashboard/virtual-assistant", label: "Virtual Assistant", Icon: DashboardChatBot },
   {
     to: "/dashboard/subscription-services",
     label: "Subscription Services",

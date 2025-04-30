@@ -67,6 +67,7 @@ const UploadYourTicket = () => {
     const file = e.target.files[0];
     if (file) {
       setSelectedFile(file);
+      setCameraError(""); // Clear camera error when file is selected
       if (file.type.startsWith("image/")) {
         const reader = new FileReader();
         reader.onloadend = () => {
@@ -78,6 +79,7 @@ const UploadYourTicket = () => {
       }
     }
   };
+
 
   const removeFile = () => {
     setSelectedFile(null);

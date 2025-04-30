@@ -1,3 +1,4 @@
+import { ChooseFileSvg } from "@/components/svg-container/SvgContainer";
 import DashboardHeader from "../../common/DashboardHeader";
 
 const DefaultAppeal = ({ setProceed, setAppeal }) => {
@@ -7,22 +8,40 @@ const DefaultAppeal = ({ setProceed, setAppeal }) => {
       <div className="grid grid-cols-12 mt-10">
         {/* Left Side */}
         <div className="col-span-6">
-          <div className="mb-32">
+          {/* Appeal For */}
+          <div className="mb-10">
             <h3 className="text-[22px] mb-3 font-semibold text-dashboard-common-heading dark:text-white">
               Appeal For
             </h3>
-            <input
-              type="text"
-              placeholder="Select PCN"
-              className="block w-full px-5 py-4 rounded-lg border border-default-border  dark:border-gray-700 outline-none bg-white dark:bg-black"
-            />
+            <select className="block w-full px-5 py-4 rounded-lg border border-default-border  outline-none bg-white dark:bg-black dark:border-border-gray ">
+              <option value="">Select PNC</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
           </div>
+          {/* Upload Attachment */}
+          <label htmlFor="uploadAttachment" className="w-full block mb-10">
+            <div
+              className="block border border-dashed w-full h-[220px] flex justify-center flex-col items-center gap-4 border-default-border rounded-xl cursor-pointer border-2"
+            >
+              <ChooseFileSvg />
+              <p className="text-black text-lg dark:text-white">Upload attachment</p>
+            </div>
+            <input
+              type="file"
+              className="hidden"
+              id="uploadAttachment"
+            />
+          </label>
+          {/* Description */}
           <div>
             <h3 className="text-[22px] mb-3 font-semibold text-dashboard-common-heading dark:text-white ">
               Tell Us Why You Want To Appeal
             </h3>
             <textarea
-              rows={15}
+              rows={13}
               placeholder="Your Opinion"
               className="block w-full px-5 py-4 rounded-lg border border-default-border  dark:border-gray-700 outline-none bg-white dark:bg-black"
             ></textarea>
