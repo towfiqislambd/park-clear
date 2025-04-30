@@ -17,12 +17,15 @@ const ParkingTicketTable = () => {
   };
 
   return (
-    <div className="mt-5 mb-10">
-      {/* Title */}
-      <h3 className="mb-5 text-dashboard-common-heading dark:text-white  text-xl font-semibold">
-        {" "}
-        Parking Ticket Dashboard
-      </h3>
+    <div className="mt-10 mb-10">
+      <div className="flex justify-between items-center mb-7">
+        <h3 className="text-dashboard-common-heading dark:text-white text-xl font-semibold">
+          Parking Ticket Dashboard
+        </h3>
+        <button className="bg-theme-orange text-white px-5 py-2 rounded-[6px] cursor-pointer">
+          Filter By Vehicle Number
+        </button>
+      </div>
 
       <table className="w-full text-center text-dashboard-common-heading dark:text-white">
         <thead className="bg-white dark:bg-black dark:text-white rounded-lg text-dashboard-common-heading font-semibold">
@@ -49,6 +52,7 @@ const ParkingTicketTable = () => {
                 <span>⇅</span>
               </div>
             </th>
+            <th className="px-3 py-5">V.Reg</th>
             <th className="px-3 py-5">
               <div className="flex items-center justify-center gap-1">
                 <span>Status</span>
@@ -79,6 +83,7 @@ const ParkingTicketTable = () => {
               <td className="px-3 py-5">Data</td>
               <td className="px-3 py-5">Data</td>
               <td className="px-3 py-5 font-medium">{row.charge}</td>
+              <td className="px-3 py-5">Data</td>
               <td className="px-3 py-5">
                 <select className={`px-3 border-none outline-none`}>
                   <option value="Unpaid">Unpaid</option>
@@ -87,9 +92,7 @@ const ParkingTicketTable = () => {
               </td>
               <td className="px-3 py-5">
                 {row.status === "Paid" ? (
-                  <button className="bg-dashboard-status text-white px-7 py-2 rounded-[6px] cursor-pointer">
-                    Detail
-                  </button>
+                  <p>No Action Need</p>
                 ) : (
                   <button className="bg-theme-orange text-white px-5 py-2 rounded-[6px] cursor-pointer">
                     Pay Now
@@ -101,37 +104,39 @@ const ParkingTicketTable = () => {
         </tbody>
       </table>
 
-      {/* Footer Section */}
-      <div className="flex items-center justify-between mt-5">
-        <div className="flex items-center gap-3">
-          <button className="bg-theme-orange text-white px-10 py-2 rounded-[6px] cursor-pointer">
-            Pay All
-          </button>
-          <span className="text-theme-orange font-semibold">
-            {selectedRows.length} Selected
-          </span>
-        </div>
-        <div className="flex items-center gap-5 text-sm">
-          <span className="text-gray-desc dark:text-white">Rows per page:</span>
-          <select className="border text-gray-500 dark:text-white border-default-border dark:border-border-gray outline-none px-2 py-1 rounded">
-            <option>05</option>
-            <option>10</option>
-            <option>15</option>
-          </select>
-          <span className="text-gray-desc dark:text-white">1-4 of 4</span>
-          <div className="flex gap-1">
-            <button className="border px-2 py-1 border-default-border dark:border-border-gray text-gray-400 dark:text-white rounded">
-              &lt;
+      {/* Conditional Footer Section */}
+      {selectedRows.length >= 2 && (
+        <div className="flex items-center justify-between mt-5">
+          <div className="flex items-center gap-3">
+            <button className="bg-theme-orange text-white px-10 py-2 rounded-[6px] cursor-pointer">
+              Pay All
             </button>
-            <button className="border px-2 py-1 border-default-border dark:border-border-gray text-gray-400 dark:text-white rounded">
-              1
-            </button>
-            <button className="border px-2 py-1 border-default-border dark:border-border-gray text-gray-400 dark:text-white rounded">
-              &gt;
-            </button>
+            <span className="text-theme-orange font-semibold">
+              {selectedRows.length} Selected
+            </span>
+          </div>
+          <div className="flex items-center gap-5 text-sm">
+            <span className="text-gray-desc dark:text-white">Rows per page:</span>
+            <select className="border text-gray-500 dark:text-white border-default-border dark:border-border-gray outline-none px-2 py-1 rounded">
+              <option>05</option>
+              <option>10</option>
+              <option>15</option>
+            </select>
+            <span className="text-gray-desc dark:text-white">1-4 of 4</span>
+            <div className="flex gap-1">
+              <button className="border px-2 py-1 border-default-border dark:border-border-gray text-gray-400 dark:text-white rounded">
+                &lt;
+              </button>
+              <button className="border px-2 py-1 border-default-border dark:border-border-gray text-gray-400 dark:text-white rounded">
+                1
+              </button>
+              <button className="border px-2 py-1 border-default-border dark:border-border-gray text-gray-400 dark:text-white rounded">
+                &gt;
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

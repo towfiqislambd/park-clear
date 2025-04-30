@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { CameraSvg, ChooseFileSvg } from "../../svg-container/SvgContainer";
+import { CameraSvg, ChooseFileSvg, UploadSvg } from "../../svg-container/SvgContainer";
 import FixedPenaltNoticeModal from "@/components/modals/FixedPenaltNoticeModal";
 
 const UploadYourTicket = () => {
@@ -135,8 +135,8 @@ const UploadYourTicket = () => {
               onClick={handleFileInputClick}
               className="block border border-dashed w-full h-[220px] flex justify-center flex-col items-center gap-4 border-default-border rounded-xl cursor-pointer border-2"
             >
-              <ChooseFileSvg />
-              <p className="text-black text-lg dark:text-white">Choose File</p>
+              <UploadSvg />
+              <p className="text-black text-lg dark:text-white">Upload File</p>
             </div>
             <input
               type="file"
