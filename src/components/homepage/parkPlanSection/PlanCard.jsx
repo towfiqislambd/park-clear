@@ -30,7 +30,7 @@ const PlanCard = ({ item }) => {
         </ul>
       </div>
       <div>
-        <PrimaryButton text="Select This Plan" icon={<FaArrowRightLong />} className={`justify-center bg-transparent ${item?.packageType === 'polished' ? 'text-theme-sky-blue border-theme-sky-blue hover:bg-theme-sky-blue hover:text-white' : item?.packageType === 'premier' ? 'text-dark-blue border-dark-blue hover:bg-dark-blue hover:text-white' : item?.packageType === 'pro' ? 'text-theme-orange border-theme-orange hover:bg-theme-orange hover:text-white' : ''}`} />
+        <PrimaryButton pathname ="/payment" text="Select This Plan" icon={<FaArrowRightLong />} className={`justify-center bg-transparent ${item?.packageType === 'polished' ? 'text-theme-sky-blue border-theme-sky-blue hover:bg-theme-sky-blue hover:text-white' : item?.packageType === 'premier' ? 'text-dark-blue border-dark-blue hover:bg-dark-blue hover:text-white' : item?.packageType === 'pro' ? 'text-theme-orange border-theme-orange hover:bg-theme-orange hover:text-white' : ''}`} />
       </div>
       {/* package type  */}
       <p className={`absolute w-[210px] py-5 px-8 text-[24px] top-8 right-0 text-white capitalize rounded-tl-[16px] rounded-bl-[16px] ${item?.packageType === 'polished' ? 'bg-theme-sky-blue' : item?.packageType === 'premier' ? 'bg-dark-blue' : item?.packageType === 'pro' ? 'bg-theme-orange' : ''}`}>{item?.packageType}</p>

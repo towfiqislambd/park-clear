@@ -2,8 +2,7 @@ import React from "react";
 import { CiLocationOn } from "react-icons/ci";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
-import { Link, useLocation } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import Logo from "../assets/logo/logo-footer.svg";
 import SocialMedia from "../components/footer/SocialMedia";
 const menuItems = [
@@ -30,17 +29,17 @@ const menuItems = [
 ];
 
 const Footer = () => {
-  const location = useLocation()
+  const location = useLocation();
   return (
     <footer className="pt-[160px] pb-[98px]">
       <div className="w-[1270px] mx-auto">
-        <h3 className="title--xxl mb-[93px]">
+        <h3 className="title--xxl mb-[93px]" data-aos="fade-up">
           Contact <span className="text-theme-orange">Us</span>
         </h3>
         {/* top  */}
         <div className="flex items-start justify-between">
           {/* footer box  */}
-          <div className="footer-box">
+          <div className="footer-box" data-aos="fade-up" data-aos-delay="100">
             <h4 className="footer-heading">Resources</h4>
             <ul>
               <li>
@@ -51,9 +50,9 @@ const Footer = () => {
             </ul>
           </div>
           {/* footer box  */}
-          <div className="footer-box">
+          <div className="footer-box" data-aos="fade-up" data-aos-delay="200">
             <h4 className="footer-heading">Plans</h4>
-            <Link className="footer-link !text-theme-sky-blue" to={"/"}>
+            <Link className="footer-link !text-theme-sky-blue" to={"/subscription-plan"}>
               Subscription Plans
             </Link>
             <ul>
@@ -90,7 +89,7 @@ const Footer = () => {
             </ul>
           </div>
           {/* footer box  */}
-          <div className="footer-box">
+          <div className="footer-box" data-aos="fade-up" data-aos-delay="300">
             <h4 className="footer-heading">Company</h4>
             <ul>
               <li>
@@ -111,7 +110,7 @@ const Footer = () => {
             </ul>
           </div>
           {/* footer box  */}
-          <div className="footer-box">
+          <div className="footer-box" data-aos="fade-up" data-aos-delay="300">
             <h4 className="footer-heading">Get in Touch</h4>
 
             <p className="text-sm w-[200px] text-text-gray">
@@ -131,11 +130,15 @@ const Footer = () => {
         </div>
         {/* bottom  */}
         <div className="pt-6 border-t border-[rgba(210,208,192,0.21)] flex items-center justify-between mt-[77px]">
-          <Link to={"/"}>
+          <Link to={"/"} data-aos="fade-up" data-aos-delay="100">
             <img className="w-[127px] h-[96px]" src={Logo} alt="Logo" />
           </Link>
           {/* menu  */}
-          <ul className="flex items-center gap-[72px]">
+          <ul
+            className="flex items-center gap-[72px]"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             {menuItems?.map((item) => (
               <li key={item?.id}>
                 <NavLink
@@ -151,7 +154,9 @@ const Footer = () => {
               </li>
             ))}
           </ul>
-          <SocialMedia />
+          <div data-aos="fade-up" data-aos-delay="100">
+            <SocialMedia />
+          </div>
         </div>
       </div>
     </footer>

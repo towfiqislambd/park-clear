@@ -16,7 +16,7 @@ const WhyUseSection = () => {
 parking tickets and appeals, we’ll remind you when your deadlines are to pay in
 our smart new dashboard."
         >
-          <h2 className="title--xxl">
+          <h2 className="title--xxl" data-aos="fade-up" data-aos-delay="100">
             Why use <span className="text-theme-orange">ParkClear</span>{" "}
             Planner?
           </h2>

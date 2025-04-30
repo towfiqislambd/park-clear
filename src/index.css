@@ -73,7 +73,7 @@ body {
 }
 
 .slider-btn {
-  @apply h-[65px] w-[65px] flex items-center justify-center bg-white text-[30px] text-theme-orange rounded-full;
+  @apply h-[65px] w-[65px] flex items-center justify-center bg-white text-[30px] text-theme-orange rounded-full duration-200 ease-in-out hover:bg-theme-orange hover:text-white cursor-pointer;
 }
 
 .swiper {
@@ -265,4 +265,7 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+.subscription-type-card input:checked + label{
+  @apply border-theme-sky-blue
 }

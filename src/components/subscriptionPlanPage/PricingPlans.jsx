@@ -93,7 +93,7 @@ const PricingPlans = () => {
     },
   ];
   return (
-    <div className="border border-default-border mt-12 rounded-[16px] overflow-hidden flex items-start">
+    <div className="border border-default-border mt-12 rounded-[16px] overflow-hidden flex items-start" data-aos="fade-up" data-aos-delay="100">
         <ComparePlansCard data={featureDetails} />
         {
             plans?.map((card) => (
