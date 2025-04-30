@@ -19,34 +19,34 @@ const ProceedWithParkClear = () => {
 
                 {/* Right Side */}
                 <div className="col-span-5">
-                    <div className="p-10 rounded-lg border border-default-border bg-white grid grid-cols-3 gap-x-5 gap-y-10 mb-5">
+                    <div className="p-10 rounded-lg border border-default-border bg-white dark:bg-transparent grid grid-cols-3 gap-x-5 gap-y-10 mb-5">
                         <div className="">
-                            <h3 className='text-dashboard-common-heading text-lg font-semibold mb-1'>Issue Date:</h3>
-                            <p className='text-dashboard-common-heading text-sm'>Data</p>
+                            <h3 className='text-dashboard-common-heading dark:text-white text-lg font-semibold mb-1'>Issue Date:</h3>
+                            <p className='text-dashboard-common-heading dark:text-gray-200 text-sm'>Data</p>
                         </div>
                         <div className="">
-                            <h3 className='text-dashboard-common-heading text-lg font-semibold mb-1'>PCN No:</h3>
-                            <p className='text-dashboard-common-heading text-sm'>Data</p>
+                            <h3 className='text-dashboard-common-heading dark:text-white text-lg font-semibold mb-1'>PCN No:</h3>
+                            <p className='text-dashboard-common-heading dark:text-gray-200 text-sm'>Data</p>
                         </div>
                         <div className="">
-                            <h3 className='text-dashboard-common-heading text-lg font-semibold mb-1'>Location:</h3>
-                            <p className='text-dashboard-common-heading text-sm'>Data</p>
+                            <h3 className='text-dashboard-common-heading dark:text-white text-lg font-semibold mb-1'>Location:</h3>
+                            <p className='text-dashboard-common-heading dark:text-gray-200 text-sm'>Data</p>
                         </div>
                         <div className="">
-                            <h3 className='text-dashboard-common-heading text-lg font-semibold mb-1'>Last Date:</h3>
-                            <p className='text-dashboard-common-heading text-sm'>Data</p>
+                            <h3 className='text-dashboard-common-heading dark:text-white text-lg font-semibold mb-1'>Last Date:</h3>
+                            <p className='text-dashboard-common-heading dark:text-gray-200 text-sm'>Data</p>
                         </div>
                         <div className="">
-                            <h3 className='text-dashboard-common-heading text-lg font-semibold mb-1'>Car Model:</h3>
-                            <p className='text-dashboard-common-heading text-sm'>Data</p>
+                            <h3 className='text-dashboard-common-heading dark:text-white text-lg font-semibold mb-1'>Car Model:</h3>
+                            <p className='text-dashboard-common-heading dark:text-gray-200 text-sm'>Data</p>
                         </div>
                     </div>
 
-                    <div className="p-10 mb-20 rounded-lg border border-default-border bg-white">
-                        <h3 className='text-[22px] mb-2 font-semibold text-dashboard-common-heading'>Total amount</h3>
+                    <div className="p-10 mb-20 rounded-lg border border-default-border bg-white dark:bg-transparent">
+                        <h3 className='text-[22px] mb-2 font-semibold text-dashboard-common-heading dark:text-white'>Total amount</h3>
                         <h2 className='font-bold text-theme-orange text-4xl'>$3.99</h2>
                     </div>
-                    <h2 className="text-dashboard-common-heading font-bold text-4xl mb-7">Payment Method</h2>
+                    <h2 className="text-dashboard-common-heading dark:text-white font-bold text-4xl mb-7">Payment Method</h2>
 
                     {/* Btns */}
                     <div className="space-y-5 mb-7">

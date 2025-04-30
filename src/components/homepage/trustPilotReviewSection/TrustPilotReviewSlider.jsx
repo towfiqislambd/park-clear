@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { IoMdArrowDropleft, IoMdArrowDropright } from "react-icons/io";
 import "swiper/css";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import testiImg from "../../../assets/images/human-rating.png";
 import ReviewCard from "./ReviewCard";
@@ -76,11 +76,8 @@ const TrustPilotReviewSlider = () => {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        pagination={{
-          clickable: true,
-        }}
         navigation={false}
-        modules={[Autoplay, Pagination, Navigation]}
+        modules={[Autoplay, Navigation]}
       >
         {testimonialsData?.map((item) => (
           <SwiperSlide key={item?.id}>
