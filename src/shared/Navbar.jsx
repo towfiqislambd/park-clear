@@ -14,7 +14,7 @@ const Navbar = () => {
     {
       id: 2,
       name: "Manage Tickets",
-      path: "/manage-ticket",
+      path: "/dashboard/ticket-management",
     },
     {
       id: 3,
@@ -34,7 +34,7 @@ const Navbar = () => {
   ];
   const location = useLocation();
   return (
-    <header className="py-10 shadow-header-shadow sticky top-0 left-0 w-full z-[50] bg-white">
+    <header className="py-7 shadow-header-shadow sticky top-0 left-0 w-full z-[50] bg-white" data-aos="fade-down">
       <Container>
         <div className="flex items-center justify-between">
           {/* logo  */}

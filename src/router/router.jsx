@@ -15,6 +15,7 @@ import LoginPage from "../pages/AuthPages/LoginPage";
 import VerifyOtpPage from "../pages/AuthPages/VerifyOtpPage";
 import SignupPage from "../pages/AuthPages/SignupPage";
 import TermsPage from "../pages/AuthPages/TermsPage";
+import PaymentPage from "../pages/PaymentPage";
 import ErrorPage from './../pages/ErrorPages/ErrorPage';
 import VirtualAssistant from "@/pages/DashboardPages/VirtualAssistant";
 
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
       { path: "about-us", element: <AboutUsPage /> },
       { path: "terms-condition", element: <TermConditionPage /> },
       { path: "subscription-plan", element: <SubscriptionPlanPage /> },
+      { path: "payment", element: <PaymentPage /> },
     ],
   },
 

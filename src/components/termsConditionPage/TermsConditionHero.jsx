@@ -5,18 +5,18 @@ const TermsConditionHero = () => {
     <section className="py-[130px]">
       <Container>
         <div>
-          <p className="title--sm">
+          <p className="title--sm" data-aos="fade-up">
             Comprehensive User Agreement and Data Policy
           </p>
-          <h1 className="title--xxl">
+          <h1 className="title--xxl" data-aos="fade-up" data-aos-delay="100">
             Terms & <span className="text-theme-orange">Conditions</span>
           </h1>
-          <p className="w-[544px] text-text-gray mt-6">
+          <p className="w-[544px] text-text-gray mt-6" data-aos="fade-up" data-aos-delay="200">
             Please review our terms and conditions to understand your rights,
             responsibilities, and usage guidelines
           </p>
           <div>
-            <p className="mt-12">
+            <p className="mt-12" data-aos="fade-up" data-aos-delay="150">
               By using ParkClear, you acknowledge and agree to utilize the
               platform in a responsible and ethical manner, ensuring that all
               information you provide is accurate, truthful, and up-to-date.
@@ -33,7 +33,7 @@ const TermsConditionHero = () => {
               acceptance and agreement with the terms outlined here, as well as
               any amendments that may be made to them in the future.
             </p>
-            <p className="mt-12">
+            <p className="mt-12" data-aos="fade-up" data-aos-delay="200">
               By using ParkClear, you acknowledge and agree to utilize the
               platform in a responsible and ethical manner, ensuring that all
               information you provide is accurate, truthful, and up-to-date.
@@ -50,7 +50,7 @@ const TermsConditionHero = () => {
               acceptance and agreement with the terms outlined here, as well as
               any amendments that may be made to them in the future.
             </p>
-            <p className="mt-12">
+            <p className="mt-12" data-aos="fade-up" data-aos-delay="250">
               By using ParkClear, you acknowledge and agree to utilize the
               platform in a responsible and ethical manner, ensuring that all
               information you provide is accurate, truthful, and up-to-date.

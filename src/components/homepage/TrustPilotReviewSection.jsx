@@ -15,20 +15,21 @@ const TrustPilotReviewSection = () => {
               className="w-[260px] h-[69px]"
               src={TrustPilotLogo}
               alt="TrustPilotLogo"
+              data-aos="zoom-out"
             />
-            <h3 className="title--xxl mt-10">
+            <h3 className="title--xxl mt-10" data-aos="fade-up" data-aos-delay="100">
               Why Our Users <span className="text-theme-orange">Trust</span> Us
             </h3>
-            <p className="mt-5">
+            <p className="mt-5" data-aos="fade-up" data-aos-delay="200">
               Take the stress out of driving with ParkClear Planner, your
               all-in-one subscription for managing life on the road. We’ve
               bundled everything you need to stay organized, prepared, and
               worry-free—all in one convenient place.
             </p>
-            <PrimaryButton text="See Our community" icon={<FaArrowRightLong />} className="mt-12 bg-theme-orange text-white hover:bg-transparent hover:text-theme-orange w-fit" />
+            {/* <PrimaryButton text="See Our community" icon={<FaArrowRightLong />} className="mt-12 bg-theme-orange text-white hover:bg-transparent hover:text-theme-orange w-fit" /> */}
           </div>
           {/* reviews  */}
-          <div className="w-[59%] pl-[166px]">
+          <div className="w-[59%] pl-[166px]" data-aos="fade-left" data-aos-delay="100">
             <TrustPilotReviewSlider />
           </div>
         </div>
