@@ -3,7 +3,6 @@ import DefaultSettings from "@/components/dashboard-pages/dashboard-setttings/De
 import EditProfile from "@/components/dashboard-pages/dashboard-setttings/EditProfile";
 import { useState } from "react";
 
-
 const Settings = () => {
     const [changePassword, setChangePassword] = useState(false)
     const [editProfile, setEditProfile] = useState(false)
@@ -15,7 +14,7 @@ const Settings = () => {
                     <ChangePassword setChangePassword={setChangePassword} />
                     :
                     editProfile ?
-                        <EditProfile />
+                        <EditProfile setEditProfile={setEditProfile} />
                         :
                         <DefaultSettings setChangePassword={setChangePassword} setEditProfile={setEditProfile} />
             }
