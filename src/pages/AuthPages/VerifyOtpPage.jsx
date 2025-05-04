@@ -7,7 +7,7 @@ import CountdownTimer from "../../components/common/CountdownTimer";
 
 const VerifyOtpPage = () => {
   const {
-    register,
+    // register,
     handleSubmit,
     control,
     formState: { errors },

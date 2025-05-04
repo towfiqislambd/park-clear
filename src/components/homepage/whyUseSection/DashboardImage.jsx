@@ -3,7 +3,7 @@ import dashboardImage from "../../../assets/images/dashboard.png";
 const DashboardImage = () => {
   return (
     <div
-      className="h-[820px] overflow-hidden mt-6 rounded-[16px]"
+      className="h-[350px] md:h-[500px] xl:h-[820px] overflow-hidden mt-6 rounded-[16px]"
       data-aos="fade-in"
       data-aos-delay="100"
     >

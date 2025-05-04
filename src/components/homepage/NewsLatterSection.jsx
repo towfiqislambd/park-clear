@@ -3,20 +3,23 @@ import Container from "../container/Container";
 
 const NewsLatterSection = () => {
   return (
-    <section className="py-[164px] bg-light-mastard mt-[55px]">
+    <section className="py-10 md:py-20 3xl:py-[164px] bg-light-mastard mt-[55px]">
       <Container>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center 2xl:justify-between flex-wrap gap-5 md:gap-8">
+          {/* Left */}
           <div
-            className="text-[64px] font-semibold w-[346px]"
+            className="text-2xl md:text-3xl xl:text-[40px] 3xl:text-[64px] font-semibold max-w-[346px]"
             data-aos="fade-up" data-aos-delay="100"
           >
             Join Our <span className="text-theme-orange">Newsletter</span>
           </div>
-          <p className="w-[361px]" data-aos="fade-up" data-aos-delay="100">
+          {/* Center */}
+          <p className="max-w-[361px]" data-aos="fade-up" data-aos-delay="100">
             We’ll drop the occasional update, exclusive tools and services, and
             offers straight to your inbox – only the good stuff. Stay in the
             loop – you’ll thank us later
           </p>
+          {/* Right */}
           <div
             className="flex items-center"
             data-aos="fade-up"
@@ -24,12 +27,12 @@ const NewsLatterSection = () => {
           >
             <input
               type="email"
-              placeholder="youremail123@gmail.com"
-              className="py-6 px-7 w-[430px] bg-white font-bold focus:outline-none rounded-tl-[16px] rounded-bl-[16px]"
+              placeholder="youremail12@gmail.com"
+              className="py-2 md:py-3 3xl:py-6 px-3 md:px-5 3xl:px-7 w-full max-w-[430px] bg-white font-bold focus:outline-none rounded-tl-[10px] rounded-bl-[10px] 3xl:rounded-tl-[16px] 3xl:rounded-bl-[16px]"
             />
             <button
               type="button"
-              className="py-[19px] curso-pointer px-[83px] text-white bg-theme-orange text-[18px] font-bold rounded-tr-[16px] rounded-br-[16px]"
+              className="py-2 md:py-3 3xl:py-[19px] curso-pointer px-3 md:px-5 3xl:px-[83px] text-white bg-theme-orange md:text-[18px] font-medium md:font-bold rounded-tr-[10px] 3xl:rounded-tr-[16px] rounded-br-[10px] 3xl:rounded-br-[16px]"
             >
               Subscribe
             </button>
