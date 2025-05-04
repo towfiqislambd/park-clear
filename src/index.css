@@ -51,7 +51,7 @@ body {
 }
 
 .title--xxl {
-  @apply text-2xl md:text-3xl xl:text-[40px] 2xl:text-[50px] 3xl:text-[80px] font-bold text-theme-sky-blue;
+  @apply text-xl sm:text-2xl md:text-3xl xl:text-[40px] 2xl:text-[50px] 3xl:text-[80px] font-bold text-theme-sky-blue;
 }
 
 .driving-experience-card:before {
