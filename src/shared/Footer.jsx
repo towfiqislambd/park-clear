@@ -32,7 +32,7 @@ const Footer = () => {
   const location = useLocation();
 
   return (
-    <footer className="3xl:pt-[160px] pb-[30px] 3xl:pb-[98px]">
+    <footer className="pt-10 lg:pt-20 3xl:pt-[160px] pb-[30px] 3xl:pb-[98px]">
       <div className="max-w-[1270px] mx-auto px-6 3xl:px-0">
         <h3 className="title--xxl mb-6 lg:mb-[50px] 3xl:mb-[93px]" data-aos="fade-up">
           Contact <span className="text-theme-orange">Us</span>
