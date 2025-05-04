@@ -16,8 +16,8 @@ const HomePage = () => {
       <WhyUseSection />
       <div className="py-[64px]">
         <SubscriptionSection />
-      </div>{/*
-      <ParkPlanSection />
+      </div>
+      <ParkPlanSection />{/*
       <TrustPilotReviewSection />
       <UltradriveStoreSection />
       <SmartSolutionSection />

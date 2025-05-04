@@ -56,7 +56,7 @@ const cardsdata = [
 
 const ParkPlanSection = () => {
   return (
-    <section className="py-[128px]">
+    <section className="py-[100px] 3xl:py-[128px]">
       <Container>
         {/* title  */}
         <TitleCommon
