@@ -56,7 +56,7 @@ const cardsdata = [
 
 const ParkPlanSection = () => {
   return (
-    <section className="py-[100px] 3xl:py-[128px]">
+    <section className="py-10 2xl:py-[100px] 3xl:py-[128px]">
       <Container>
         {/* title  */}
         <TitleCommon
@@ -68,7 +68,7 @@ const ParkPlanSection = () => {
             Smarter.
           </h3>
         </TitleCommon>
-        <div className="grid grid-cols-3 gap-5 mt-12">
+        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-5 mt-12">
           {cardsdata.map((card, index) => (
             <div key={card?.id} data-aos="fade-up" data-aos-delay={index * 150}>
               <PlanCard item={card} />

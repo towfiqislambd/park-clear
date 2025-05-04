@@ -79,7 +79,7 @@ body {
 }
 
 .slider-btn {
-  @apply h-[65px] w-[65px] flex items-center justify-center bg-white text-[30px] text-theme-orange rounded-full duration-200 ease-in-out hover:bg-theme-orange hover:text-white cursor-pointer;
+  @apply w-[45px] h-[45px] xl:h-[65px] xl:w-[65px] flex items-center justify-center bg-white text-[30px] text-theme-orange rounded-full duration-200 ease-in-out hover:bg-theme-orange hover:text-white cursor-pointer;
 }
 
 .swiper {

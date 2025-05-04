@@ -71,10 +71,15 @@ const TrustPilotReviewSlider = () => {
       <Swiper
         ref={swiperRef}
         spaceBetween={24}
-        slidesPerView={2}
+        slidesPerView={1}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
+        }}
+        breakpoints={{
+          1024: {
+            slidesPerView: 2,
+          },
         }}
         navigation={false}
         modules={[Autoplay, Navigation]}
@@ -86,7 +91,7 @@ const TrustPilotReviewSlider = () => {
         ))}
       </Swiper>
       {/* pagination */}
-      <div className="flex items-center gap-4 justify-end mt-6">
+      <div className="flex items-center gap-3 xl:gap-4 justify-end mt-6">
         <button onClick={goToPrevSlide} className="slider-btn">
           <IoMdArrowDropleft />
         </button>

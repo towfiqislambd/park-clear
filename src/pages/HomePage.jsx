@@ -17,12 +17,12 @@ const HomePage = () => {
       <div className="py-[64px]">
         <SubscriptionSection />
       </div>
-      <ParkPlanSection />{/*
+      <ParkPlanSection />
       <TrustPilotReviewSection />
       <UltradriveStoreSection />
       <SmartSolutionSection />
       <FleetRentalBusiness />
-      <NewsLatterSection /> */}
+      <NewsLatterSection />
     </>
   );
 };
