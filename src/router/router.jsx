@@ -18,6 +18,7 @@ import TermsPage from "../pages/AuthPages/TermsPage";
 import PaymentPage from "../pages/PaymentPage";
 import ErrorPage from './../pages/ErrorPages/ErrorPage';
 import VirtualAssistant from "@/pages/DashboardPages/VirtualAssistant";
+import DriverKnowledge from "@/pages/DriverKnowledge";
 
 const router = createBrowserRouter([
 
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <HomePage /> },
       { path: "about-us", element: <AboutUsPage /> },
+      { path: "driver-knowledge", element: <DriverKnowledge /> },
       { path: "terms-condition", element: <TermConditionPage /> },
       { path: "subscription-plan", element: <SubscriptionPlanPage /> },
       { path: "payment", element: <PaymentPage /> },
