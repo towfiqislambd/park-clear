@@ -30,14 +30,15 @@ const menuItems = [
 
 const Footer = () => {
   const location = useLocation();
+
   return (
-    <footer className="pt-[160px] pb-[98px]">
-      <div className="w-[1270px] mx-auto">
-        <h3 className="title--xxl mb-[93px]" data-aos="fade-up">
+    <footer className="3xl:pt-[160px] pb-[30px] 3xl:pb-[98px]">
+      <div className="max-w-[1270px] mx-auto px-6 3xl:px-0">
+        <h3 className="title--xxl mb-6 lg:mb-[50px] 3xl:mb-[93px]" data-aos="fade-up">
           Contact <span className="text-theme-orange">Us</span>
         </h3>
         {/* top  */}
-        <div className="flex items-start justify-between">
+        <div className="flex items-start justify-between flex-wrap gap-8 md:gap-10">
           {/* footer box  */}
           <div className="footer-box" data-aos="fade-up" data-aos-delay="100">
             <h4 className="footer-heading">Resources</h4>
@@ -118,10 +119,7 @@ const Footer = () => {
             </p>
             <ul>
               <li>
-                <Link
-                  className="text-base font-bold !text-theme-sky-blue mt-10 inline-block"
-                  to={"/"}
-                >
+                <Link className="text-base font-semibold xl:font-bold !text-theme-sky-blue mt-5 xl:mt-10 inline-block">
                   info@parkclear.co.uk
                 </Link>
               </li>
@@ -129,13 +127,13 @@ const Footer = () => {
           </div>
         </div>
         {/* bottom  */}
-        <div className="pt-6 border-t border-[rgba(210,208,192,0.21)] flex items-center justify-between mt-[77px]">
+        <div className="pt-4 2xl:pt-6 border-t border-[rgba(210,208,192,0.21)] flex flex-wrap gap-5 items-center justify-between mt-[30px] 2xl:mt-[77px]">
           <Link to={"/"} data-aos="fade-up" data-aos-delay="100">
-            <img className="w-[127px] h-[96px]" src={Logo} alt="Logo" />
+            <img className="w-[90px] 2xl:w-[100px] 3xl:w-[127px] h-[70px] 2xl:h-[80px] 3xl:h-[96px]" src={Logo} alt="Logo" />
           </Link>
           {/* menu  */}
           <ul
-            className="flex items-center gap-[72px]"
+            className="flex items-center flex-wrap gap-3 md:gap-4 lg:gap-10 2xl:gap-[72px]"
             data-aos="fade-up"
             data-aos-delay="100"
           >
@@ -143,11 +141,10 @@ const Footer = () => {
               <li key={item?.id}>
                 <NavLink
                   to={`${item?.path}`}
-                  className={`text-[18px] font-semibold duration-200 ease-in-out hover:text-theme-sky-blue capitalize ${
-                    item?.path === location?.pathname
-                      ? "text-theme-sky-blue"
-                      : "text-menu-color"
-                  }`}
+                  className={`text-sm md:text-base 2xl:text-[18px] font-medium lg:font-semibold duration-200 ease-in-out hover:text-theme-sky-blue capitalize ${item?.path === location?.pathname
+                    ? "text-theme-sky-blue"
+                    : "text-menu-color"
+                    }`}
                 >
                   {item?.name}
                 </NavLink>

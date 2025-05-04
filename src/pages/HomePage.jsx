@@ -13,7 +13,7 @@ const HomePage = () => {
   return (
     <>
       <HeroSection />
-      <WhyUseSection />
+      <WhyUseSection />{/* 
       <div className="py-[64px]">
         <SubscriptionSection />
       </div>
@@ -22,7 +22,7 @@ const HomePage = () => {
       <UltradriveStoreSection />
       <SmartSolutionSection />
       <FleetRentalBusiness />
-      <NewsLatterSection />
+      <NewsLatterSection /> */}
     </>
   );
 };
