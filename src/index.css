@@ -7,8 +7,11 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
+  /* Fonts */
   --font-poppins: "Poppins", sans-serif;
   --font-inter: "Inter", sans-serif;
+
+  /* Colors */
   --color-theme-sky-blue: #05acc0;
   --color-theme-orange: #f60;
   --color-light-mastard: #fffaf1;
@@ -17,9 +20,6 @@
   --color-menu-color: #151d48;
   --shadow-header-shadow: 0px 2px 16px 0px rgba(0, 0, 0, 0.08);
   --color-default-border: #d6d8db;
-
-  /* For Dashboard */
-
   --color-dashboard-outlet-bg: #f6fbff;
   --color-dashboard-common-heading: #151d48;
   --color-sidebar-card-headingOne: #05acc0;
@@ -31,6 +31,15 @@
   --color-dashboard-status: #6ad167;
   --color-plan-card: #fafbfc;
   --color-border-gray: oklch(37.3% 0.034 259.733);
+
+  /* Breakpoints */
+  --breakpoint-xs: 375px;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 576px;
+  --breakpoint-lg: 768px;
+  --breakpoint-xl: 1024px;
+  --breakpoint-2xl: 1280px;
+  --breakpoint-3xl: 1460px;
 }
 
 body {
@@ -38,17 +47,18 @@ body {
 }
 
 .title--sm {
-  @apply text-[24px] font-semibold text-text-gray;
+  @apply sm:text-lg md:text-xl 2xl:text-[24px] font-semibold text-text-gray;
 }
 
 .title--xxl {
-  @apply text-[80px] font-bold text-theme-sky-blue;
+  @apply text-xl sm:text-2xl md:text-3xl xl:text-[40px] 2xl:text-[50px] 3xl:text-[80px] font-bold text-theme-sky-blue;
 }
 
 .driving-experience-card:before {
   content: "";
   @apply absolute top-0 left-0 h-full w-full z-[-1]
-  /* bg-[rgba(0, 0, 0, 0.7)] */;
+  /* bg-[rgba(0, 0, 0, 0.7)] */
+  ;
 }
 
 /* For Hide Scrollbar */
@@ -61,10 +71,6 @@ body {
   scrollbar-width: none;
 }
 
-.title--xxl {
-  @apply text-[80px] font-bold text-theme-sky-blue;
-}
-
 .driving-experience-card:before,
 .fleetRental-card:before {
   content: "";
@@ -73,7 +79,7 @@ body {
 }
 
 .slider-btn {
-  @apply h-[65px] w-[65px] flex items-center justify-center bg-white text-[30px] text-theme-orange rounded-full duration-200 ease-in-out hover:bg-theme-orange hover:text-white cursor-pointer;
+  @apply w-[45px] h-[45px] xl:h-[65px] xl:w-[65px] flex items-center justify-center bg-white text-[30px] text-theme-orange rounded-full duration-200 ease-in-out hover:bg-theme-orange hover:text-white cursor-pointer;
 }
 
 .swiper {
@@ -81,7 +87,7 @@ body {
 }
 
 .footer-heading {
-  @apply font-bold mb-6;
+  @apply font-bold mb-3 2xl:mb-6;
 }
 
 .footer-link {
@@ -97,11 +103,11 @@ body {
 }
 
 .social-link {
-  @apply w-[46px] h-[46px] flex items-center justify-center text-[20px] border border-text-gray rounded-full;
+  @apply w-[35px] h-[35px] 2xl:w-[46px] 2xl:h-[46px] flex items-center justify-center text-[17px] 2xl:text-[20px] border border-text-gray rounded-full;
 }
 
 .plan-header {
-  @apply min-h-[180px] py-5 px-8 flex flex-col justify-center;
+  @apply min-h-[180px] py-5 px-5 3xl:px-8 flex flex-col justify-center;
 }
 
 .plan-card {
@@ -120,9 +126,7 @@ body {
   @apply w-[117px] rounded-[10px] bg-white opacity-100;
 }
 
-.auth-slider
-  .swiper-pagination
-  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.auth-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   @apply bg-theme-orange;
 }
 
@@ -266,6 +270,7 @@ body {
     @apply bg-background text-foreground;
   }
 }
-.subscription-type-card input:checked + label{
+
+.subscription-type-card input:checked+label {
   @apply border-theme-sky-blue
 }

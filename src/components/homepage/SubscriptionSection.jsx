@@ -6,16 +6,16 @@ const SubscriptionSection = () => {
   return (
     <section data-aos="fade-up" data-aos-delay="100">
       <Container>
-        <div className="p-12 border border-default-border bg-[#FAFBFC] rounded-[8px] text-center">
+        <div className="p-8 md:p-12 border border-default-border bg-[#FAFBFC] rounded-[8px] text-center">
           <p
-            className="h-[64px] w-[64px] flex items-center justify-center bg-theme-orange rounded-full text-[30px] text-white mx-auto"
+            className="w-[50px] h-[50px] md:h-[64px] md:w-[64px] flex items-center justify-center bg-theme-orange rounded-full text-[30px] text-white mx-auto"
             data-aos="zoom-out"
           >
             <GoQuestion />
           </p>
-          <div className="w-[350px] mx-auto">
+          <div className="max-w-[350px] mx-auto">
             <h4
-              className="title--sm !text-menu-color mt-6"
+              className="title--sm !text-menu-color mt-3 md:mt-6"
               data-aos="fade-up"
               data-aos-delay="100"
             >
@@ -38,7 +38,7 @@ const SubscriptionSection = () => {
             <div data-aos="zoom-out" data-aos-delay="100">
               <PrimaryButton
                 text="Subscribe Now"
-                className="bg-theme-orange text-white mt-8 hover:bg-transparent hover:text-theme-orange w-fit mx-auto"
+                className="bg-theme-orange text-white mt-5 md:mt-8 hover:bg-transparent hover:text-theme-orange w-fit mx-auto"
               />
             </div>
           </div>

@@ -6,19 +6,19 @@ import Container from "../container/Container";
 
 const HeroSection = () => {
   return (
-    <section className="pt-[154px] pb-[178px] bg-white">
+    <section className="py-20 md:py-[154px] bg-white">
       <Container>
         <div className="text-center">
           {/* sub title  */}
           <p
-            className="flex items-center gap-5 justify-center"
+            className="flex items-center flex-wrap gap-5 justify-center"
             data-aos="fade-up"
           >
             <span className="title--sm">
               Innovative all-in-one driver assistance platform
             </span>{" "}
             <img
-              className="w-[67px] h-20"
+              className="w-[40px] lg:w-[67px] 3xl:h-20"
               src={Logo}
               alt="Logo"
               data-aos="zoom-in"
@@ -30,7 +30,7 @@ const HeroSection = () => {
             Planner
           </h1>
           <p
-            className="text-black w-[670px] mx-auto mt-6"
+            className="text-black max-w-[670px] mx-auto mt-6 text-sm md:text-base"
             data-aos="fade-up"
             data-aos-delay="200"
           >

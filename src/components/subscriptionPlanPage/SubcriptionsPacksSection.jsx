@@ -5,7 +5,7 @@ import PricingPlans from "./PricingPlans";
 
 const SubcriptionsPacksSection = () => {
   return (
-    <section className="py-[128px]">
+    <section className="py-10 2xl:py-20 3xl:py-[128px]">
       <Container>
         <TitleCommon
           subTitle="Three powerful plans. Zero parking stress. Pick your perfect match."

@@ -5,8 +5,9 @@ import PrimaryButton from "../common/PrimaryButton";
 const UltradriveStoreSection = () => {
   return (
     <section className="bg-dark-blue">
-      <div className="flex items-stretch">
-        <div className="w-[56%] py-[128px] px-[120px]">
+      <div className="flex items-stretch flex-col lg:flex-row">
+        {/* Left */}
+        <div className="lg:w-[56%] py-[50px] md:py-[70px] xl:py-[128px] px-[30px] xl:px-[120px]">
           <p className="title--sm" data-aos="fade-up">
             UltraDriver Store
           </p>
@@ -19,7 +20,7 @@ const UltradriveStoreSection = () => {
             <span className="text-theme-orange">Smarter</span>
           </h3>
           <p
-            className="text-white mt-6"
+            className="text-white mt-4 md:mt-6 text-sm md:text-base"
             data-aos="fade-up"
             data-aos-delay="200"
           >
@@ -30,12 +31,15 @@ const UltradriveStoreSection = () => {
             <PrimaryButton
               text="Go to UltraDrive"
               icon={<FaArrowRightLong />}
-              className="text-white bg-theme-orange hover:bg-transparent hover:text-theme-orange border-theme-orange w-fit mt-12"
+              className="text-white bg-theme-orange hover:bg-transparent hover:text-theme-orange border-theme-orange w-fit mt-8 2xl:mt-12"
             />
           </div>
         </div>
-        <div className="w-[44%]" data-aos="fade-in" data-aos-delay="100">
-          <img className="w-full h-full" src={driveImage} alt="" />
+        {/* Right */}
+        <div className="lg:w-[44%] hidden lg:block" data-aos="fade-in" data-aos-delay="100">
+          <figure className="w-full h-full">
+            <img className="w-full h-full object-cover" src={driveImage} alt="" />
+          </figure>
         </div>
       </div>
     </section>
