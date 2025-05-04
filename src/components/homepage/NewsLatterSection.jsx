@@ -28,11 +28,11 @@ const NewsLatterSection = () => {
             <input
               type="email"
               placeholder="youremail12@gmail.com"
-              className="py-3 3xl:py-6 px-3 md:px-5 3xl:px-7 w-full max-w-[430px] bg-white font-bold focus:outline-none rounded-tl-[10px] rounded-bl-[10px] 3xl:rounded-tl-[16px] 3xl:rounded-bl-[16px]"
+              className="py-2 md:py-3 3xl:py-6 px-3 md:px-5 3xl:px-7 w-full max-w-[430px] bg-white font-bold focus:outline-none rounded-tl-[10px] rounded-bl-[10px] 3xl:rounded-tl-[16px] 3xl:rounded-bl-[16px]"
             />
             <button
               type="button"
-              className="py-3 3xl:py-[19px] curso-pointer px-3 md:px-5 3xl:px-[83px] text-white bg-theme-orange md:text-[18px] font-medium md:font-bold rounded-tr-[10px] 3xl:rounded-tr-[16px] rounded-br-[10px] 3xl:rounded-br-[16px]"
+              className="py-2 md:py-3 3xl:py-[19px] curso-pointer px-3 md:px-5 3xl:px-[83px] text-white bg-theme-orange md:text-[18px] font-medium md:font-bold rounded-tr-[10px] 3xl:rounded-tr-[16px] rounded-br-[10px] 3xl:rounded-br-[16px]"
             >
               Subscribe
             </button>
