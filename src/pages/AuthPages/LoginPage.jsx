@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { LuKeyRound } from "react-icons/lu";
 import { MdOutlineMail } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AuthTitle from "../../components/authLayout/AuthTitle";
 import AuthBackButton from "../../components/authLayout/AuthBackButton";
 import { FaRegEye } from "react-icons/fa6";
@@ -9,7 +9,9 @@ import { useState } from "react";
 import { FaRegEyeSlash } from "react-icons/fa6";
 
 const LoginPage = () => {
-  const [passwordShow, setPasswordShow] = useState(false)
+  const navigate = useNavigate()
+  const [passwordShow, setPasswordShow] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -18,19 +20,22 @@ const LoginPage = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+    navigate('/auth/terms-condition')
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="flex items-center justify-end w-full mb-[90px]">
+      {/* Back btn */}
+      <div className="flex items-center justify-end w-full mb-16">
         <AuthBackButton />
       </div>
       <AuthTitle
         title="Log In"
         description="Please fill your information below"
       />
-      <div className="mt-10">
-        {/* auth-input-box  */}
+
+      <div className="mt-5 md:mt-7 2xl:mt-10">
+        {/* Email  */}
         <div className="auth-input-box">
           <div className="inner">
             <input
@@ -49,7 +54,7 @@ const LoginPage = () => {
             <p className="error-message">{errors.email.message}</p>
           )}
         </div>
-        {/* auth-input-box  */}
+        {/* Password  */}
         <div className="auth-input-box">
           <div className="inner">
             <input
@@ -66,29 +71,31 @@ const LoginPage = () => {
               <LuKeyRound />
             </p>
             <p className="eye-icon cursor-pointer" onClick={() => setPasswordShow(!passwordShow)}>
-            {
-              passwordShow ? <FaRegEyeSlash /> : <FaRegEye />
-            }
+              {
+                passwordShow ? <FaRegEyeSlash /> : <FaRegEye />
+              }
             </p>
           </div>
           {errors.password && (
             <p className="error-message">{errors.password.message}</p>
           )}
         </div>
+        {/* Forget Password Link */}
         <Link
-          to={"forgot-password"}
-          className="text-semibold text-theme-orange mt-4 inline-block font-semibold"
+          to='/auth/forgot-password'
+          className="text-theme-orange mt-3 md:mt-4 inline-block font-medium text-sm md:text-base md:font-semibold"
         >
           Forget Password ?
         </Link>
+        {/* Submit btn */}
         <button
           type="submit"
-          className="py-4 px-10 bg-theme-orange rounded-[8px] text-white hover:bg-transparent hover:text-theme-orange w-fit ml-auto mt-12 duration-200 ease-in-out border-[2px] border-theme-orange block font-semibold"
+          className="py-2 md:py-2.5 2xl:py-4 px-7 2xl:px-10 bg-theme-orange rounded-[8px] text-white hover:bg-transparent hover:text-theme-orange w-full md:w-fit ml-auto mt-6 md:mt-12 duration-200 ease-in-out border-[2px] border-theme-orange block font-medium md:font-semibold"
         >
           Login
         </button>
-        {/* register  */}
-        <div className="pt-10 mt-10 border-t border-default-border flex items-center justify-between">
+        {/* register area  */}
+        <div className="pt-4 md:pt-5 2xl:pt-10 mt-5 md:mt-7 2xl:mt-10 border-t border-default-border  text-sm md:text-base flex items-center justify-between">
           <p>Don’t have an account ?</p>
           <Link to={"/auth/signup"} className="text-theme-orange font-semibold">
             Register Now

@@ -4,7 +4,7 @@ import PrimaryButton from "../../common/PrimaryButton";
 
 const PlanCard = ({ item }) => {
   return (
-    <div className="h-full px-4 py-4 2xl:p-8 bg-plan-card rounded-[16px] border border-default-border relative lg:min-h-[500px] xl:min-h-[600px] flex flex-col">
+    <div className="h-full px-4 py-4 2xl:p-8 bg-plan-card rounded-[16px] border border-default-border relative 3xl:min-h-[500px] flex flex-col">
       <div className="flex flex-col grow-1">
         <div className="text-xl 3xl:text-[24px] text-black flex items-center font-bold mb-6">
           <span>£</span>
