@@ -107,7 +107,7 @@ body {
 }
 
 .plan-header {
-  @apply min-h-[180px] py-5 px-5 3xl:px-8 flex flex-col justify-center;
+  @apply py-4 md:py-5 xl:py-7 2xl:py-10 px-4 md:px-5 3xl:px-8 flex flex-col justify-center;
 }
 
 .plan-card {

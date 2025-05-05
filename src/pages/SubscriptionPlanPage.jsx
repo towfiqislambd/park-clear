@@ -1,11 +1,11 @@
 import React from 'react';
 import SubcriptionsPacksSection from '../components/subscriptionPlanPage/SubcriptionsPacksSection';
-import SubscriptionSection from '../components/homepage/SubscriptionSection';
+import CarWashCoupon from '@/components/subscriptionPlanPage/CarWashCoupon';
 const SubscriptionPlanPage = () => {
   return (
     <>
       <SubcriptionsPacksSection />
-      <SubscriptionSection />
+      <CarWashCoupon />
     </>
   );
 };
