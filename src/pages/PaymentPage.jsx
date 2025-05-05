@@ -10,7 +10,7 @@ const PaymentPage = () => {
       <PaymentHero />
       <UltradriveStoreSection />
       <SmartSolutionSection />
-      <NewsLatterSection />
+      < NewsLatterSection />
     </>
   );
 };
