@@ -1,4 +1,6 @@
 import PrimaryButton from "../common/PrimaryButton";
+import 'react-tooltip/dist/react-tooltip.css';
+import { Tooltip } from 'react-tooltip';
 import { CheckSvg, CrossSvg, TooltipSvg } from "../svg-container/SvgContainer";
 
 const plans = [
@@ -39,11 +41,11 @@ const features = [
   },
   {
     name: 'Basic Route Planner',
-    tooltip: 'TripSaver+: Fuel savings made smarter - TripSaver finds you the cheapest nearby petrol or diesel and helps you track your actual fuel spend over time. Just upload your fuel receipts and tell us your mileage — we’ll do the rest.'
+    tooltip: 'TripSaver+: Fuel savings made smarter - TripSaver finds you the cheapest nearby petrol or diesel and helps you track your actual fuel spend over time. Just upload your fuel receipts and tell us your mileage — we’ll do the rest.'
   },
   {
     name: "Basic Parking Ticket Support Service",
-    tooltip: "Parking Ticket Support Service: We handle the stress, so you don’t have to. Got a pile of PCNs? We can help consolidate, manage the appeals process, and track down lost PCNs from start to finish — on your behalf ***"
+    tooltip: "Parking Ticket Support Service: We handle the stress, so you don’t have to. Got a pile of PCNs? We can help consolidate, manage the appeals process, and track down lost PCNs from start to finish — on your behalf."
   },
   {
     name: 'Cheapest Petrol stations near you',
@@ -63,7 +65,7 @@ const features = [
   },
   {
     name: 'Roadside and Home Breakdown Cover',
-    tooltip: 'Roadside & Home Breakdown Cover: - We’ve got you covered – wherever you are. Whether your car won’t start in the driveway or breaks down miles from home, our partners Breakdown Cover gets you moving again. Fast response, no fuss.'
+    tooltip: 'Roadside & Home Breakdown Cover: We’ve got you covered – wherever you are. Whether your car won’t start in the driveway or breaks down miles from home, our partners Breakdown Cover gets you moving again. Fast response, no fuss.'
   },
   {
     name: 'New Car Support Service',
@@ -89,15 +91,15 @@ const PricingPlans = () => {
             <thead>
               <tr className="text-gray-800 align-top border-b border-gray-200">
                 <th className="p-4 text-left align-top w-[260px] max-w-[280px] border-r border-gray-200 break-words">
-                  <h3 className="text-dark-blue text-lg font-semibold leading-snug">Compare plans</h3>
-                  <p className="text-text-gray text-sm leading-snug">
+                  <h3 className="text-dark-blue text-xl font-semibold leading-snug">Compare plans</h3>
+                  <p className="text-text-gray text-sm leading-snug !font-medium mt-2">
                     Choose your workspace plan according to your organizational plan
                   </p>
                 </th>
                 {plans.map((plan, idx) => (
                   <th
                     key={idx}
-                    className="p-4 text-center align-top border-l border-gray-200 first:border-l-0 text-nowrap"
+                    className="px-5 text-center align-top border-l border-gray-200 first:border-l-0 text-nowrap"
                   >
                     <div className="plan-header">
                       <h3 className="text-2xl 3xl:text-[40px] font-bold text-center capitalize">
@@ -123,33 +125,46 @@ const PricingPlans = () => {
 
             {/* Table Body */}
             <tbody>
-              {features.map((feature, featureIdx) => (
-                <tr key={featureIdx} className="border-t border-gray-200 text-nowrap">
-                  <td className="p-4 font-medium text-gray-700 flex items-center gap-3 border-r border-gray-200 justify-between">
-                    {feature.name}
-                    {feature.tooltip && (
-                      <p
-                        className="text-gray-400 text-sm"
-                        title={feature.tooltip}
-                      >
-                        <TooltipSvg />
-                      </p>
-                    )}
-                  </td>
-                  {plans.map((plan, planIdx) => (
-                    <td
-                      key={planIdx}
-                      className="p-4 text-center border-l border-gray-200 first:border-l-0"
-                    >
-                      {plan.features[featureIdx] ? (
-                        <p className="grid place-items-center"><CheckSvg /></p>
-                      ) : (
-                        <p className="grid place-items-center"><CrossSvg /></p>
+              {features.map((feature, featureIdx) => {
+                const tooltipId = `tooltip-${featureIdx}`;
+                return (
+                  <tr key={featureIdx} className="border-t border-gray-200 text-nowrap">
+                    <td className="p-5 font-medium text-gray-700 flex items-center gap-3 border-r border-gray-200 justify-between">
+                      {feature.name}
+                      {feature.tooltip && (
+                        <>
+                          <p
+                            data-tooltip-id={tooltipId}
+                            data-tooltip-content={feature.tooltip}
+                            className="cursor-pointer"
+                          >
+                            <TooltipSvg />
+                          </p>
+                          <Tooltip
+                            id={tooltipId}
+                            place="top"
+                            className="!max-w-[280px] !bg-white !text-gray-800 border !rounded-md shadow-xl whitespace-normal text-sm !z-[9999] !opacity-100"
+                          />
+
+                        </>
                       )}
                     </td>
-                  ))}
-                </tr>
-              ))}
+
+                    {plans.map((plan, planIdx) => (
+                      <td
+                        key={planIdx}
+                        className="p-5 text-center border-l border-gray-200 first:border-l-0"
+                      >
+                        {plan.features[featureIdx] ? (
+                          <p className="grid place-items-center"><CheckSvg /></p>
+                        ) : (
+                          <p className="grid place-items-center"><CrossSvg /></p>
+                        )}
+                      </td>
+                    ))}
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
