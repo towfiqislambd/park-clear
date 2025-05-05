@@ -1,19 +1,20 @@
 import { Controller, useForm } from "react-hook-form";
 import OtpInput from "react-otp-input";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import AuthBackButton from "../../components/authLayout/AuthBackButton";
 import AuthTitle from "../../components/authLayout/AuthTitle";
 import CountdownTimer from "../../components/common/CountdownTimer";
 
 const VerifyOtpPage = () => {
+  const navigate = useNavigate()
   const {
-    // register,
     handleSubmit,
     control,
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
     console.log(data);
+    navigate('/auth/reset-password')
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

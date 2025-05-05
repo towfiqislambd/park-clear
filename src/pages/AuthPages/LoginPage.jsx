@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { LuKeyRound } from "react-icons/lu";
 import { MdOutlineMail } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AuthTitle from "../../components/authLayout/AuthTitle";
 import AuthBackButton from "../../components/authLayout/AuthBackButton";
 import { FaRegEye } from "react-icons/fa6";
@@ -9,6 +9,7 @@ import { useState } from "react";
 import { FaRegEyeSlash } from "react-icons/fa6";
 
 const LoginPage = () => {
+  const navigate = useNavigate()
   const [passwordShow, setPasswordShow] = useState(false)
   const {
     register,
@@ -18,6 +19,7 @@ const LoginPage = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+    navigate('/auth/terms-condition')
   };
 
   return (
@@ -66,9 +68,9 @@ const LoginPage = () => {
               <LuKeyRound />
             </p>
             <p className="eye-icon cursor-pointer" onClick={() => setPasswordShow(!passwordShow)}>
-            {
-              passwordShow ? <FaRegEyeSlash /> : <FaRegEye />
-            }
+              {
+                passwordShow ? <FaRegEyeSlash /> : <FaRegEye />
+              }
             </p>
           </div>
           {errors.password && (
@@ -76,7 +78,7 @@ const LoginPage = () => {
           )}
         </div>
         <Link
-          to={"forgot-password"}
+          to='/auth/forgot-password'
           className="text-semibold text-theme-orange mt-4 inline-block font-semibold"
         >
           Forget Password ?

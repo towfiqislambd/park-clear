@@ -4,11 +4,12 @@ import { CiLocationOn } from "react-icons/ci";
 import { FaPhone, FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { LuKeyRound, LuUserRound } from "react-icons/lu";
 import { MdOutlineEmail } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import AuthBackButton from "../../components/authLayout/AuthBackButton";
 import AuthTitle from "../../components/authLayout/AuthTitle";
 
 const SignupPage = () => {
+  const navigate = useNavigate()
   const [passwordShow, setPasswordShow] = useState(false);
   const [confirmPasswordShow, setConfirmPasswordShow] = useState(false);
   const {
@@ -19,6 +20,7 @@ const SignupPage = () => {
   } = useForm();
 
   const onSubmit = (data) => {
+    navigate('/auth/terms-condition')
     console.log(data);
   };
 
@@ -147,7 +149,7 @@ const SignupPage = () => {
               name="confirm_password"
               placeholder="Confirm Password"
               {...register("confirm_password", {
-                required: "Please confirm your password.", 
+                required: "Please confirm your password.",
                 validate: (value) =>
                   value === watch("password") || "Passwords do not match",
               })}

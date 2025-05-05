@@ -19,6 +19,8 @@ import PaymentPage from "../pages/PaymentPage";
 import ErrorPage from './../pages/ErrorPages/ErrorPage';
 import VirtualAssistant from "@/pages/DashboardPages/VirtualAssistant";
 import DriverKnowledge from "@/pages/DriverKnowledge";
+import ForgetPassword from "@/pages/AuthPages/ForgetPassword";
+import ResetPassword from "@/pages/AuthPages/ResetPassword";
 
 const router = createBrowserRouter([
 
@@ -59,8 +61,10 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { path: "login", element: <LoginPage /> },
-      { path: "verify-otp", element: <VerifyOtpPage /> },
       { path: "signup", element: <SignupPage /> },
+      { path: "forgot-password", element: <ForgetPassword /> },
+      { path: "verify-otp", element: <VerifyOtpPage /> },
+      { path: "reset-password", element: <ResetPassword /> },
       { path: "terms-condition", element: <TermsPage /> },
     ],
   },
