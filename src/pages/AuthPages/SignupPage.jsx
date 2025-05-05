@@ -26,15 +26,17 @@ const SignupPage = () => {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="flex items-center justify-end w-full mb-[90px]">
+      {/* Back btn */}
+      <div className="flex items-center justify-end w-full mb-12 4xl:mb-16">
         <AuthBackButton />
       </div>
       <AuthTitle
         title="Create Account"
         description="Please fill your information below"
       />
-      <div className="mt-10">
-        {/* auth-input-box  */}
+
+      <div className="mt-5 md:mt-7 2xl:mt-10">
+        {/* Name  */}
         <div className="auth-input-box">
           <div className="inner">
             <input
@@ -53,7 +55,7 @@ const SignupPage = () => {
             <p className="error-message">{errors.name.message}</p>
           )}
         </div>
-        {/* auth-input-box  */}
+        {/* Phone Number  */}
         <div className="auth-input-box">
           <div className="inner">
             <input
@@ -72,7 +74,7 @@ const SignupPage = () => {
             <p className="error-message">{errors.phone.message}</p>
           )}
         </div>
-        {/* auth-input-box  */}
+        {/* Address  */}
         <div className="auth-input-box">
           <div className="inner">
             <input
@@ -93,7 +95,7 @@ const SignupPage = () => {
             <p className="error-message">{errors.address.message}</p>
           )}
         </div>
-        {/* auth-input-box  */}
+        {/* Email  */}
         <div className="auth-input-box">
           <div className="inner">
             <input
@@ -113,7 +115,7 @@ const SignupPage = () => {
           )}
         </div>
 
-        {/* auth-input-box  */}
+        {/* Password  */}
         <div className="auth-input-box">
           <div className="inner">
             <input
@@ -140,7 +142,7 @@ const SignupPage = () => {
             <p className="error-message">{errors.password.message}</p>
           )}
         </div>
-        {/* auth-input-box  */}
+        {/* Confirm Password  */}
         <div className="auth-input-box">
           <div className="inner">
             <input
@@ -169,14 +171,15 @@ const SignupPage = () => {
             <p className="error-message">{errors.confirm_password.message}</p>
           )}
         </div>
+        {/* Submit btn */}
         <button
           type="submit"
-          className="py-4 px-10 bg-theme-orange rounded-[8px] text-white hover:bg-transparent hover:text-theme-orange w-fit ml-auto mt-12 duration-200 ease-in-out border-[2px] border-theme-orange block font-semibold"
+          className="py-2 md:py-2.5 2xl:py-4 px-7 2xl:px-10 bg-theme-orange rounded-[8px] text-white hover:bg-transparent hover:text-theme-orange w-full md:w-fit ml-auto mt-6 md:mt-12 duration-200 ease-in-out border-[2px] border-theme-orange block font-medium md:font-semibold"
         >
           Signup
         </button>
-        {/* register  */}
-        <div className="pt-10 mt-10 border-t border-default-border flex items-center justify-between">
+        {/* register area  */}
+        <div className="pt-4 md:pt-5 2xl:pt-10 mt-5 md:mt-7 2xl:mt-10 border-t border-default-border  text-sm md:text-base flex items-center justify-between">
           <p>Already have an account ?</p>
           <Link to={"/auth/login"} className="text-theme-orange font-semibold">
             Log In Now

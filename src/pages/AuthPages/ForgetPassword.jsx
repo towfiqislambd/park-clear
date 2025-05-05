@@ -19,6 +19,7 @@ const ForgetPassword = () => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
+            {/* Back btn */}
             <div className="flex items-center justify-end w-full mb-[90px]">
                 <AuthBackButton />
             </div>
@@ -26,7 +27,7 @@ const ForgetPassword = () => {
                 title="Verify Your Account"
                 description="Please fill your information below"
             />
-            <div className="mt-10">
+            <div className="mt-5 md:mt-7 2xl:mt-10">
                 {/* Email  */}
                 <div className="auth-input-box">
                     <div className="inner">
@@ -48,7 +49,7 @@ const ForgetPassword = () => {
                 </div>
                 <button
                     type="submit"
-                    className="py-4 px-10 bg-theme-orange rounded-[8px] text-white hover:bg-transparent hover:text-theme-orange w-fit ml-auto mt-12 duration-200 ease-in-out border-[2px] border-theme-orange block font-semibold"
+                    className="py-2 md:py-2.5 2xl:py-4 px-7 2xl:px-10 bg-theme-orange rounded-[8px] text-white hover:bg-transparent hover:text-theme-orange w-full md:w-fit ml-auto mt-6 md:mt-12 duration-200 ease-in-out border-[2px] border-theme-orange block font-medium md:font-semibold"
                 >
                     Next
                 </button>
