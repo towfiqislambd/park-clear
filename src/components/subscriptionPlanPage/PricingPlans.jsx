@@ -1,4 +1,5 @@
 import PrimaryButton from "../common/PrimaryButton";
+import { CheckSvg, CrossSvg, TooltipSvg } from "../svg-container/SvgContainer";
 
 const plans = [
   {
@@ -34,19 +35,48 @@ const plans = [
 const features = [
   {
     name: 'Full Ticket Tracker dashboard',
-    tooltip:
-      'Keep tabs on every ticket — effortlessly. Your central hub for tracking, managing, and appealing parking fines. See the status of each ticket at a glance.',
+    tooltip: 'TickeTracker: Keep tabs on every ticket — effortlessly. Your central hub for tracking, managing, and appealing parking fines. See the status of each ticket at a glance, and never miss a deadline again. We’ll remind you when you need to pay to avoid your PCN increasing.'
   },
-  { name: 'Basic Route Planner' },
-  { name: 'Basic Parking Ticket Support Service' },
-  { name: 'Cheapest Petrol stations near you' },
-  { name: 'Free Parking Near Me' },
-  { name: 'Cost saver Route Planner' },
-  { name: 'Full Parking Ticket Support Service' },
-  { name: 'Roadside and Home Breakdown Cover' },
-  { name: 'New Car Support Service' },
-  { name: '15% off our ParkClear UltraDriver Store' },
-  { name: 'Discounted Carwashing' },
+  {
+    name: 'Basic Route Planner',
+    tooltip: 'TripSaver+: Fuel savings made smarter - TripSaver finds you the cheapest nearby petrol or diesel and helps you track your actual fuel spend over time. Just upload your fuel receipts and tell us your mileage — we’ll do the rest.'
+  },
+  {
+    name: "Basic Parking Ticket Support Service",
+    tooltip: "Parking Ticket Support Service: We handle the stress, so you don’t have to. Got a pile of PCNs? We can help consolidate, manage the appeals process, and track down lost PCNs from start to finish — on your behalf ***"
+  },
+  {
+    name: 'Cheapest Petrol stations near you',
+    tooltip: ''
+  },
+  {
+    name: 'Free Parking Near Me',
+    tooltip: ''
+  },
+  {
+    name: 'Cost saver Route Planner',
+    tooltip: ''
+  },
+  {
+    name: 'Full Parking Ticket Support Service',
+    tooltip: ''
+  },
+  {
+    name: 'Roadside and Home Breakdown Cover',
+    tooltip: 'Roadside & Home Breakdown Cover: - We’ve got you covered – wherever you are. Whether your car won’t start in the driveway or breaks down miles from home, our partners Breakdown Cover gets you moving again. Fast response, no fuss.'
+  },
+  {
+    name: 'New Car Support Service',
+    tooltip: 'New Car Support Service: Buying a car? We’ll help you check it’s the right one. Before you commit, enter the vehicle registration. We’ll give you essential information such as MOT history, specifications and outstanding finance in real-time — we help you buy smarter, not just faster.'
+  },
+  {
+    name: '15% off our ParkClear UltraDriver Store',
+    tooltip: ''
+  },
+  {
+    name: 'Discounted Carwash',
+    tooltip: 'Car Wash Discounts: Keep it clean – for less. As a ParkClear Pro member, you get exclusive discounts from our trusted car washing partners across the UK. Whether you prefer a quick rinse or a full valet, we’ve got you covered.'
+  },
 ];
 
 const PricingPlans = () => {
@@ -55,12 +85,13 @@ const PricingPlans = () => {
       <div className="overflow-x-auto xs:overflow-x-scroll lg:overflow-x-visible">
         <div className="min-w-[900px] lg:min-w-full border rounded-xl overflow-hidden">
           <table className="w-full table-auto text-left text-sm border-collapse">
+            {/* Table Header */}
             <thead>
               <tr className="text-gray-800 align-top border-b border-gray-200">
                 <th className="p-4 text-left align-top w-[260px] max-w-[280px] border-r border-gray-200 break-words">
                   <h3 className="text-dark-blue text-lg font-semibold leading-snug">Compare plans</h3>
                   <p className="text-text-gray text-sm leading-snug">
-                    Choose your workspace plan according to your organisational plan
+                    Choose your workspace plan according to your organizational plan
                   </p>
                 </th>
                 {plans.map((plan, idx) => (
@@ -79,8 +110,8 @@ const PricingPlans = () => {
                         <PrimaryButton
                           text={plan.price === 'Free' ? 'Active Now' : 'Choose This Plan'}
                           className={`!text-xs 3xl:text-sm justify-center mt-5 3xl:mt-7 ${plan.price === 'Free'
-                              ? 'border-[#6AD167] bg-transparent text-[#6AD167]'
-                              : 'bg-theme-orange text-white hover:bg-transparent border-theme-orange hover:text-theme-orange'
+                            ? 'border-[#6AD167] bg-transparent text-[#6AD167]'
+                            : 'bg-theme-orange text-white hover:bg-transparent border-theme-orange hover:text-theme-orange'
                             }`}
                         />
                       )}
@@ -90,18 +121,19 @@ const PricingPlans = () => {
               </tr>
             </thead>
 
+            {/* Table Body */}
             <tbody>
               {features.map((feature, featureIdx) => (
                 <tr key={featureIdx} className="border-t border-gray-200 text-nowrap">
-                  <td className="p-4 font-medium text-gray-700 flex items-center gap-1 border-r border-gray-200">
+                  <td className="p-4 font-medium text-gray-700 flex items-center gap-3 border-r border-gray-200 justify-between">
                     {feature.name}
                     {feature.tooltip && (
-                      <span
-                        className="text-gray-400 cursor-help text-xs"
+                      <p
+                        className="text-gray-400 text-sm"
                         title={feature.tooltip}
                       >
-                        ⓘ
-                      </span>
+                        <TooltipSvg />
+                      </p>
                     )}
                   </td>
                   {plans.map((plan, planIdx) => (
@@ -110,9 +142,9 @@ const PricingPlans = () => {
                       className="p-4 text-center border-l border-gray-200 first:border-l-0"
                     >
                       {plan.features[featureIdx] ? (
-                        <span className="text-green-500 text-lg">✔️</span>
+                        <p className="grid place-items-center"><CheckSvg /></p>
                       ) : (
-                        <span className="text-red-500 text-lg">❌</span>
+                        <p className="grid place-items-center"><CrossSvg /></p>
                       )}
                     </td>
                   ))}
