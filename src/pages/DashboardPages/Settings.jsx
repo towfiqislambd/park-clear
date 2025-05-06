@@ -4,6 +4,7 @@ import EditProfile from "@/components/dashboard-pages/dashboard-setttings/EditPr
 import { useTheme } from "@/components/ThemeProvider/ThemeProvider";
 import { useState } from "react";
 
+
 const Settings = () => {
   const { theme, handleThemeChange } = useTheme();
   const [changePassword, setChangePassword] = useState(false);

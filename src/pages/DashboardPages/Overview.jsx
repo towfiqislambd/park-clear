@@ -7,16 +7,16 @@ import ParkingTicketTable from './../../components/dashboard-pages/dashboard-ove
 
 const Overview = () => {
     return (
-        <div>
+        <>
             <DashboardHeader title='TickeTracker Dashboard' />
             <OverviewCards />
-            <div className="grid grid-cols-12 gap-10 mt-10">
-                <div className="col-span-4"><UploadYourTicket /></div>
-                <div className="col-span-8"><PenaltyChargeNotice /></div>
+            <div className="grid xl:grid-cols-12 gap-5 md:gap-10 xl:gap-5 3xl:gap-10 mt-5 md:mt-10">
+                <div className="xl:col-span-4"><UploadYourTicket /></div>
+                <div className="xl:col-span-8"><PenaltyChargeNotice /></div>
             </div>
             <ParkingTicketTable />
             <AppealDataTable />
-        </div>
+        </>
     );
 };
 

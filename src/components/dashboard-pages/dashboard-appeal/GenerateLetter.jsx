@@ -4,8 +4,8 @@ const GenerateLetter = () => {
   return (
     <div>
       <DashboardHeader title="Appeal" />
-      <div className="mt-5 border border-default-border p-10 rounded-lg bg-white dark:bg-black dark:border-border-gray max-w-[1550px] mx-auto">
-        <p>
+      <div className="mt-5 border border-default-border p-4 md:p-5 3xl:p-7 4xl:p-10 rounded-lg bg-white dark:bg-black dark:border-border-gray max-w-[1550px] mx-auto">
+        <p className="text-sm md:text-base">
           Subject: Appeal Against Penalty Charge Notice
           <br />
           Dear Sir/Madam,
@@ -31,11 +31,11 @@ const GenerateLetter = () => {
         </p>
       </div>
 
-      <div className="flex justify-end gap-5 items-center mt-10">
-        <button className="font-medium text-lg px-4 py-3  border border-sidebar-card-headingOne bg-transparent rounded-lg text-sidebar-card-headingOne cursor-pointer transition-all duration-500 hover:bg-sidebar-card-headingOne hover:text-white">
+      <div className="flex flex-col md:flex-row justify-end gap-3 4xl:gap-5 items-center mt-10">
+        <button className="font-medium md:text-lg px-4 py-2 4xl:py-3  border border-sidebar-card-headingOne bg-transparent rounded-lg text-sidebar-card-headingOne cursor-pointer transition-all duration-500 hover:bg-sidebar-card-headingOne hover:text-white">
           Submit this appeal through website
         </button>
-        <button className="font-medium text-lg px-4 py-3 bg-sidebar-card-headingOne border border-sidebar-card-headingOne rounded-lg text-white cursor-pointer transition-all duration-500 hover:bg-transparent hover:text-sidebar-card-headingOne">
+        <button className="font-medium md:text-lg px-4 py-2 4xl:py-3 bg-sidebar-card-headingOne border border-sidebar-card-headingOne rounded-lg text-white cursor-pointer transition-all duration-500 hover:bg-transparent hover:text-sidebar-card-headingOne">
           Submit this appeal with parkclear
         </button>
       </div>

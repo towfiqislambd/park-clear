@@ -13,19 +13,19 @@ const LogoutModal = ({ open, onOpenChange }) => {
                         <QuestionSvg />
                     </div>
                     <h3 className="text-2xl pt-5 pb-4 font-bold text-dashboard-common-heading dark:text-white">Sign Out</h3>
-                    <p className="text-sidebar-card-desc max-w-[350px] mx-auto mb-10 dark:text-gray-200">Are you sure you want to log out</p>
+                    <p className="text-sidebar-card-desc max-w-[350px] mx-auto mb-6 2xl:mb-10 dark:text-gray-200">Are you sure you want to log out</p>
 
-                    <div className="flex justify-center items-center gap-4">
+                    <div className="flex justify-center items-center gap-3 2xl:gap-4">
                         {/* Signout btn */}
                         <button
-                            className="px-7 py-3.5 rounded-lg text-red-500 border border-red-500 font-medium cursor-pointer"
+                            className="px-3 2xl:px-7 py-2 2xl:py-3.5 rounded-[6px] 2xl:rounded-lg text-red-500 border border-red-500 font-medium cursor-pointer"
                             onClick={() => onOpenChange(false)}
                         >
                             Sing Out
                         </button>
                         {/* Cancel btn */}
                         <button
-                            className="px-7 py-3.5 rounded-lg bg-red-500 text-white font-medium cursor-pointer"
+                            className="px-5 2xl:px-7 py-2 2xl:py-3.5 rounded-[6px] 2xl:rounded-lg bg-red-500 text-white font-medium cursor-pointer"
                             onClick={() => onOpenChange(false)}
                         >
                             Cancel

@@ -161,8 +161,7 @@ export function DashboardOverviewCardOne() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="29"
-      height="29"
+      className="w-5 xl:w-[29px] h-5 xl:h-[29px]"
       viewBox="0 0 29 29"
       fill="none"
     >
@@ -195,8 +194,7 @@ export function DashboardOverviewCardTwo() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="29"
-      height="29"
+      className="w-5 xl:w-[29px] h-5 xl:h-[29px]"
       viewBox="0 0 29 29"
       fill="none"
     >
@@ -229,8 +227,7 @@ export function DashboardOverviewCardThree() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="29"
-      height="29"
+      className="w-5 xl:w-[29px] h-5 xl:h-[29px]"
       viewBox="0 0 29 29"
       fill="none"
     >
@@ -308,8 +305,7 @@ export function StripeSvg() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="33"
-      height="33"
+      className="w-[24px] md:w-[33px] h-[24px] md:h-[33px]"
       viewBox="0 0 48 48"
       fill="none"
     >

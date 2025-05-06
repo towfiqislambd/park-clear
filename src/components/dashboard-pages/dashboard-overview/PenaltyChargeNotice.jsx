@@ -28,7 +28,7 @@ const PenaltyChargeNotice = () => {
   return (
     <div>
       {/* Title */}
-      <h3 className="mb-5 text-dashboard-common-heading dark:text-white text-xl font-semibold">
+      <h3 className="mb-3 md:mb-5 text-dashboard-common-heading dark:text-white text-lg md:text-xl font-semibold">
         Penalty Charge Notice
       </h3>
 
