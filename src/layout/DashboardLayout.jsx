@@ -41,11 +41,11 @@ const DashboardLayout = () => {
   return (
     <section className="h-screen flex flex-col">
       {/* Header */}
-      <header className="2xl:hidden py-1 px-10 border-b fixed h-[70px] xl:h-[80px] w-full left-0 top-0 z-50">
+      <header className="2xl:hidden py-1 px-5 md:px-10 border-b fixed h-[70px] xl:h-[80px] w-full left-0 top-0 z-50">
         <nav className="w-full h-full flex justify-between items-center">
           {/* Logo */}
           <Link to="/">
-            <figure className="w-[150px]">
+            <figure className="w-[135px] md:w-[150px]">
               <img src={logo} alt="logo" className="object-cover w-full" />
             </figure>
           </Link>
@@ -185,14 +185,14 @@ const DashboardLayout = () => {
         </Link>
 
         {/* Navigation Links */}
-        <ul className="space-y-5 xl:space-y-6 mt-7">
+        <ul className="space-y-4 md:space-y-5 xl:space-y-6 mt-7">
           {navItems.map(({ to, label, Icon }) => (
             <li key={to}>
               <NavLink
                 onClick={() => setOpen(false)}
                 to={to}
                 className={({ isActive }) =>
-                  `flex gap-2  items-center w-full xl:text-[17px] font-medium py-2.5 px-3 4xl:px-4 rounded transition-all duration-300 ease-in-out ${isActive
+                  `flex gap-2 items-center w-full xl:text-[17px] font-medium py-2 md:py-2.5 px-3 4xl:px-4 rounded transition-all duration-300 ease-in-out ${isActive
                     ? "bg-theme-orange text-white"
                     : "text-menu-color dark:text-white dark:hover:bg-gray-800 hover:bg-gray-100 hover:shadow"
                   }`

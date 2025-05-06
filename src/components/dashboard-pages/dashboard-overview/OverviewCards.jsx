@@ -30,7 +30,7 @@ const overviewCardData = [
 
 const OverviewCards = () => {
   return (
-    <section className="grid grid-cols-3 gap-5 mt-5">
+    <section className="grid lg:grid-cols-3 gap-5 mt-5">
       {overviewCardData?.map((data) => (
         <div
           key={data?.id}

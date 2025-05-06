@@ -29,7 +29,7 @@ const DefaultSettings = ({ setChangePassword, setEditProfile, theme, handleTheme
       {/* Profile Overview */}
       <div className="flex justify-between items-end px-5 py-4 mt-5 mb-10 rounded-xl bg-white dark:bg-black border border-default-border dark:border-border-gray">
         {/* Left */}
-        <div className="flex gap-5">
+        <div className="flex flex-col lg:flex-row gap-5">
           <figure className="w-[170px] xl:w-[190px] h-[160px] xl:h-[180px] rounded-lg">
             <img
               src={profile_img}
@@ -61,7 +61,7 @@ const DefaultSettings = ({ setChangePassword, setEditProfile, theme, handleTheme
         </button>
       </div>
 
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid lg:grid-cols-2 gap-5">
         {/* Appearance */}
         <div>
           <h3 className="text-xl xl:text-2xl mb-3 xl:mb-5 text-dashboard-common-heading dark:text-white font-medium">
@@ -138,7 +138,7 @@ const DefaultSettings = ({ setChangePassword, setEditProfile, theme, handleTheme
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-5 mt-7">
+      <div className="grid xl:grid-cols-2 gap-5 mt-7">
         {/* Security  */}
         <div>
           <h3 className="text-xl xl:text-2xl mb-3 xl:mb-5 text-dashboard-common-heading dark:text-white font-medium">
@@ -175,7 +175,7 @@ const DefaultSettings = ({ setChangePassword, setEditProfile, theme, handleTheme
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-5 mt-7">
+      <div className="grid xl:grid-cols-2 gap-5 mt-7">
         {/* Our Policies */}
         <div>
           <h3 className="text-xl xl:text-2xl mb-3 xl:mb-5 text-dashboard-common-heading dark:text-white font-medium">
