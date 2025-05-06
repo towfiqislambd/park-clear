@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { CameraSvg, ChooseFileSvg, UploadSvg } from "../../svg-container/SvgContainer";
+import { CameraSvg, UploadSvg } from "../../svg-container/SvgContainer";
 import FixedPenaltNoticeModal from "@/components/modals/FixedPenaltNoticeModal";
 
 const UploadYourTicket = () => {
@@ -103,16 +103,17 @@ const UploadYourTicket = () => {
       </h3>
 
       {ticketSection ? (
+
         // Upload Automatically
         <div className="flex gap-5">
           {/* Take Picture */}
           <div className="w-full flex-1">
             <div
               onClick={handleTakePictureClick}
-              className="block border border-dashed w-full h-[220px] flex justify-center flex-col items-center gap-4 border-default-border rounded-xl cursor-pointer border-2"
+              className="block border border-dashed w-full h-[170px] 4xl:h-[220px] flex justify-center flex-col items-center gap-4 border-default-border rounded-xl cursor-pointer border-2"
             >
               <CameraSvg />
-              <p className="text-black text-lg dark:text-white">Take Picture</p>
+              <p className="text-black font-medium 4xl:text-lg dark:text-white">Take Picture</p>
             </div>
             <input
               type="file"
@@ -123,20 +124,20 @@ const UploadYourTicket = () => {
               ref={cameraInputRef}
               onChange={handleFileChange}
             />
-            <p className="text-upload-box mt-3 dark:text-white">
+            <p className="text-upload-box mt-3 dark:text-white text-sm 4xl:text-base">
               Supported Format:
             </p>
-            <p className="text-upload-box dark:text-white ">PNG, JPEG</p>
+            <p className="text-upload-box dark:text-white  text-sm 4xl:text-base">PNG, JPEG</p>
           </div>
 
           {/* Choose File */}
           <div className="w-full flex-1">
             <div
               onClick={handleFileInputClick}
-              className="block border border-dashed w-full h-[220px] flex justify-center flex-col items-center gap-4 border-default-border rounded-xl cursor-pointer border-2"
+              className="block border border-dashed w-full h-[170px] 4xl:h-[220px] flex justify-center flex-col items-center gap-4 border-default-border rounded-xl cursor-pointer border-2"
             >
               <UploadSvg />
-              <p className="text-black text-lg dark:text-white">Upload File</p>
+              <p className="text-black font-medium 4xl:text-lg dark:text-white">Upload File</p>
             </div>
             <input
               type="file"
@@ -146,42 +147,42 @@ const UploadYourTicket = () => {
               ref={fileInputRef}
               onChange={handleFileChange}
             />
-            <p className="text-upload-box mt-3 text-right dark:text-white">
+            <p className="text-upload-box mt-3 text-right dark:text-white text-sm 4xl:text-base">
               Maximum Size 25 mb
             </p>
           </div>
         </div>
       ) : (
         // Upload Manually
-        <div className="space-y-5">
+        <div className="space-y-4 4xl:space-y-5">
           {!expandField ? (
             <>
               <input
                 type="text"
                 placeholder="PCN Number"
-                className="block w-full px-5 py-4 rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black"
+                className="block w-full px-3 4xl:px-5 py-2.5 4xl:py-4 rounded-[6px] 4xl:rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black"
               />
               <input
                 type="text"
                 placeholder="Issue Date"
-                className="block w-full px-5 py-4 rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black"
+                className="block w-full px-3 4xl:px-5 py-2.5 4xl:py-4 rounded-[6px] 4xl:rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black"
               />
               <input
                 type="text"
                 placeholder="End Date"
-                className="block w-full px-5 py-4 rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black"
+                className="block w-full px-3 4xl:px-5 py-2.5 4xl:py-4 rounded-[6px] 4xl:rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black"
               />
               <input
                 type="text"
                 placeholder="Vehicle Registration"
-                className="block w-full px-5 py-4 rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black"
+                className="block w-full px-3 4xl:px-5 py-2.5 4xl:py-4 rounded-[6px] 4xl:rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black"
               />
             </>
           ) : (
             <>
               <div>
                 <select
-                  className="block w-full px-5 py-4 rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black"
+                  className="block w-full px-3 4xl:px-5 py-2.5 4xl:py-4 rounded-[6px] 4xl:rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black"
                   onChange={handleChange}
                   value={selectedOption}
                 >
@@ -205,17 +206,17 @@ const UploadYourTicket = () => {
               <input
                 type="text"
                 placeholder="Location"
-                className="block w-full px-5 py-4 rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black"
+                className="block w-full px-3 4xl:px-5 py-2.5 4xl:py-4 rounded-[6px] 4xl:rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black"
               />
               <input
                 type="text"
                 placeholder="End Date"
-                className="block w-full px-5 py-4 rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black"
+                className="block w-full px-3 4xl:px-5 py-2.5 4xl:py-4 rounded-[6px] 4xl:rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black"
               />
               <input
                 type="text"
                 placeholder="Authorities"
-                className="block w-full px-5 py-4 rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black"
+                className="block w-full px-3 4xl:px-5 py-2.5 4xl:py-4 rounded-[6px] 4xl:rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black"
               />
             </>
           )}
@@ -264,14 +265,14 @@ const UploadYourTicket = () => {
         {!expandField ? (
           <button
             onClick={handleUpload}
-            className="flex-1 py-[10px] rounded-lg border text-theme-orange border-theme-orange font-medium hover:bg-theme-orange hover:text-white transition-all duration-500 cursor-pointer"
+            className="flex-1 py-[10px] text-sm 4xl:text-base rounded-lg border text-theme-orange border-theme-orange font-medium hover:bg-theme-orange hover:text-white transition-all duration-500 cursor-pointer"
           >
             {ticketSection ? "Upload Manually" : "Upload Automatic"}
           </button>
         ) : (
           <button
             onClick={handleBack}
-            className="flex-1 py-[10px] rounded-lg border text-theme-orange border-theme-orange font-medium hover:bg-theme-orange hover:text-white transition-all duration-500 cursor-pointer"
+            className="flex-1 py-[10px] text-sm 4xl:text-base rounded-lg border text-theme-orange border-theme-orange font-medium hover:bg-theme-orange hover:text-white transition-all duration-500 cursor-pointer"
           >
             Back
           </button>
@@ -279,14 +280,14 @@ const UploadYourTicket = () => {
         {!expandField ? (
           <button
             onClick={handleExpand}
-            className="flex-1 py-[10px] rounded-lg border text-white border-theme-orange font-medium bg-theme-orange hover:bg-transparent hover:text-theme-orange transition-all duration-500 cursor-pointer"
+            className="flex-1 py-[10px] text-sm 4xl:text-base rounded-lg border text-white border-theme-orange font-medium bg-theme-orange hover:bg-transparent hover:text-theme-orange transition-all duration-500 cursor-pointer"
           >
             {ticketSection ? "Submit" : "Next"}
           </button>
         ) : (
           <button
             onClick={handleSubmit}
-            className="flex-1 py-[10px] rounded-lg border text-theme-orange border-theme-orange font-medium hover:bg-transparent bg-theme-orange hover:text-theme-orange text-white transition-all duration-500 cursor-pointer"
+            className="flex-1 py-[10px] text-sm 4xl:text-base rounded-lg border text-theme-orange border-theme-orange font-medium hover:bg-transparent bg-theme-orange hover:text-theme-orange text-white transition-all duration-500 cursor-pointer"
           >
             Submit
           </button>
