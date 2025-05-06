@@ -36,7 +36,7 @@ const DashboardLayout = () => {
   return (
     <section className="flex h-screen dark:bg-black ">
       {/* Sidebar */}
-      <aside className="!w-[320px] h-full p-7 border-r border-default-border dark:border-gray-700 overflow-y-auto scrollbar-hide">
+      <aside className="w-[290px] 4xl:!w-[320px] h-full p-5 4xl:p-7 border-r border-default-border dark:border-gray-700 overflow-y-auto scrollbar-hide">
         {/* Logo */}
         <Link to="/">
           <figure>
@@ -51,7 +51,7 @@ const DashboardLayout = () => {
               <NavLink
                 to={to}
                 className={({ isActive }) =>
-                  `flex gap-2  items-center w-full text-[17px] font-medium py-2.5 px-4 rounded transition-all duration-300 ease-in-out ${isActive
+                  `flex gap-2  items-center w-full text-[17px] font-medium py-2.5 px-3 4xl:px-4 rounded transition-all duration-300 ease-in-out ${isActive
                     ? "bg-theme-orange text-white"
                     : "text-menu-color dark:text-white dark:hover:bg-gray-800 hover:bg-gray-100 hover:shadow"
                   }`
@@ -69,7 +69,7 @@ const DashboardLayout = () => {
         </ul>
 
         {/* Sidebar Cards */}
-        <section className="space-y-9 mt-10">
+        <section className="space-y-6 4xl:space-y-9 mt-10">
           {/* Card 1 */}
           <div
             style={{
@@ -78,7 +78,7 @@ const DashboardLayout = () => {
               backgroundPosition: "center",
               backgroundSize: "cover",
             }}
-            className="text-center h-[341.618px] flex flex-col justify-center items-center"
+            className="text-center h-[341.618px] flex flex-col justify-center items-center rounded-xl"
           >
             <img src={sideLogoOne} alt="logo" className="" />
             <h3 className="text-white text-xl py-2 font-semibold">
@@ -96,16 +96,16 @@ const DashboardLayout = () => {
           {/* Card 2 */}
           <div className="text-center border border-default-border py-7 px-7 rounded-xl">
             <img src={sideLogoTwo} alt="logo" className="mx-auto" />
-            <h3 className="text-2xl text-dashboard-common-heading dark:text-white py-3 font-bold">
+            <h3 className="text-xl 4xl:text-2xl text-dashboard-common-heading dark:text-white py-3 font-bold">
               Car Screen Wash Coupon
             </h3>
             <p className="text-sidebar-card-desc mb-5 dark:text-gray-300">
               If you subscribe today you will get a free 10L of car screen wash{" "}
             </p>
-            <h4 className="text-sidebar-card-headingOne text-2xl font-bold mb-2.5">
+            <h4 className="text-sidebar-card-headingOne text-xl 4xl:text-2xl font-bold mb-2 4xl:mb-2.5">
               12:54:00
             </h4>
-            <h4 className="text-sidebar-card-headingTwo text-2xl font-bold">
+            <h4 className="text-sidebar-card-headingTwo text-xl 4xl:text-2xl font-bold">
               Activated
             </h4>
           </div>
@@ -118,7 +118,7 @@ const DashboardLayout = () => {
               backgroundPosition: "center",
               backgroundSize: "cover",
             }}
-            className="text-center h-[341.618px] flex flex-col justify-center items-center"
+            className="text-center h-[341.618px] flex flex-col justify-center items-center rounded-xl"
           >
             <img src={sideLogoOne} alt="logo" className="" />
             <h3 className="text-white text-xl py-2 font-semibold">

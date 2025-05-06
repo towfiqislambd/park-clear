@@ -42,8 +42,8 @@ const OverviewCards = () => {
           <p className="text-dashboard-common-heading dark:text-white text-sm">
             {data?.sub_title}
           </p>
-          <div className="flex justify-between items-center mt-5">
-            <h3 className="text-dashboard-common-heading dark:text-white text-4xl font-bold">
+          <div className="flex justify-between items-center mt-3 4xl:mt-5">
+            <h3 className="text-dashboard-common-heading dark:text-white text-3xl 4xl:text-4xl font-bold">
               ${data?.amount}
             </h3>
             <p className="bg-overview-card-bg w-14 h-14 rounded-full border border-default-border grid place-items-center">
