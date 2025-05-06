@@ -225,13 +225,13 @@ const UploadYourTicket = () => {
 
       {/* Error Message */}
       {cameraError && (
-        <p className="mt-4 text-red-500 font-medium">{cameraError}</p>
+        <p className="mt-2 3xl:mt-4 text-red-500 text-sm 3xl:text-base font-medium">{cameraError}</p>
       )}
 
       {/* File Preview */}
       {selectedFile && (
-        <div className="mt-4 bg-white shadow rounded-lg p-4 flex items-center justify-between">
-          <div className="flex items-center gap-4">
+        <div className="mt-4 bg-white shadow rounded-lg p-2 3xl:p-4 flex items-center justify-between">
+          <div className="flex items-center gap-3 3xl:gap-4">
             {previewUrl ? (
               <img
                 src={previewUrl}
@@ -244,7 +244,7 @@ const UploadYourTicket = () => {
               </div>
             )}
             <div>
-              <p className="font-medium dark:text-gray-700">{selectedFile.name}</p>
+              <p className="text-sm 3xl:text-base 3xl:font-medium dark:text-gray-700">{selectedFile.name}</p>
               <p className="text-sm text-gray-500">
                 {formatFileSize(selectedFile.size)}
               </p>
