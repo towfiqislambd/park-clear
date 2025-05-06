@@ -40,15 +40,15 @@ const DefaultAppeal = ({ setProceed, setAppeal }) => {
   return (
     <div>
       <DashboardHeader title="Appeal Management" />
-      <div className="grid xl:grid-cols-12 mt-10 gap-3 xl:gap-0">
+      <div className="grid xl:grid-cols-12 mt-5 md:mt-10 gap-3 xl:gap-0">
         {/* Left Side */}
         <div className="xl:col-span-6">
           {/* Appeal For */}
-          <div className="mb-7 xl:mb-10">
-            <h3 className="text-xl mb-3 xl:mb-4 font-semibold text-dashboard-common-heading dark:text-white">
+          <div className="mb-5 md:mb-7 xl:mb-10">
+            <h3 className="text-lg md:text-xl mb-2 md:mb-3 xl:mb-4 font-semibold text-dashboard-common-heading dark:text-white">
               Appeal For
             </h3>
-            <select className="block w-full px-3 3xl:px-5 py-2.5 3xl:py-4 rounded-lg border border-default-border  outline-none bg-white dark:bg-black dark:border-border-gray ">
+            <select className="block w-full px-3 3xl:px-5 py-2 md:py-2.5 3xl:py-4 rounded-lg border border-default-border  outline-none bg-white dark:bg-black dark:border-border-gray ">
               <option value="">Select PNC</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -58,14 +58,14 @@ const DefaultAppeal = ({ setProceed, setAppeal }) => {
           </div>
 
           {/* Upload Attachment */}
-          <div className="mb-10">
-            <h3 className="text-xl mb-4 font-semibold text-dashboard-common-heading dark:text-white">
+          <div className="mb-7 md:mb-10">
+            <h3 className="text-lg md:text-xl mb-4 font-semibold text-dashboard-common-heading dark:text-white">
               Submit Supporting Documents (Optional)
             </h3>
             <label htmlFor="uploadAttachment" className="w-full block">
-              <div className="block border border-dashed w-full h-[180px] 3xl:h-[220px] flex justify-center flex-col items-center gap-4 border-default-border rounded-xl cursor-pointer border-2">
+              <div className="block border border-dashed w-full h-[160px] md:h-[180px] 3xl:h-[220px] flex justify-center flex-col items-center gap-2.5 md:gap-4 border-default-border rounded-xl cursor-pointer border-2">
                 <ChooseFileSvg />
-                <p className="text-black text-lg dark:text-white">Upload attachment</p>
+                <p className="text-black md:text-lg dark:text-white">Upload attachment</p>
               </div>
               <input
                 type="file"
@@ -110,59 +110,59 @@ const DefaultAppeal = ({ setProceed, setAppeal }) => {
 
           {/* Description */}
           <div>
-            <h3 className="text-xl mb-4 font-semibold text-dashboard-common-heading dark:text-white ">
+            <h3 className="text-lg md:text-xl mb-3 md:mb-4 font-semibold text-dashboard-common-heading dark:text-white ">
               Tell Us Why You Want To Appeal
             </h3>
             <textarea
               placeholder="Your Opinion"
-              className="block w-full h-[230px] 3xl:h-[300px] 4xl:h-[350px] px-5 py-4 rounded-lg border border-default-border  dark:border-gray-700 outline-none bg-white dark:bg-black"
+              className="block w-full h-[180px] md:h-[230px] 3xl:h-[300px] 4xl:h-[350px] px-5 py-4 rounded-lg border border-default-border  dark:border-gray-700 outline-none bg-white dark:bg-black"
             ></textarea>
           </div>
         </div>
         <div className="xl:col-span-1"></div>
         {/* Right Side */}
         <div className="xl:col-span-5">
-          <div className="p-5 3xl:p-10 rounded-lg border border-default-border  dark:border-gray-700 bg-white dark:bg-black grid grid-cols-3 gap-x-5 gap-y-10 mb-5">
+          <div className="p-5 3xl:p-10 rounded-lg border border-default-border  dark:border-gray-700 bg-white dark:bg-black grid grid-cols-2 md:grid-cols-3 gap-x-3 md:gap-x-5 gap-y-5 md:gap-y-10 mb-5">
             <div>
-              <h3 className="text-dashboard-common-heading dark:text-white text-lg font-semibold mb-1">Issue Date:</h3>
+              <h3 className="text-dashboard-common-heading dark:text-white md:text-lg font-semibold mb-1">Issue Date:</h3>
               <p className="text-dashboard-common-heading dark:text-white text-sm">Data</p>
             </div>
             <div>
-              <h3 className="text-dashboard-common-heading dark:text-white text-lg font-semibold mb-1">PCN No:</h3>
+              <h3 className="text-dashboard-common-heading dark:text-white md:text-lg font-semibold mb-1">PCN No:</h3>
               <p className="text-dashboard-common-heading dark:text-white text-sm">Data</p>
             </div>
             <div>
-              <h3 className="text-dashboard-common-heading dark:text-white text-lg font-semibold mb-1">Location:</h3>
+              <h3 className="text-dashboard-common-heading dark:text-white md:text-lg font-semibold mb-1">Location:</h3>
               <p className="text-dashboard-common-heading dark:text-white text-sm">Data</p>
             </div>
             <div>
-              <h3 className="text-dashboard-common-heading dark:text-white text-lg font-semibold mb-1">Last Date:</h3>
+              <h3 className="text-dashboard-common-heading dark:text-white md:text-lg font-semibold mb-1">Last Date:</h3>
               <p className="text-dashboard-common-heading dark:text-white text-sm">Data</p>
             </div>
             <div>
-              <h3 className="text-dashboard-common-heading dark:text-white text-lg font-semibold mb-1">Car Model:</h3>
+              <h3 className="text-dashboard-common-heading dark:text-white md:text-lg font-semibold mb-1">Car Model:</h3>
               <p className="text-dashboard-common-heading dark:text-white text-sm">Data</p>
             </div>
           </div>
 
-          <div className="p-5 3xl:p-10 mb-5 xl:mb-10 rounded-lg border border-default-border dark:border-gray-700 bg-white dark:bg-black">
-            <h3 className="text-[22px] mb-2 font-semibold text-dashboard-common-heading dark:text-white">
+          <div className="p-3 md:p-5 3xl:p-10 mb-5 xl:mb-10 rounded-lg border border-default-border dark:border-gray-700 bg-white dark:bg-black">
+            <h3 className="text-lg md:text-[22px] mb-1 md:mb-2 font-semibold text-dashboard-common-heading dark:text-white">
               If You proceed with us
             </h3>
-            <h2 className="font-bold text-sidebar-card-headingOne text-3xl 3xl:text-4xl">$3.99</h2>
+            <h2 className="font-bold text-sidebar-card-headingOne text-2xl md:text-3xl 3xl:text-4xl">$3.99</h2>
           </div>
 
           {/* Btns */}
-          <div className="space-y-5">
+          <div className="space-y-3 md:space-y-5">
             <button
               onClick={() => setProceed(true)}
-              className="h-13 4xl:h-16 font-medium text-lg w-full block bg-sidebar-card-headingOne border border-sidebar-card-headingOne rounded-lg text-white cursor-pointer transition-all duration-500 hover:bg-transparent hover:text-sidebar-card-headingOne"
+              className="h-13 4xl:h-16 font-medium md:text-lg w-full block bg-sidebar-card-headingOne border border-sidebar-card-headingOne rounded-lg text-white cursor-pointer transition-all duration-500 hover:bg-transparent hover:text-sidebar-card-headingOne"
             >
               Proceed With ParkClear
             </button>
             <button
               onClick={() => setAppeal(true)}
-              className="h-13 4xl:h-16 border border-sidebar-card-headingOne font-medium text-lg w-full block text-sidebar-card-headingOne rounded-lg cursor-pointer transition-all duration-500 hover:bg-sidebar-card-headingOne hover:text-white"
+              className="h-13 4xl:h-16 border border-sidebar-card-headingOne font-medium md:text-lg w-full block text-sidebar-card-headingOne rounded-lg cursor-pointer transition-all duration-500 hover:bg-sidebar-card-headingOne hover:text-white"
             >
               Generate Appeal letter
             </button>

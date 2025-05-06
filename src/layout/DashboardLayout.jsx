@@ -161,7 +161,7 @@ const DashboardLayout = () => {
         </aside>
 
         {/* Main Content */}
-        <main className="bg-dashboard-outlet-bg dark:bg-black h-full overflow-y-auto p-5 xl:p-7 flex-grow">
+        <main className="bg-dashboard-outlet-bg dark:bg-black h-full overflow-y-auto p-3.5 md:p-5 xl:p-7 flex-grow">
           <Outlet />
         </main>
       </div>

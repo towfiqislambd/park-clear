@@ -1,11 +1,4 @@
 import { useState } from "react";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
 
 const AppealDataTable = () => {
   const [selectedRows, setSelectedRows] = useState([]);
@@ -24,12 +17,12 @@ const AppealDataTable = () => {
   };
 
   return (
-    <div className="mt-10">
-      <div className="flex justify-between items-center mb-7">
-        <h3 className="text-dashboard-common-heading dark:text-white text-xl font-semibold">
+    <div className="mt-7 md:mt-10">
+      <div className="flex flex-col md:flex-row gap-3 md:gap-0 justify-between items-center mb-7">
+        <h3 className="text-dashboard-common-heading dark:text-white text-lg md:text-xl font-semibold">
           Appeal Data
         </h3>
-        <button className="bg-theme-orange text-white px-3 xl:px-5 py-2 rounded-[6px] cursor-pointer">
+        <button className="bg-theme-orange text-white px-3 xl:px-5 py-1.5 md:py-2 rounded-[6px] cursor-pointer">
           Filter By Vehicle Number
         </button>
       </div>
@@ -38,43 +31,43 @@ const AppealDataTable = () => {
         <table className="w-full text-center text-dashboard-common-heading dark:text-white">
           <thead className="bg-white dark:bg-black rounded-lg dark:text-white text-dashboard-common-heading font-semibold">
             <tr className="text-nowrap">
-              <th className="px-5 py-5">Select</th>
-              <th className="px-3 py-5">Sl No</th>
-              <th className="px-3 py-5">PCN No</th>
-              <th className="px-3 py-5">
+              <th className="px-2 md:px-3 py-4 md:py-5">Select</th>
+              <th className="px-2 md:px-3 py-4 md:py-5">Sl No</th>
+              <th className="px-2 md:px-3 py-4 md:py-5">PCN No</th>
+              <th className="px-2 md:px-3 py-4 md:py-5">
                 <div className="flex items-center justify-center gap-1">
                   <span>Issue Date</span>
                   <span>⇅</span>
                 </div>
               </th>
-              <th className="px-3 py-5">
+              <th className="px-2 md:px-3 py-4 md:py-5">
                 <div className="flex items-center justify-center gap-1">
                   <span>Last Date</span>
                   <span>⇅</span>
                 </div>
               </th>
-              <th className="px-3 py-5">Authorities</th>
-              <th className="px-3 py-5">
+              <th className="px-2 md:px-3 py-4 md:py-5">Authorities</th>
+              <th className="px-2 md:px-3 py-4 md:py-5">
                 <div className="flex items-center justify-center gap-1">
                   <span>Charge</span>
                   <span>⇅</span>
                 </div>
               </th>
-              <th className="px-3 py-5">V.Reg</th>
-              <th className="px-3 py-5">
+              <th className="px-2 md:px-3 py-4 md:py-5">V.Reg</th>
+              <th className="px-2 md:px-3 py-4 md:py-5">
                 <div className="flex items-center justify-center gap-1">
                   <span>Status</span>
                   <span>⇅</span>
                 </div>
               </th>
-              <th className="px-5 py-5">Action</th>
+              <th className="px-2 md:px-3 py-4 md:py-5">Action</th>
             </tr>
           </thead>
 
           <tbody className="text-sm">
             {data.map((row) => (
               <tr key={row.id} className="border-b border-default-border text-nowrap">
-                <td className="px-3 py-5">
+                <td className="px-2 md:px-3 py-4 md:py-5">
                   <input
                     type="checkbox"
                     checked={selectedRows.includes(row.id)}
@@ -82,14 +75,14 @@ const AppealDataTable = () => {
                     className="w-4 h-4"
                   />
                 </td>
-                <td className="px-3 py-5">{row.id}</td>
-                <td className="px-3 py-5">Data</td>
-                <td className="px-3 py-5">Data</td>
-                <td className="px-3 py-5">Data</td>
-                <td className="px-3 py-5">Data</td>
-                <td className="px-3 py-5 font-medium">{row.charge}</td>
-                <td className="px-3 py-5">Data</td>
-                <td className="px-3 py-5">
+                <td className="px-2 md:px-3 py-4 md:py-5">{row.id}</td>
+                <td className="px-2 md:px-3 py-4 md:py-5">Data</td>
+                <td className="px-2 md:px-3 py-4 md:py-5">Data</td>
+                <td className="px-2 md:px-3 py-4 md:py-5">Data</td>
+                <td className="px-2 md:px-3 py-4 md:py-5">Data</td>
+                <td className="px-2 md:px-3 py-4 md:py-5 font-medium">{row.charge}</td>
+                <td className="px-2 md:px-3 py-4 md:py-5">Data</td>
+                <td className="px-2 md:px-3 py-4 md:py-5">
                   <span
                     className={`text-sm ${row.status !== "Appeal Rejected"
                       ? "text-dashboard-status"
@@ -99,7 +92,7 @@ const AppealDataTable = () => {
                     {row.status}
                   </span>
                 </td>
-                <td className="px-3 py-5">
+                <td className="px-2 md:px-3 py-4 md:py-5">
                   {row.status === "Appeal Accepted" ? (
                     <p>No Action Needed</p>
                   ) : (

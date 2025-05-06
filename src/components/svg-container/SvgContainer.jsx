@@ -305,8 +305,7 @@ export function StripeSvg() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="33"
-      height="33"
+      className="w-[24px] md:w-[33px] h-[24px] md:h-[33px]"
       viewBox="0 0 48 48"
       fill="none"
     >

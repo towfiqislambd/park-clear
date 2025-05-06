@@ -18,49 +18,49 @@ const ParkingTicketTable = () => {
 
   return (
     <div className="mt-10 mb-10">
-      <div className="flex justify-between items-center mb-7">
-        <h3 className="text-dashboard-common-heading dark:text-white text-xl font-semibold">
+      <div className="flex flex-col md:flex-row gap-3 md:gap-0 justify-between items-center mb-7">
+        <h3 className="text-dashboard-common-heading dark:text-white text-lg md:text-xl font-semibold">
           Parking Ticket Dashboard
         </h3>
-        <button className="bg-theme-orange text-white px-3 xl:px-5 py-2 rounded-[6px] cursor-pointer">
+        <button className="bg-theme-orange text-white px-3 xl:px-5 py-1.5 md:py-2 rounded-[6px] cursor-pointer">
           Filter By Vehicle Number
         </button>
       </div>
 
       <div className="overflow-x-auto">
         <table className="w-full text-center text-dashboard-common-heading dark:text-white">
-          <thead className="bg-white dark:bg-black dark:text-white rounded-lg text-dashboard-common-heading font-semibold">
+          <thead className="bg-white dark:bg-black dark:text-white rounded-lg text-dashboard-common-heading">
             <tr className="text-nowrap">
-              <th className="px-5 py-5">Select</th>
-              <th className="px-3 py-5">Sl No</th>
-              <th className="px-3 py-5">PCN No</th>
-              <th className="px-3 py-5">
+              <th className="px-2 md:px-3 py-4 md:py-5">Select</th>
+              <th className="px-2 md:px-3 py-4 md:py-5">Sl No</th>
+              <th className="px-2 md:px-3 py-4 md:py-5">PCN No</th>
+              <th className="px-2 md:px-3 py-4 md:py-5">
                 <div className="flex items-center justify-center gap-1">
                   <span>Issue Date</span>
                   <span>⇅</span>
                 </div>
               </th>
-              <th className="px-3 py-5">
+              <th className="px-2 md:px-3 py-4 md:py-5">
                 <div className="flex items-center justify-center gap-1">
                   <span>Last Date</span>
                   <span>⇅</span>
                 </div>
               </th>
-              <th className="px-3 py-5">Authorities</th>
-              <th className="px-3 py-5">
+              <th className="px-2 md:px-3 py-4 md:py-5">Authorities</th>
+              <th className="px-2 md:px-3 py-4 md:py-5">
                 <div className="flex items-center justify-center gap-1">
                   <span>Charge</span>
                   <span>⇅</span>
                 </div>
               </th>
-              <th className="px-3 py-5">V.Reg</th>
-              <th className="px-3 py-5">
+              <th className="px-2 md:px-3 py-4 md:py-5">V.Reg</th>
+              <th className="px-2 md:px-3 py-4 md:py-5">
                 <div className="flex items-center justify-center gap-1">
                   <span>Status</span>
                   <span>⇅</span>
                 </div>
               </th>
-              <th className="px-5 py-5">Action</th>
+              <th className="px-2 md:px-3 py-4 md:py-5">Action</th>
             </tr>
           </thead>
 
@@ -70,7 +70,7 @@ const ParkingTicketTable = () => {
                 key={row.id}
                 className="border-b border-default-border dark:border-border-gray text-nowrap"
               >
-                <td className="px-3 py-5">
+                <td className="px-2 md:px-3 py-4 md:py-5">
                   <input
                     type="checkbox"
                     checked={selectedRows.includes(row.id)}
@@ -78,20 +78,20 @@ const ParkingTicketTable = () => {
                     className="w-4 h-4"
                   />
                 </td>
-                <td className="px-3 py-5">{row.id}</td>
-                <td className="px-3 py-5">Data</td>
-                <td className="px-3 py-5">Data</td>
-                <td className="px-3 py-5">Data</td>
-                <td className="px-3 py-5">Data</td>
-                <td className="px-3 py-5 font-medium">{row.charge}</td>
-                <td className="px-3 py-5">Data</td>
-                <td className="px-3 py-5">
+                <td className="px-2 md:px-3 py-4 md:py-5">{row.id}</td>
+                <td className="px-2 md:px-3 py-4 md:py-5">Data</td>
+                <td className="px-2 md:px-3 py-4 md:py-5">Data</td>
+                <td className="px-2 md:px-3 py-4 md:py-5">Data</td>
+                <td className="px-2 md:px-3 py-4 md:py-5">Data</td>
+                <td className="px-2 md:px-3 py-4 md:py-5 font-medium">{row.charge}</td>
+                <td className="px-2 md:px-3 py-4 md:py-5">Data</td>
+                <td className="px-2 md:px-3 py-4 md:py-5">
                   <select className={`px-3 border-none outline-none`}>
                     <option value="Unpaid">Unpaid</option>
                     <option value="Paid">Paid</option>
                   </select>
                 </td>
-                <td className="px-3 py-5">
+                <td className="px-2 md:px-3 py-4 md:py-5">
                   {row.status === "Paid" ? (
                     <p>No Action Need</p>
                   ) : (
