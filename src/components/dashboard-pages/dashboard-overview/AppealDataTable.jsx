@@ -29,7 +29,7 @@ const AppealDataTable = () => {
         <h3 className="text-dashboard-common-heading dark:text-white text-xl font-semibold">
           Appeal Data
         </h3>
-        <button className="bg-theme-orange text-white px-5 py-2 rounded-[6px] cursor-pointer">
+        <button className="bg-theme-orange text-white px-3 xl:px-5 py-2 rounded-[6px] cursor-pointer">
           Filter By Vehicle Number
         </button>
       </div>

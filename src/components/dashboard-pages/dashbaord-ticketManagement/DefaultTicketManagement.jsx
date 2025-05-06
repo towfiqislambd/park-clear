@@ -21,11 +21,11 @@ const DefaultTicketManagement = ({ setAppeal }) => {
   return (
     <div>
       <DashboardHeader title=" Parking Ticket Payment" />
-      <div className="grid grid-cols-12 mt-10">
+      <div className="grid xl:grid-cols-12 mt-5 xl:mt-10 gap-3 xl:gap-0">
         {/* Left Side */}
-        <div className="col-span-6">
-          <div className="mb-20 4xl:mb-32">
-            <h3 className="text-[22px] mb-3 font-semibold text-dashboard-common-heading dark:text-white">
+        <div className="xl:col-span-6">
+          <div className="mb-5 xl:mb-20 4xl:mb-32">
+            <h3 className="text-xl xl:text-[22px] mb-3 font-semibold text-dashboard-common-heading dark:text-white">
               Payment For
             </h3>
             <select className="block w-full px-3 4xl:px-5 py-2.5 4xl:py-4 rounded-lg border border-default-border  outline-none bg-white dark:bg-black dark:border-border-gray ">
@@ -39,7 +39,7 @@ const DefaultTicketManagement = ({ setAppeal }) => {
 
           <div>
             <div className="flex justify-between items-center mb-5">
-              <h3 className="text-[22px] mb-3 font-semibold text-dashboard-common-heading dark:text-white">
+              <h3 className="text-xl xl:text-[22px] mb-3 font-semibold text-dashboard-common-heading dark:text-white">
                 Payment Offer
               </h3>
               <button className="text-theme-orange cursor-pointer 4xl:text-lg font-semibold">
@@ -79,10 +79,10 @@ const DefaultTicketManagement = ({ setAppeal }) => {
             </div>
           </div>
         </div>
-        <div className="col-span-1"></div>
+        <div className="xl:col-span-1"></div>
 
         {/* Right Side */}
-        <div className="col-span-5">
+        <div className="xl:col-span-5">
           <div className="p-5 3xl:p-7 4xl:p-10 rounded-lg border border-default-border dark:border-border-gray dark:bg-black bg-white grid grid-cols-3 gap-x-5 gap-y-10 mb-5">
             <div className="">
               <h3 className="text-dashboard-common-heading dark:text-white text-lg font-semibold mb-1">
@@ -134,7 +134,7 @@ const DefaultTicketManagement = ({ setAppeal }) => {
           </div>
 
           {/* Btns */}
-          <div className="space-y-5">
+          <div className="space-y-3 xl:space-y-5">
             {/* Pay btn */}
             <button
               onClick={() => setAppeal(true)}

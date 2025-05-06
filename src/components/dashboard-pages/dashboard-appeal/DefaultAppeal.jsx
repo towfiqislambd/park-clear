@@ -40,12 +40,12 @@ const DefaultAppeal = ({ setProceed, setAppeal }) => {
   return (
     <div>
       <DashboardHeader title="Appeal Management" />
-      <div className="grid grid-cols-12 mt-10">
+      <div className="grid xl:grid-cols-12 mt-10 gap-3 xl:gap-0">
         {/* Left Side */}
-        <div className="col-span-6">
+        <div className="xl:col-span-6">
           {/* Appeal For */}
-          <div className="mb-10">
-            <h3 className="text-xl mb-4 font-semibold text-dashboard-common-heading dark:text-white">
+          <div className="mb-7 xl:mb-10">
+            <h3 className="text-xl mb-3 xl:mb-4 font-semibold text-dashboard-common-heading dark:text-white">
               Appeal For
             </h3>
             <select className="block w-full px-3 3xl:px-5 py-2.5 3xl:py-4 rounded-lg border border-default-border  outline-none bg-white dark:bg-black dark:border-border-gray ">
@@ -119,11 +119,9 @@ const DefaultAppeal = ({ setProceed, setAppeal }) => {
             ></textarea>
           </div>
         </div>
-
-        <div className="col-span-1"></div>
-
+        <div className="xl:col-span-1"></div>
         {/* Right Side */}
-        <div className="col-span-5">
+        <div className="xl:col-span-5">
           <div className="p-5 3xl:p-10 rounded-lg border border-default-border  dark:border-gray-700 bg-white dark:bg-black grid grid-cols-3 gap-x-5 gap-y-10 mb-5">
             <div>
               <h3 className="text-dashboard-common-heading dark:text-white text-lg font-semibold mb-1">Issue Date:</h3>
@@ -147,7 +145,7 @@ const DefaultAppeal = ({ setProceed, setAppeal }) => {
             </div>
           </div>
 
-          <div className="p-5 3xl:p-10 mb-10 rounded-lg border border-default-border dark:border-gray-700 bg-white dark:bg-black">
+          <div className="p-5 3xl:p-10 mb-5 xl:mb-10 rounded-lg border border-default-border dark:border-gray-700 bg-white dark:bg-black">
             <h3 className="text-[22px] mb-2 font-semibold text-dashboard-common-heading dark:text-white">
               If You proceed with us
             </h3>

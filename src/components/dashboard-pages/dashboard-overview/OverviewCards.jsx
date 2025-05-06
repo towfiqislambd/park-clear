@@ -36,7 +36,7 @@ const OverviewCards = () => {
           key={data?.id}
           className="px-5 3xl:px-7 py-5 rounded-xl bg-white dark:bg-black border border-default-border dark:border-border-gray "
         >
-          <h2 className="text-xl 3xl:text-2xl font-semibold mb-1 text-dashboard-common-heading dark:text-white">
+          <h2 className="text-lg xl:text-xl 3xl:text-2xl font-semibold mb-1 text-dashboard-common-heading dark:text-white">
             {data?.title}
           </h2>
           <p className="text-dashboard-common-heading dark:text-white text-sm">
@@ -46,7 +46,7 @@ const OverviewCards = () => {
             <h3 className="text-dashboard-common-heading dark:text-white text-2xl 3xl:text-3xl 4xl:text-4xl font-bold">
               ${data?.amount}
             </h3>
-            <p className="bg-overview-card-bg w-14 h-14 rounded-full border border-default-border grid place-items-center">
+            <p className="bg-overview-card-bg w-11 xl:w-14 h-11 xl:h-14 rounded-full border border-default-border grid place-items-center">
               {data?.icon}
             </p>
           </div>
