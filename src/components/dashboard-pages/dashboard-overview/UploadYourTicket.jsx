@@ -98,7 +98,7 @@ const UploadYourTicket = () => {
   return (
     <form>
       {/* Title */}
-      <h3 className="mb-5 text-dashboard-common-heading dark:text-white text-xl font-semibold">
+      <h3 className="mb-3 md:mb-5 text-dashboard-common-heading dark:text-white text-lg md:text-xl font-semibold">
         Upload Your Ticket
       </h3>
 
@@ -110,7 +110,7 @@ const UploadYourTicket = () => {
           <div className="w-full flex-1">
             <div
               onClick={handleTakePictureClick}
-              className="block border border-dashed w-full h-[170px] 4xl:h-[220px] flex justify-center flex-col items-center gap-4 border-default-border rounded-xl cursor-pointer border-2"
+              className="block border border-dashed w-full h-[150px] 3xl:h-[170px] 4xl:h-[220px] flex justify-center flex-col items-center gap-4 border-default-border rounded-xl cursor-pointer border-2"
             >
               <CameraSvg />
               <p className="text-black font-medium 4xl:text-lg dark:text-white">Take Picture</p>
@@ -134,7 +134,7 @@ const UploadYourTicket = () => {
           <div className="w-full flex-1">
             <div
               onClick={handleFileInputClick}
-              className="block border border-dashed w-full h-[170px] 4xl:h-[220px] flex justify-center flex-col items-center gap-4 border-default-border rounded-xl cursor-pointer border-2"
+              className="block border border-dashed w-full h-[150px] 3xl:h-[170px] 4xl:h-[220px] flex justify-center flex-col items-center gap-4 border-default-border rounded-xl cursor-pointer border-2"
             >
               <UploadSvg />
               <p className="text-black font-medium 4xl:text-lg dark:text-white">Upload File</p>
@@ -225,13 +225,13 @@ const UploadYourTicket = () => {
 
       {/* Error Message */}
       {cameraError && (
-        <p className="mt-4 text-red-500 font-medium">{cameraError}</p>
+        <p className="mt-2 3xl:mt-4 text-red-500 text-sm 3xl:text-base font-medium">{cameraError}</p>
       )}
 
       {/* File Preview */}
       {selectedFile && (
-        <div className="mt-4 bg-white shadow rounded-lg p-4 flex items-center justify-between">
-          <div className="flex items-center gap-4">
+        <div className="mt-4 bg-white shadow rounded-lg p-2 3xl:p-4 flex items-center justify-between">
+          <div className="flex items-center gap-3 3xl:gap-4">
             {previewUrl ? (
               <img
                 src={previewUrl}
@@ -244,7 +244,7 @@ const UploadYourTicket = () => {
               </div>
             )}
             <div>
-              <p className="font-medium dark:text-gray-700">{selectedFile.name}</p>
+              <p className="text-sm 3xl:text-base 3xl:font-medium dark:text-gray-700">{selectedFile.name}</p>
               <p className="text-sm text-gray-500">
                 {formatFileSize(selectedFile.size)}
               </p>
