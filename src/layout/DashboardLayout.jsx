@@ -36,7 +36,7 @@ const DashboardLayout = () => {
   return (
     <section className="flex h-screen dark:bg-black ">
       {/* Sidebar */}
-      <aside className="w-[290px] 4xl:!w-[320px] h-full p-5 4xl:p-7 border-r border-default-border dark:border-gray-700 overflow-y-auto scrollbar-hide">
+      <aside className="w-[290px] flex-shrink-0 4xl:!w-[320px] h-full p-5 4xl:p-7 border-r border-default-border dark:border-gray-700 overflow-y-auto scrollbar-hide">
         {/* Logo */}
         <Link to="/">
           <figure>
@@ -67,7 +67,6 @@ const DashboardLayout = () => {
             </li>
           ))}
         </ul>
-
 
         {/* Sidebar Cards */}
         <section className="space-y-6 4xl:space-y-9 mt-10">

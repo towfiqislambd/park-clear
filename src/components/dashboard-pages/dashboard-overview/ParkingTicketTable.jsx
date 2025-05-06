@@ -27,82 +27,84 @@ const ParkingTicketTable = () => {
         </button>
       </div>
 
-      <table className="w-full text-center text-dashboard-common-heading dark:text-white">
-        <thead className="bg-white dark:bg-black dark:text-white rounded-lg text-dashboard-common-heading font-semibold">
-          <tr>
-            <th className="px-5 py-5">Select</th>
-            <th className="px-3 py-5">Sl No</th>
-            <th className="px-3 py-5">PCN No</th>
-            <th className="px-3 py-5">
-              <div className="flex items-center justify-center gap-1">
-                <span>Issue Date</span>
-                <span>⇅</span>
-              </div>
-            </th>
-            <th className="px-3 py-5">
-              <div className="flex items-center justify-center gap-1">
-                <span>Last Date</span>
-                <span>⇅</span>
-              </div>
-            </th>
-            <th className="px-3 py-5">Authorities</th>
-            <th className="px-3 py-5">
-              <div className="flex items-center justify-center gap-1">
-                <span>Charge</span>
-                <span>⇅</span>
-              </div>
-            </th>
-            <th className="px-3 py-5">V.Reg</th>
-            <th className="px-3 py-5">
-              <div className="flex items-center justify-center gap-1">
-                <span>Status</span>
-                <span>⇅</span>
-              </div>
-            </th>
-            <th className="px-5 py-5">Action</th>
-          </tr>
-        </thead>
-
-        <tbody className="text-sm">
-          {data.map((row) => (
-            <tr
-              key={row.id}
-              className="border-b border-default-border dark:border-border-gray"
-            >
-              <td className="px-3 py-5">
-                <input
-                  type="checkbox"
-                  checked={selectedRows.includes(row.id)}
-                  onChange={() => toggleRow(row.id)}
-                  className="w-4 h-4"
-                />
-              </td>
-              <td className="px-3 py-5">{row.id}</td>
-              <td className="px-3 py-5">Data</td>
-              <td className="px-3 py-5">Data</td>
-              <td className="px-3 py-5">Data</td>
-              <td className="px-3 py-5">Data</td>
-              <td className="px-3 py-5 font-medium">{row.charge}</td>
-              <td className="px-3 py-5">Data</td>
-              <td className="px-3 py-5">
-                <select className={`px-3 border-none outline-none`}>
-                  <option value="Unpaid">Unpaid</option>
-                  <option value="Paid">Paid</option>
-                </select>
-              </td>
-              <td className="px-3 py-5">
-                {row.status === "Paid" ? (
-                  <p>No Action Need</p>
-                ) : (
-                  <button className="bg-theme-orange text-white px-5 py-2 rounded-[6px] cursor-pointer">
-                    Pay Now
-                  </button>
-                )}
-              </td>
+      <div className="overflow-x-auto">
+        <table className="w-full text-center text-dashboard-common-heading dark:text-white">
+          <thead className="bg-white dark:bg-black dark:text-white rounded-lg text-dashboard-common-heading font-semibold">
+            <tr className="text-nowrap">
+              <th className="px-5 py-5">Select</th>
+              <th className="px-3 py-5">Sl No</th>
+              <th className="px-3 py-5">PCN No</th>
+              <th className="px-3 py-5">
+                <div className="flex items-center justify-center gap-1">
+                  <span>Issue Date</span>
+                  <span>⇅</span>
+                </div>
+              </th>
+              <th className="px-3 py-5">
+                <div className="flex items-center justify-center gap-1">
+                  <span>Last Date</span>
+                  <span>⇅</span>
+                </div>
+              </th>
+              <th className="px-3 py-5">Authorities</th>
+              <th className="px-3 py-5">
+                <div className="flex items-center justify-center gap-1">
+                  <span>Charge</span>
+                  <span>⇅</span>
+                </div>
+              </th>
+              <th className="px-3 py-5">V.Reg</th>
+              <th className="px-3 py-5">
+                <div className="flex items-center justify-center gap-1">
+                  <span>Status</span>
+                  <span>⇅</span>
+                </div>
+              </th>
+              <th className="px-5 py-5">Action</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+
+          <tbody className="text-sm">
+            {data.map((row) => (
+              <tr
+                key={row.id}
+                className="border-b border-default-border dark:border-border-gray text-nowrap"
+              >
+                <td className="px-3 py-5">
+                  <input
+                    type="checkbox"
+                    checked={selectedRows.includes(row.id)}
+                    onChange={() => toggleRow(row.id)}
+                    className="w-4 h-4"
+                  />
+                </td>
+                <td className="px-3 py-5">{row.id}</td>
+                <td className="px-3 py-5">Data</td>
+                <td className="px-3 py-5">Data</td>
+                <td className="px-3 py-5">Data</td>
+                <td className="px-3 py-5">Data</td>
+                <td className="px-3 py-5 font-medium">{row.charge}</td>
+                <td className="px-3 py-5">Data</td>
+                <td className="px-3 py-5">
+                  <select className={`px-3 border-none outline-none`}>
+                    <option value="Unpaid">Unpaid</option>
+                    <option value="Paid">Paid</option>
+                  </select>
+                </td>
+                <td className="px-3 py-5">
+                  {row.status === "Paid" ? (
+                    <p>No Action Need</p>
+                  ) : (
+                    <button className="bg-theme-orange text-white px-5 py-2 rounded-[6px] cursor-pointer">
+                      Pay Now
+                    </button>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       {/* Conditional Footer Section */}
       {selectedRows.length >= 2 && (

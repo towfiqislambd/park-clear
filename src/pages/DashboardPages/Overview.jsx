@@ -10,7 +10,7 @@ const Overview = () => {
         <div>
             <DashboardHeader title='TickeTracker Dashboard' />
             <OverviewCards />
-            <div className="grid grid-cols-12 gap-10 mt-10">
+            <div className="grid grid-cols-12 gap-5 3xl:gap-10 mt-10">
                 <div className="col-span-4"><UploadYourTicket /></div>
                 <div className="col-span-8"><PenaltyChargeNotice /></div>
             </div>

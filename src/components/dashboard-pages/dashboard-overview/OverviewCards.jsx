@@ -34,16 +34,16 @@ const OverviewCards = () => {
       {overviewCardData?.map((data) => (
         <div
           key={data?.id}
-          className="px-7 py-5 rounded-xl bg-white dark:bg-black border border-default-border dark:border-border-gray "
+          className="px-5 3xl:px-7 py-5 rounded-xl bg-white dark:bg-black border border-default-border dark:border-border-gray "
         >
-          <h2 className="text-2xl font-semibold mb-1 text-dashboard-common-heading dark:text-white">
+          <h2 className="text-xl 3xl:text-2xl font-semibold mb-1 text-dashboard-common-heading dark:text-white">
             {data?.title}
           </h2>
           <p className="text-dashboard-common-heading dark:text-white text-sm">
             {data?.sub_title}
           </p>
           <div className="flex justify-between items-center mt-3 4xl:mt-5">
-            <h3 className="text-dashboard-common-heading dark:text-white text-3xl 4xl:text-4xl font-bold">
+            <h3 className="text-dashboard-common-heading dark:text-white text-2xl 3xl:text-3xl 4xl:text-4xl font-bold">
               ${data?.amount}
             </h3>
             <p className="bg-overview-card-bg w-14 h-14 rounded-full border border-default-border grid place-items-center">

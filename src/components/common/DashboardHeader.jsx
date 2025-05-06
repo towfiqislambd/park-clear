@@ -2,8 +2,8 @@ import profile from "../../assets/images/profile.png";
 
 const DashboardHeader = ({ title }) => {
   return (
-    <div className="flex justify-between items-center px-5 py-4 rounded-xl bg-white dark:bg-black border border-default-border dark:border-gray-700">
-      <h2 className="text-dashboard-common-heading dark:text-white font-bold text-2xl">
+    <div className="flex justify-between items-center px-4 3xl:px-5 py-2.5 3xl:py-4 rounded-xl bg-white dark:bg-black border border-default-border dark:border-gray-700">
+      <h2 className="text-dashboard-common-heading dark:text-white font-bold text-[22px] 3xl:text-2xl">
         {title}
       </h2>
 

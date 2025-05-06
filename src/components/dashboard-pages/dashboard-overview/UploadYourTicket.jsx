@@ -110,7 +110,7 @@ const UploadYourTicket = () => {
           <div className="w-full flex-1">
             <div
               onClick={handleTakePictureClick}
-              className="block border border-dashed w-full h-[170px] 4xl:h-[220px] flex justify-center flex-col items-center gap-4 border-default-border rounded-xl cursor-pointer border-2"
+              className="block border border-dashed w-full h-[150px] 3xl:h-[170px] 4xl:h-[220px] flex justify-center flex-col items-center gap-4 border-default-border rounded-xl cursor-pointer border-2"
             >
               <CameraSvg />
               <p className="text-black font-medium 4xl:text-lg dark:text-white">Take Picture</p>
@@ -134,7 +134,7 @@ const UploadYourTicket = () => {
           <div className="w-full flex-1">
             <div
               onClick={handleFileInputClick}
-              className="block border border-dashed w-full h-[170px] 4xl:h-[220px] flex justify-center flex-col items-center gap-4 border-default-border rounded-xl cursor-pointer border-2"
+              className="block border border-dashed w-full h-[150px] 3xl:h-[170px] 4xl:h-[220px] flex justify-center flex-col items-center gap-4 border-default-border rounded-xl cursor-pointer border-2"
             >
               <UploadSvg />
               <p className="text-black font-medium 4xl:text-lg dark:text-white">Upload File</p>

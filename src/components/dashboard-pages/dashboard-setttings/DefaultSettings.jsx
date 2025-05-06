@@ -118,11 +118,11 @@ const DefaultSettings = ({ setChangePassword, setEditProfile, theme, handleTheme
             Subscription Plan{" "}
           </h3>
 
-          <div className="border p-11 rounded-lg relative cursor-pointer transition-all duration-300  border-default-border bg-white dark:bg-black dark:border-border-gray">
-            <h3 className="font-bold text-4xl mb-4">
+          <div className="border p-6 4xl:p-11 rounded-lg relative cursor-pointer transition-all duration-300  border-default-border bg-white dark:bg-black dark:border-border-gray">
+            <h3 className="font-bold text-3xl 3xl:text-4xl mb-3 3xl:mb-4">
               £26.99<span className="text-sm">/yr</span>
             </h3>
-            <p className="text-lg font-semibold mb-20">ParkClear Pro Driver </p>
+            <p className="text-lg font-semibold mb-10 4xl:mb-20">ParkClear Pro Driver </p>
             <p className="bg-theme-orange text-white py-3 ps-5 rounded-l-lg pr-16 absolute top-5 right-0">
               Pro
             </p>

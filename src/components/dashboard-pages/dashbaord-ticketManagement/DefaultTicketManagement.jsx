@@ -24,11 +24,11 @@ const DefaultTicketManagement = ({ setAppeal }) => {
       <div className="grid grid-cols-12 mt-10">
         {/* Left Side */}
         <div className="col-span-6">
-          <div className="mb-32">
+          <div className="mb-20 4xl:mb-32">
             <h3 className="text-[22px] mb-3 font-semibold text-dashboard-common-heading dark:text-white">
               Payment For
             </h3>
-            <select className="block w-full px-5 py-4 rounded-lg border border-default-border  outline-none bg-white dark:bg-black dark:border-border-gray ">
+            <select className="block w-full px-3 4xl:px-5 py-2.5 4xl:py-4 rounded-lg border border-default-border  outline-none bg-white dark:bg-black dark:border-border-gray ">
               <option value="">Select PNC</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -42,7 +42,7 @@ const DefaultTicketManagement = ({ setAppeal }) => {
               <h3 className="text-[22px] mb-3 font-semibold text-dashboard-common-heading dark:text-white">
                 Payment Offer
               </h3>
-              <button className="text-theme-orange cursor-pointer text-lg font-semibold">
+              <button className="text-theme-orange cursor-pointer 4xl:text-lg font-semibold">
                 Remove Selection
               </button>
             </div>
@@ -54,15 +54,14 @@ const DefaultTicketManagement = ({ setAppeal }) => {
                   <div
                     key={index}
                     onClick={() => setSelectedOfferIndex(index)}
-                    className={`border p-7 rounded-lg relative cursor-pointer transition-all duration-300 border-2 
-                                             ${
-                                               isSelected
-                                                 ? "border-theme-sky-blue"
-                                                 : "border-default-border bg-white dark:bg-black dark:border-border-gray"
-                                             }`}
+                    className={`border p-5 4xl:p-7 rounded-lg relative cursor-pointer transition-all duration-300 border-2 
+                                             ${isSelected
+                        ? "border-theme-sky-blue"
+                        : "border-default-border bg-white dark:bg-black dark:border-border-gray"
+                      }`}
                   >
                     <div className="flex gap-3 items-end mb-3">
-                      <h3 className="font-bold text-4xl">
+                      <h3 className="font-bold text-3xl 4xl:text-4xl">
                         {offer.price}
                         <span className="text-sm">/mo</span>
                       </h3>
@@ -70,7 +69,7 @@ const DefaultTicketManagement = ({ setAppeal }) => {
                         {offer.charge}
                       </p>
                     </div>
-                    <p className="text-lg font-semibold">{offer.description}</p>
+                    <p className="4xl:text-lg font-semibold">{offer.description}</p>
                     <p className="bg-theme-orange text-white py-3 ps-5 rounded-l-lg pr-12 absolute top-5 right-0">
                       {offer.duration}
                     </p>
@@ -84,7 +83,7 @@ const DefaultTicketManagement = ({ setAppeal }) => {
 
         {/* Right Side */}
         <div className="col-span-5">
-          <div className="p-10 rounded-lg border border-default-border dark:border-border-gray dark:bg-black bg-white grid grid-cols-3 gap-x-5 gap-y-10 mb-5">
+          <div className="p-5 3xl:p-7 4xl:p-10 rounded-lg border border-default-border dark:border-border-gray dark:bg-black bg-white grid grid-cols-3 gap-x-5 gap-y-10 mb-5">
             <div className="">
               <h3 className="text-dashboard-common-heading dark:text-white text-lg font-semibold mb-1">
                 Issue Date:
@@ -127,11 +126,11 @@ const DefaultTicketManagement = ({ setAppeal }) => {
             </div>
           </div>
 
-          <div className="p-10 mb-10 rounded-lg border border-default-border dark:border-border-gray bg-white dark:bg-black">
+          <div className="p-5 4xl:p-10 mb-7 4xl:mb-10 rounded-lg border border-default-border dark:border-border-gray bg-white dark:bg-black">
             <h3 className="text-[22px] mb-2 font-semibold text-dashboard-common-heading dark:text-white">
               Charge:
             </h3>
-            <h2 className="font-bold text-theme-orange text-4xl">$3.99</h2>
+            <h2 className="font-bold text-theme-orange text-3xl 4xl:text-4xl">$3.99</h2>
           </div>
 
           {/* Btns */}
@@ -139,13 +138,13 @@ const DefaultTicketManagement = ({ setAppeal }) => {
             {/* Pay btn */}
             <button
               onClick={() => setAppeal(true)}
-              className="h-16 font-medium text-lg w-full block bg-theme-orange border border-theme-orange rounded-lg text-white cursor-pointer transition-all duration-500 hover:bg-transparent hover:text-theme-orange"
+              className="h-12 4xl:h-16 font-medium text-lg w-full block bg-theme-orange border border-theme-orange rounded-lg text-white cursor-pointer transition-all duration-500 hover:bg-transparent hover:text-theme-orange"
             >
               Pay
             </button>
             {/* Appeal btn */}
             <Link to="/dashboard/appeal">
-              <button className="h-16 font-medium text-lg w-full block bg-sidebar-card-headingOne border border-sidebar-card-headingOne rounded-lg text-white cursor-pointer transition-all duration-500 hover:bg-transparent hover:text-sidebar-card-headingOne">
+              <button className="h-12 4xl:h-16 font-medium text-lg w-full block bg-sidebar-card-headingOne border border-sidebar-card-headingOne rounded-lg text-white cursor-pointer transition-all duration-500 hover:bg-transparent hover:text-sidebar-card-headingOne">
                 Appeal
               </button>
             </Link>
