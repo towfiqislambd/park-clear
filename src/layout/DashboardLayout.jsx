@@ -14,6 +14,9 @@ import {
   DashboardSubscription,
   DashboardTicketManagement,
 } from "../components/svg-container/SvgContainer";
+import { FaBars } from "react-icons/fa6";
+import { useState } from "react";
+import { RxCross2 } from "react-icons/rx";
 
 const navItems = [
   { to: "/dashboard/overview", label: "Overview", Icon: DashboardOverview },
@@ -33,10 +36,147 @@ const navItems = [
 ];
 
 const DashboardLayout = () => {
+  const [isOpen, setOpen] = useState(false);
+
   return (
-    <section className="flex h-screen dark:bg-black ">
-      {/* Sidebar */}
-      <aside className="w-[290px] flex-shrink-0 4xl:!w-[320px] h-full p-5 4xl:p-7 border-r border-default-border dark:border-gray-700 overflow-y-auto scrollbar-hide">
+    <section className="h-screen flex flex-col">
+      {/* Header */}
+      <header className="2xl:hidden py-1 px-10 border-b fixed xl:h-[80px] w-full left-0 top-0 z-50">
+        <nav className="w-full h-full flex justify-between items-center">
+          {/* Logo */}
+          <Link to="/">
+            <figure>
+              <img src={logo} alt="logo" className="object-cover" />
+            </figure>
+          </Link>
+          {/* Hamburger btn */}
+          <button
+            onClick={() => setOpen(!isOpen)}
+            className="bg-theme-sky-blue 2xl:hidden text-white h-9 md:h-10 w-10 md:w-11 rounded grid place-items-center"
+          >
+            <FaBars className="text-2xl" />
+          </button>
+        </nav>
+      </header>
+
+      {/* Main */}
+      <div className="flex dark:bg-black mt-[80px] 2xl:mt-0 h-[calc(100vh-80px)] 2xl:h-full">
+        {/* Sidebar */}
+        <aside className="hidden 2xl:block 2xl:w-[290px] flex-shrink-0 4xl:!w-[320px] h-full p-5 4xl:p-7 border-r border-default-border dark:border-gray-700 overflow-y-auto scrollbar-hide">
+          {/* Logo */}
+          <Link to="/">
+            <figure>
+              <img src={logo} alt="logo" className="object-cover" />
+            </figure>
+          </Link>
+
+          {/* Navigation Links */}
+          <ul className="space-y-6 mt-7">
+            {navItems.map(({ to, label, Icon }) => (
+              <li key={to}>
+                <NavLink
+                  to={to}
+                  className={({ isActive }) =>
+                    `flex gap-2  items-center w-full text-[17px] font-medium py-2.5 px-3 4xl:px-4 rounded transition-all duration-300 ease-in-out ${isActive
+                      ? "bg-theme-orange text-white"
+                      : "text-menu-color dark:text-white dark:hover:bg-gray-800 hover:bg-gray-100 hover:shadow"
+                    }`
+                  }
+                >
+                  {({ isActive }) => (
+                    <>
+                      <Icon isActive={isActive} />
+                      <span>{label}</span>
+                    </>
+                  )}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+
+          {/* Sidebar Cards */}
+          <section className="space-y-6 4xl:space-y-9 mt-10">
+            {/* Card 1 */}
+            <div
+              style={{
+                backgroundImage: `url(${s1})`,
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+              }}
+              className="text-center h-[341.618px] flex flex-col justify-center items-center rounded-xl"
+            >
+              <img src={sideLogoOne} alt="logo" className="" />
+              <h3 className="text-white text-xl py-2 font-semibold">
+                ParkClear Pro
+              </h3>
+              <p className="font-inter text-[15px] mb-7 text-white font-medium max-w-[155.966px] mx-auto">
+                Get <span className="text-lg font-semibold">15%</span> off upgrade
+                to pro Subscription
+              </p>
+              <button className="px-10 cursor-pointer bg-white text-theme-orange text-lg font-semibold py-2 rounded-lg">
+                Get Pro
+              </button>
+            </div>
+
+            {/* Card 2 */}
+            <div className="text-center border border-default-border py-7 px-7 rounded-xl">
+              <img src={sideLogoTwo} alt="logo" className="mx-auto" />
+              <h3 className="text-xl 4xl:text-2xl text-dashboard-common-heading dark:text-white py-3 font-bold">
+                Car Screen Wash Coupon
+              </h3>
+              <p className="text-sidebar-card-desc mb-5 dark:text-gray-300">
+                If you subscribe today you will get a free 10L of car screen wash{" "}
+              </p>
+              <h4 className="text-sidebar-card-headingOne text-xl 4xl:text-2xl font-bold mb-2 4xl:mb-2.5">
+                12:54:00
+              </h4>
+              <h4 className="text-sidebar-card-headingTwo text-xl 4xl:text-2xl font-bold">
+                Activated
+              </h4>
+            </div>
+
+            {/* Card 3 */}
+            <div
+              style={{
+                backgroundImage: `url(${s2})`,
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+              }}
+              className="text-center h-[341.618px] flex flex-col justify-center items-center rounded-xl"
+            >
+              <img src={sideLogoOne} alt="logo" className="" />
+              <h3 className="text-white text-xl py-2 font-semibold">
+                Ultra Drive Store
+              </h3>
+              <p className="font-inter text-[15px] mb-7 text-white font-medium max-w-[155.966px] mx-auto">
+                Your Coupon Code
+              </p>
+              <button className="px-10 cursor-pointer bg-white text-theme-orange text-lg font-semibold py-2 rounded-lg">
+                *******
+              </button>
+            </div>
+          </section>
+        </aside>
+
+        {/* Main Content */}
+        <main className="bg-dashboard-outlet-bg dark:bg-black h-full overflow-y-auto p-7 flex-grow">
+          <Outlet />
+        </main>
+      </div>
+
+
+      {/* ================= For Mobile Version ================ */}
+      {/* Blur Overlay */}
+      <div
+        onClick={() => setOpen(false)}
+        className={`fixed inset-0 bg-black/30 backdrop-blur-sm transition-opacity duration-300 2xl:hidden z-[999] ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+      </div>
+
+      {/* Mobile Sidebar */}
+      <aside className={`${isOpen ? 'translate-x-0' : '-translate-x-full'} duration-500 transition-transform fixed top-0 z-[999] left-0 bg-white p-5 overflow-y-auto  border-r border-default-border dark:border-gray-700 max-h-screen min-h-screen w-[290px] 2xl:hidden scrollbar-hide`}>
+
         {/* Logo */}
         <Link to="/">
           <figure>
@@ -49,6 +189,7 @@ const DashboardLayout = () => {
           {navItems.map(({ to, label, Icon }) => (
             <li key={to}>
               <NavLink
+                onClick={() => setOpen(false)}
                 to={to}
                 className={({ isActive }) =>
                   `flex gap-2  items-center w-full text-[17px] font-medium py-2.5 px-3 4xl:px-4 rounded transition-all duration-300 ease-in-out ${isActive
@@ -132,12 +273,12 @@ const DashboardLayout = () => {
             </button>
           </div>
         </section>
-      </aside>
 
-      {/* Main Content */}
-      <main className="bg-dashboard-outlet-bg dark:bg-black h-full overflow-y-auto p-7 flex-grow">
-        <Outlet />
-      </main>
+        {/* Close btn */}
+        <button onClick={() => setOpen(false)} className="absolute top-3 right-3">
+          <RxCross2 className="text-xl" />
+        </button>
+      </aside>
     </section>
   );
 };
