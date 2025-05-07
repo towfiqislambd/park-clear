@@ -43,10 +43,8 @@ const Footer = () => {
           <div className="footer-box" data-aos="fade-up" data-aos-delay="100">
             <h4 className="footer-heading">Resources</h4>
             <ul>
-              <li>
-                <Link className="footer-link" to={"/"}>
-                  UltraDriver Store
-                </Link>
+              <li className="footer-link">
+                UltraDriver Store
               </li>
             </ul>
           </div>
