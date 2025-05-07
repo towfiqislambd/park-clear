@@ -6,7 +6,7 @@ import Container from "../container/Container";
 
 const HeroSection = () => {
   return (
-    <section className="py-20 md:py-[154px] bg-white">
+    <section className="py-14 md:py-20 md:py-[154px] bg-white">
       <Container>
         <div className="text-center">
           {/* sub title  */}

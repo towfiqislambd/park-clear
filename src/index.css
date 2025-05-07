@@ -88,11 +88,11 @@ body {
 }
 
 .footer-heading {
-  @apply font-bold mb-3 2xl:mb-6;
+  @apply font-bold mb-1 lg:mb-3 2xl:mb-6;
 }
 
 .footer-link {
-  @apply text-[12px] text-text-gray mt-3 inline-block;
+  @apply text-[12px] text-text-gray lg:mt-3 inline-block;
 }
 
 .footer-contact {

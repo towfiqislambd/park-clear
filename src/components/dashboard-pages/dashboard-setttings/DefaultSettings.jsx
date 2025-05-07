@@ -1,5 +1,5 @@
 import DashboardHeader from "@/components/common/DashboardHeader";
-import profile_img from "../../../assets/images/profile_Img.png";
+import profile_img from "../../../assets/images/asian_man.png";
 import {
   ChangePassSvg,
   DarkModeSvg,

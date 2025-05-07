@@ -26,11 +26,11 @@ const menuItems = [
     name: "about Us",
     path: "/about-us",
   },
-  // {
-  //   id: 4,
-  //   name: "dashboard",
-  //   path: "/dashboard/overview",
-  // },
+  {
+    id: 5,
+    name: "My Maintenance",
+    path: "/my-maintenance",
+  },
 ];
 
 const Navbar = () => {
@@ -55,15 +55,15 @@ const Navbar = () => {
 
           {/* logo  */}
           <Link to={"/"} className="inline-block">
-            <img className="w-[150px] md:w-[170px] h-[40px] md:h-[42px] 3xl:w-[200px] 3xl:h-[52px]" src={Logo} alt="Logo" />
+            <img className="w-[150px] md:w-[170px] 2xl:w-[130px] 3xl:w-[200px] h-[40px] md:h-[42px] 3xl:h-[52px]" src={Logo} alt="Logo" />
           </Link>
 
           {/* menus  */}
-          <ul className="hidden 2xl:flex items-center gap-14 3xl:gap-[72px]">
+          <ul className="hidden 2xl:flex items-center gap-10 3xl:gap-[65px]">
             {
               menuItems?.map((item) => (
                 <li key={item?.id}>
-                  <NavLink to={`${item?.path}`} className={`3xl:text-[18px] font-semibold duration-200 ease-in-out hover:text-theme-sky-blue capitalize ${item?.path === location?.pathname ? 'text-theme-sky-blue' : 'text-menu-color'}`}>{item?.name}</NavLink>
+                  <NavLink to={`${item?.path}`} className={`2xl:text-[15px] 3xl:text-[18px] font-semibold duration-200 ease-in-out hover:text-theme-sky-blue capitalize ${item?.path === location?.pathname ? 'text-theme-sky-blue' : 'text-menu-color'}`}>{item?.name}</NavLink>
                 </li>
               ))
             }
@@ -135,7 +135,7 @@ const Navbar = () => {
           >
             <RxCross2 className="text-xl" />
           </button>
-          
+
         </div>
 
       </Container>

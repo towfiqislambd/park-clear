@@ -43,10 +43,8 @@ const Footer = () => {
           <div className="footer-box" data-aos="fade-up" data-aos-delay="100">
             <h4 className="footer-heading">Resources</h4>
             <ul>
-              <li>
-                <Link className="footer-link" to={"/"}>
-                  UltraDriver Store
-                </Link>
+              <li className="footer-link">
+                UltraDriver Store
               </li>
             </ul>
           </div>
@@ -113,6 +111,7 @@ const Footer = () => {
           {/* footer box  */}
           <div className="footer-box" data-aos="fade-up" data-aos-delay="300">
             <h4 className="footer-heading">Get in Touch</h4>
+
 
             <p className="text-sm w-[200px] text-text-gray">
               Feel free to get in touch with us vai email
