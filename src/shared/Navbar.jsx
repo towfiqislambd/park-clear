@@ -19,17 +19,17 @@ const menuItems = [
   {
     id: 3,
     name: "Driver Knowledge Hub",
-    path: "/driver-knowledge",
+    path: "https://parkclear.org",
   },
   {
     id: 4,
-    name: "about Us",
+    name: "about",
     path: "/about-us",
   },
   {
     id: 5,
-    name: "My Maintenance",
-    path: "/my-maintenance",
+    name: "FlexiRide",
+    path: "/flexi-ride",
   },
 ];
 
@@ -61,12 +61,22 @@ const Navbar = () => {
           {/* menus  */}
           <ul className="hidden 2xl:flex items-center gap-10 3xl:gap-[65px]">
             {
-              menuItems?.map((item) => (
-                <li key={item?.id}>
-                  <NavLink to={`${item?.path}`} className={`2xl:text-[15px] 3xl:text-[18px] font-semibold duration-200 ease-in-out hover:text-theme-sky-blue capitalize ${item?.path === location?.pathname ? 'text-theme-sky-blue' : 'text-menu-color'}`}>{item?.name}</NavLink>
-                </li>
-              ))
+              menuItems?.map((item) => {
+                const isExternal = item.path.startsWith('http');
+                return (
+                  <li key={item?.id}>
+                    <NavLink
+                      to={item.path}
+                      {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                      className={`2xl:text-[15px] 3xl:text-[18px] font-semibold duration-200 ease-in-out hover:text-theme-sky-blue capitalize ${item?.path === location?.pathname ? 'text-theme-sky-blue' : 'text-menu-color'}`}
+                    >
+                      {item.name}
+                    </NavLink>
+                  </li>
+                );
+              })
             }
+
           </ul>
 
           {/* buttons  */}
@@ -103,14 +113,21 @@ const Navbar = () => {
           {/* Menus */}
           <ul className="flex flex-col gap-7 md:gap-8 mt-10 mb-10 md:mb-11">
             {
-              menuItems?.map((item) => (
-                <li key={item?.id}>
-                  <NavLink
-                    to={`${item?.path}`}
-                    onClick={() => setOpen(false)}
-                    className={`3xl:text-[18px] font-semibold duration-200 ease-in-out hover:text-theme-sky-blue capitalize ${item?.path === location?.pathname ? 'text-theme-sky-blue' : 'text-menu-color'}`}>{item?.name}</NavLink>
-                </li>
-              ))
+              menuItems?.map((item) => {
+                const isExternal = item.path.startsWith('http');
+                return (
+                  <li key={item?.id}>
+                    <NavLink
+                      to={item.path}
+                      {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                      onClick={() => setOpen(false)}
+                      className={`3xl:text-[18px] font-semibold duration-200 ease-in-out hover:text-theme-sky-blue capitalize ${item?.path === location?.pathname ? 'text-theme-sky-blue' : 'text-menu-color'}`}
+                    >
+                      {item.name}
+                    </NavLink>
+                  </li>
+                );
+              })
             }
           </ul>
 
