@@ -22,8 +22,8 @@ const PlanCard = ({ item }) => {
         )}
         {/* features  */}
         <ul className="mt-3 md:mt-5 3xl:mt-8 list-disc list-outside pl-5">
-          {item?.features?.map((feature) => (
-            <li key={feature?.id} className="text-sm md:text-base mt-1">
+          {item?.features?.map((feature, idx) => (
+            <li key={idx} className="text-sm md:text-base mt-1">
               {feature}
             </li>
           ))}

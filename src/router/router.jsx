@@ -21,6 +21,7 @@ import VirtualAssistant from "@/pages/DashboardPages/VirtualAssistant";
 import DriverKnowledge from "@/pages/DriverKnowledge";
 import ForgetPassword from "@/pages/AuthPages/ForgetPassword";
 import ResetPassword from "@/pages/AuthPages/ResetPassword";
+import MyMaintenance from "@/pages/MyMaintenance";
 
 const router = createBrowserRouter([
 
@@ -36,6 +37,7 @@ const router = createBrowserRouter([
       { path: "terms-condition", element: <TermConditionPage /> },
       { path: "subscription-plan", element: <SubscriptionPlanPage /> },
       { path: "payment", element: <PaymentPage /> },
+      { path: "my-maintenance", element: <MyMaintenance /> },
     ],
   },
 

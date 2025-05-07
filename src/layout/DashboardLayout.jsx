@@ -13,6 +13,7 @@ import {
   DashboardSettings,
   DashboardSubscription,
   DashboardTicketManagement,
+  VehicleManagement,
 } from "../components/svg-container/SvgContainer";
 import { FaBars } from "react-icons/fa6";
 import { useState } from "react";
@@ -32,6 +33,7 @@ const navItems = [
     label: "Subscription Services",
     Icon: DashboardSubscription,
   },
+  { to: "/vehicle-management", label: "Vehicle Management", Icon: VehicleManagement },
   { to: "/dashboard/settings", label: "Settings", Icon: DashboardSettings },
 ];
 

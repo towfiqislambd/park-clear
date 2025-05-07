@@ -30,7 +30,7 @@ const TrustPilotReviewSection = () => {
             {/* <PrimaryButton text="See Our community" icon={<FaArrowRightLong />} className="mt-12 bg-theme-orange text-white hover:bg-transparent hover:text-theme-orange w-fit" /> */}
           </div>
           {/* Right */}
-          <div className="w-full lg:w-[65%] 3xl:w-[59%] lg:pl-[30px] xl:pl-[50px] 2xl:pl-[166px]" data-aos="fade-left" data-aos-delay="100">
+          <div className="w-full lg:w-[65%] 3xl:w-[59%] lg:pl-[30px] xl:pl-[50px] 2xl:pl-[166px]">
             <TrustPilotReviewSlider />
           </div>
         </div>
