@@ -6,7 +6,7 @@ import Container from "../container/Container";
 
 const SmartSolutionSection = () => {
   return (
-    <section className="py-10 lg:py-20 2xl:py-[100px] 3xl:py-[190px]">
+    <section className="pt-10 md:py-10 lg:py-20 2xl:py-[100px] 3xl:py-[190px]">
       <Container>
         <div className="flex items-center gap-5 flex-col lg:flex-row">
           {/* Left */}

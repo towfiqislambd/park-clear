@@ -112,6 +112,7 @@ const Footer = () => {
           <div className="footer-box" data-aos="fade-up" data-aos-delay="300">
             <h4 className="footer-heading">Get in Touch</h4>
 
+
             <p className="text-sm w-[200px] text-text-gray">
               Feel free to get in touch with us vai email
             </p>
