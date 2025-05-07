@@ -27,7 +27,7 @@ const navItems = [
     label: "Ticket Management",
     Icon: DashboardTicketManagement,
   },
-  { to: "/dashboard/virtual-assistant", label: "Virtual Assistant", Icon: DashboardChatBot },
+  { to: "https://parkclear.org", label: "Virtual Assistant", Icon: DashboardChatBot },
   {
     to: "/dashboard/subscription-services",
     label: "Subscription Services",
@@ -74,26 +74,43 @@ const DashboardLayout = () => {
 
           {/* Navigation Links */}
           <ul className="space-y-6 mt-7">
-            {navItems.map(({ to, label, Icon }) => (
-              <li key={to}>
-                <NavLink
-                  to={to}
-                  className={({ isActive }) =>
-                    `flex gap-2  items-center w-full text-[17px] font-medium py-2.5 px-3 4xl:px-4 rounded transition-all duration-300 ease-in-out ${isActive
-                      ? "bg-theme-orange text-white"
-                      : "text-menu-color dark:text-white dark:hover:bg-gray-800 hover:bg-gray-100 hover:shadow"
-                    }`
-                  }
-                >
-                  {({ isActive }) => (
-                    <>
-                      <Icon isActive={isActive} />
+            {navItems.map(({ to, label, Icon }) => {
+              const isExternal = to.startsWith('http');
+
+              return (
+                <li key={to}>
+                  {isExternal ? (
+                    <a
+                      href={to}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex gap-2 items-center w-full text-[17px] font-medium py-2.5 px-3 4xl:px-4 rounded transition-all duration-300 ease-in-out text-menu-color dark:text-white dark:hover:bg-gray-800 hover:bg-gray-100 hover:shadow"
+                    >
+                      <Icon isActive={false} />
                       <span>{label}</span>
-                    </>
+                    </a>
+                  ) : (
+                    <NavLink
+                      to={to}
+                      className={({ isActive }) =>
+                        `flex gap-2 items-center w-full text-[17px] font-medium py-2.5 px-3 4xl:px-4 rounded transition-all duration-300 ease-in-out ${isActive
+                          ? 'bg-theme-orange text-white'
+                          : 'text-menu-color dark:text-white dark:hover:bg-gray-800 hover:bg-gray-100 hover:shadow'
+                        }`
+                      }
+                    >
+                      {({ isActive }) => (
+                        <>
+                          <Icon isActive={isActive} />
+                          <span>{label}</span>
+                        </>
+                      )}
+                    </NavLink>
                   )}
-                </NavLink>
-              </li>
-            ))}
+                </li>
+              );
+            })}
+
           </ul>
 
           {/* Sidebar Cards */}
@@ -188,27 +205,45 @@ const DashboardLayout = () => {
 
         {/* Navigation Links */}
         <ul className="space-y-4 md:space-y-5 xl:space-y-6 mt-7">
-          {navItems.map(({ to, label, Icon }) => (
-            <li key={to}>
-              <NavLink
-                onClick={() => setOpen(false)}
-                to={to}
-                className={({ isActive }) =>
-                  `flex gap-2 items-center w-full xl:text-[17px] font-medium py-2 md:py-2.5 px-3 4xl:px-4 rounded transition-all duration-300 ease-in-out ${isActive
-                    ? "bg-theme-orange text-white"
-                    : "text-menu-color dark:text-white dark:hover:bg-gray-800 hover:bg-gray-100 hover:shadow"
-                  }`
-                }
-              >
-                {({ isActive }) => (
-                  <>
-                    <Icon isActive={isActive} />
+          {navItems.map(({ to, label, Icon }) => {
+            const isExternal = to.startsWith('http');
+
+            return (
+              <li key={to}>
+                {isExternal ? (
+                  <a
+                    href={to}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setOpen(false)}
+                    className="flex gap-2 items-center w-full xl:text-[17px] font-medium py-2 md:py-2.5 px-3 4xl:px-4 rounded transition-all duration-300 ease-in-out text-menu-color dark:text-white dark:hover:bg-gray-800 hover:bg-gray-100 hover:shadow"
+                  >
+                    <Icon isActive={false} />
                     <span>{label}</span>
-                  </>
+                  </a>
+                ) : (
+                  <NavLink
+                    to={to}
+                    onClick={() => setOpen(false)}
+                    className={({ isActive }) =>
+                      `flex gap-2 items-center w-full xl:text-[17px] font-medium py-2 md:py-2.5 px-3 4xl:px-4 rounded transition-all duration-300 ease-in-out ${isActive
+                        ? 'bg-theme-orange text-white'
+                        : 'text-menu-color dark:text-white dark:hover:bg-gray-800 hover:bg-gray-100 hover:shadow'
+                      }`
+                    }
+                  >
+                    {({ isActive }) => (
+                      <>
+                        <Icon isActive={isActive} />
+                        <span>{label}</span>
+                      </>
+                    )}
+                  </NavLink>
                 )}
-              </NavLink>
-            </li>
-          ))}
+              </li>
+            );
+          })}
+
         </ul>
 
         {/* Sidebar Cards */}

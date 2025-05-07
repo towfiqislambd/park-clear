@@ -17,8 +17,6 @@ import SignupPage from "../pages/AuthPages/SignupPage";
 import TermsPage from "../pages/AuthPages/TermsPage";
 import PaymentPage from "../pages/PaymentPage";
 import ErrorPage from './../pages/ErrorPages/ErrorPage';
-import VirtualAssistant from "@/pages/DashboardPages/VirtualAssistant";
-import DriverKnowledge from "@/pages/DriverKnowledge";
 import ForgetPassword from "@/pages/AuthPages/ForgetPassword";
 import ResetPassword from "@/pages/AuthPages/ResetPassword";
 import MyMaintenance from "@/pages/MyMaintenance";
@@ -33,11 +31,10 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <HomePage /> },
       { path: "about-us", element: <AboutUsPage /> },
-      { path: "driver-knowledge", element: <DriverKnowledge /> },
       { path: "terms-condition", element: <TermConditionPage /> },
       { path: "subscription-plan", element: <SubscriptionPlanPage /> },
       { path: "payment", element: <PaymentPage /> },
-      { path: "my-maintenance", element: <MyMaintenance /> },
+      { path: "flexi-ride", element: <MyMaintenance /> },
     ],
   },
 
@@ -50,7 +47,6 @@ const router = createBrowserRouter([
       { path: "overview", element: <Overview /> },
       { path: "appeal", element: <Appeal /> },
       { path: "ticket-management", element: <TicketManagement /> },
-      { path: "virtual-assistant", element: <VirtualAssistant /> },
       { path: "subscription-services", element: <SubscriptionServices /> },
       { path: "settings", element: <Settings /> },
     ],
