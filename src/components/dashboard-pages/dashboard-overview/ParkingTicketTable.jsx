@@ -1,7 +1,13 @@
 import { useState } from "react";
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+} from "@/components/ui/popover";
 
 const ParkingTicketTable = () => {
   const [selectedRows, setSelectedRows] = useState([]);
+  const [selectedLocation, setSelectedLocation] = useState(null);
 
   const data = [
     { id: 1, status: "Unpaid", charge: "$766" },
@@ -10,10 +16,32 @@ const ParkingTicketTable = () => {
     { id: 4, status: "Unpaid", charge: "$766" },
   ];
 
+  const locations = [
+    { id: 1, name: "Hammersmith And Fulham", link: "https://example.com/1" },
+    { id: 2, name: "M6 Toll", link: "https://example.com/2" },
+    { id: 3, name: "M6 Toll", link: "https://example.com/3" },
+    { id: 4, name: "M6 Toll", link: "https://example.com/4" },
+    { id: 5, name: "M6 Toll", link: "https://example.com/5" },
+    { id: 6, name: "M6 Toll", link: "https://example.com/6" },
+    { id: 7, name: "M6 Toll", link: "https://example.com/7" },
+    { id: 8, name: "M6 Toll", link: "https://example.com/8" },
+  ];
+
   const toggleRow = (id) => {
     setSelectedRows((prev) =>
       prev.includes(id) ? prev.filter((rowId) => rowId !== id) : [...prev, id]
     );
+  };
+
+  const handleLocationSelect = (id) => {
+    setSelectedLocation((prev) => (prev === id ? null : id));
+  };
+
+  const handleNext = () => {
+    const selected = locations.find((item) => item.id === selectedLocation);
+    if (selected?.link) {
+      window.open(selected.link, "_blank");
+    }
   };
 
   return (
@@ -86,18 +114,46 @@ const ParkingTicketTable = () => {
                 <td className="px-2 md:px-3 py-4 md:py-5 font-medium">{row.charge}</td>
                 <td className="px-2 md:px-3 py-4 md:py-5">Data</td>
                 <td className="px-2 md:px-3 py-4 md:py-5">
-                  <select className={`px-3 border-none outline-none`}>
+                  <select className="px-3 border-none outline-none">
                     <option value="Unpaid">Unpaid</option>
                     <option value="Paid">Paid</option>
                   </select>
                 </td>
                 <td className="px-2 md:px-3 py-4 md:py-5">
                   {row.status === "Paid" ? (
-                    <p>No Action Need</p>
+                    <p>No Action Needed</p>
                   ) : (
-                    <button className="bg-theme-orange text-white px-5 py-2 rounded-[6px] cursor-pointer">
-                      Pay Now
-                    </button>
+                    <Popover>
+                      <PopoverTrigger className="bg-theme-orange text-white px-5 py-2 rounded-[6px] cursor-pointer">
+                        Pay Now
+                      </PopoverTrigger>
+                      <PopoverContent className="w-[250px] max-h-[400px] overflow-hidden p-0">
+                        <div className="flex flex-col h-full">
+                          <div className="overflow-y-auto px-4 pt-4 pb-2 flex-1">
+                            {locations.map((location) => (
+                              <div key={location.id} className="flex items-center justify-between py-2">
+                                <span className="text-sm text-sky-600">{location.name}</span>
+                                <input
+                                  type="checkbox"
+                                  checked={selectedLocation === location.id}
+                                  onChange={() => handleLocationSelect(location.id)}
+                                  className="w-4 h-4"
+                                />
+                              </div>
+                            ))}
+                          </div>
+                          <div className="p-3 border-t">
+                            <button
+                              onClick={handleNext}
+                              disabled={selectedLocation === null}
+                              className="w-full bg-orange-500 text-white py-2 rounded-md hover:bg-orange-600 transition disabled:opacity-50"
+                            >
+                              Next
+                            </button>
+                          </div>
+                        </div>
+                      </PopoverContent>
+                    </Popover>
                   )}
                 </td>
               </tr>
@@ -106,7 +162,6 @@ const ParkingTicketTable = () => {
         </table>
       </div>
 
-      {/* Conditional Footer Section */}
       {selectedRows.length >= 2 && (
         <div className="flex items-center justify-between mt-5">
           <div className="flex items-center gap-3">

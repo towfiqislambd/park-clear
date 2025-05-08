@@ -1,6 +1,6 @@
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
-import Img from "../../assets/images/asian_man.png";
+import Img from "../../assets/images/dispute_img.png";
 import PrimaryButton from "../common/PrimaryButton";
 import Container from "../container/Container";
 
