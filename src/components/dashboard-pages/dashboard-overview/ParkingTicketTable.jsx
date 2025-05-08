@@ -1,4 +1,9 @@
 import { useState } from "react";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover"
 
 const ParkingTicketTable = () => {
   const [selectedRows, setSelectedRows] = useState([]);
@@ -96,7 +101,14 @@ const ParkingTicketTable = () => {
                     <p>No Action Need</p>
                   ) : (
                     <button className="bg-theme-orange text-white px-5 py-2 rounded-[6px] cursor-pointer">
-                      Pay Now
+                      <Popover>
+                        <PopoverTrigger className='cursor-pointer'>Pay Now</PopoverTrigger>
+                        <PopoverContent>
+                          <div className="">
+
+                          </div>
+                        </PopoverContent>
+                      </Popover>
                     </button>
                   )}
                 </td>
