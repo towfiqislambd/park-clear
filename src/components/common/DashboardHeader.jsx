@@ -17,7 +17,7 @@ const DashboardHeader = ({ title }) => {
         </figure>
 
         <div>
-          <h5 className="font-medium">Musfiq</h5>
+          <h5 className="font-medium dark:text-white">Musfiq</h5>
           <p className="font-inter text-sm xl:text-[15px] dark:text-gray-300 text-gray-desc">
             user@gmail.com
           </p>

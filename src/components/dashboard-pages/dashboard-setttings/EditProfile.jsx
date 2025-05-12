@@ -20,18 +20,18 @@ const EditProfile = ({ setEditProfile }) => {
             <span className="text-theme-orange font-medium">Go Back</span>
           </button>
         </div>
-        <h3 className="text-2xl 2xl:text-3xl font-bold mb-1 2xl:mb-2">Edit Profile </h3>
+        <h3 className="text-2xl 2xl:text-3xl font-bold mb-1 2xl:mb-2 dark:text-white">Edit Profile </h3>
         <p className="text-text-gray mb-7">
           Please fill your information below
         </p>
 
-        <div className="space-y-4 2xl:space-y-5">
+        <div className="space-y-4 2xl:space-y-5 dark:text-white">
           {/* {/ Name /} */}
           <div className="relative">
             <input
               type="text"
               placeholder="Name"
-              className="block w-full pl-11 2xl:pl-12 pr-12 py-2.5 2xl:py-4 rounded-[6px] 2xl:rounded-lg border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black "
+              className="block w-full dark:text-white pl-11 2xl:pl-12 pr-12 py-2.5 2xl:py-4 rounded-[6px] 2xl:rounded-lg border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black "
             />
             <p className="absolute left-3 top-2.5 2xl:top-4">
               <UserSvg />

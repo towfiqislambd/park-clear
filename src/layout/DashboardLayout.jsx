@@ -43,7 +43,7 @@ const DashboardLayout = () => {
   return (
     <section className="h-screen flex flex-col">
       {/* Header */}
-      <header className="dark:bg-black 2xl:hidden py-1 px-5 md:px-10 border-b fixed h-[70px] xl:h-[80px] w-full left-0 top-0 z-50 bg-white">
+      <header className="dark:bg-black 2xl:hidden py-1 px-5 md:px-10 border-b dark:border-b-[#05acc0] fixed h-[70px] xl:h-[80px] w-full left-0 top-0 z-50 bg-white">
         <nav className="w-full h-full flex justify-between items-center">
           {/* Logo */}
           <Link to="/">

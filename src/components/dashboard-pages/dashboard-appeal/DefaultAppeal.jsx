@@ -48,7 +48,7 @@ const DefaultAppeal = ({ setProceed, setAppeal }) => {
             <h3 className="text-lg md:text-xl mb-2 md:mb-3 xl:mb-4 font-semibold text-dashboard-common-heading dark:text-white">
               Appeal For
             </h3>
-            <select className="block w-full px-3 3xl:px-5 py-2 md:py-2.5 3xl:py-4 rounded-lg border border-default-border  outline-none bg-white dark:bg-black dark:border-border-gray ">
+            <select className="block w-full px-3 3xl:px-5 py-2 dark:text-white md:py-2.5 3xl:py-4 rounded-lg border border-default-border  outline-none bg-white dark:bg-black dark:border-border-gray ">
               <option value="">Select PNC</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -115,7 +115,7 @@ const DefaultAppeal = ({ setProceed, setAppeal }) => {
             </h3>
             <textarea
               placeholder="Your Opinion"
-              className="block w-full h-[180px] md:h-[230px] 3xl:h-[300px] 4xl:h-[350px] px-5 py-4 rounded-lg border border-default-border  dark:border-gray-700 outline-none bg-white dark:bg-black"
+              className="block w-full dark:text-white h-[180px] md:h-[230px] 3xl:h-[300px] 4xl:h-[350px] px-5 py-4 rounded-lg border border-default-border  dark:border-gray-700 outline-none bg-white dark:bg-black"
             ></textarea>
           </div>
         </div>
