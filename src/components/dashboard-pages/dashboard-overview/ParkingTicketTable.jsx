@@ -114,7 +114,7 @@ const ParkingTicketTable = () => {
                 <td className="px-2 md:px-3 py-4 md:py-5 font-medium">{row.charge}</td>
                 <td className="px-2 md:px-3 py-4 md:py-5">Data</td>
                 <td className="px-2 md:px-3 py-4 md:py-5">
-                  <select className="px-3 border-none outline-none">
+                  <select className="px-3 border-none outline-none dark:bg-black">
                     <option value="Unpaid">Unpaid</option>
                     <option value="Paid">Paid</option>
                   </select>
@@ -127,12 +127,12 @@ const ParkingTicketTable = () => {
                       <PopoverTrigger className="bg-theme-orange text-white px-5 py-2 rounded-[6px] cursor-pointer">
                         Pay Now
                       </PopoverTrigger>
-                      <PopoverContent className="w-[250px] max-h-[400px] overflow-hidden p-0">
+                      <PopoverContent className="w-[250px] max-h-[400px] overflow-hidden p-0 dark:bg-gray-950 dark:border-gray-500">
                         <div className="flex flex-col h-full">
                           <div className="overflow-y-auto px-4 pt-4 pb-2 flex-1">
                             {locations.map((location) => (
                               <div key={location.id} className="flex items-center justify-between py-2">
-                                <span className="text-sm text-sky-600">{location.name}</span>
+                                <span className="text-sm text-sky-600 dark:text-white">{location.name}</span>
                                 <input
                                   type="checkbox"
                                   checked={selectedLocation === location.id}
@@ -174,7 +174,7 @@ const ParkingTicketTable = () => {
           </div>
           <div className="flex items-center gap-5 text-sm">
             <span className="text-gray-desc dark:text-white">Rows per page:</span>
-            <select className="border text-gray-500 dark:text-white border-default-border dark:border-border-gray outline-none px-2 py-1 rounded">
+            <select className="border text-gray-500 dark:text-white dark:bg-black border-default-border dark:border-border-gray outline-none px-2 py-1 rounded">
               <option>05</option>
               <option>10</option>
               <option>15</option>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import Logo from "../assets/logo/logo.svg";
 import Container from "../components/container/Container";
@@ -33,8 +33,8 @@ const menuItems = [
   },
 ];
 
-const Navbar = () => {
-  const [isOpen, setOpen] = useState(false);
+const Navbar = ({ isOpen, setOpen }) => {
+
   const location = useLocation();
   useEffect(() => {
     if (isOpen) {
