@@ -5,7 +5,7 @@ const GenerateLetter = () => {
     <div>
       <DashboardHeader title="Appeal" />
       <div className="mt-5 border border-default-border p-4 md:p-5 3xl:p-7 4xl:p-10 rounded-lg bg-white dark:bg-black dark:border-border-gray max-w-[1550px] mx-auto">
-        <p className="text-sm md:text-base">
+        <p className="text-sm md:text-base dark:text-gray-200">
           Subject: Appeal Against Penalty Charge Notice
           <br />
           Dear Sir/Madam,

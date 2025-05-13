@@ -68,7 +68,7 @@ const ParkPlanSection = () => {
             Smarter.
           </h3>
         </TitleCommon>
-        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-5 mt-12">
+        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-5 mt-7 md:mt-12">
           {cardsdata.map((card, index) => (
             <div key={card?.id} data-aos="fade-up" data-aos-delay={index * 150}>
               <PlanCard item={card} />

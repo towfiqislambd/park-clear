@@ -52,13 +52,13 @@ const ProceedWithParkClear = () => {
                     <div className="space-y-5 mb-7">
                         <button className='h-[50px] 4xl:h-[70px] border border-default-border font-semibold md:text-lg w-full block rounded-lg cursor-pointer flex gap-2 justify-center items-center'>
                             <StripeSvg />
-                            <span>Continue With Stripe</span>
+                            <span className="dark:text-white">Continue With Stripe</span>
                         </button>
                     </div>
 
 
                     {/* Terms and conditions */}
-                    <p className="text-sm md:text-base">By proceeding, you acknowledge and automatically agree to our Terms and Conditions. For more details, <span className="text-theme-orange">please review our terms here.</span></p>
+                    <p className="text-sm md:text-base dark:text-white">By proceeding, you acknowledge and automatically agree to our Terms and Conditions. For more details, <span className="text-theme-orange">please review our terms here.</span></p>
                 </div>
             </div>
         </div>

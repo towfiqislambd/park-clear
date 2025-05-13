@@ -28,7 +28,7 @@ const DefaultTicketManagement = ({ setAppeal }) => {
             <h3 className="text-lg md:text-xl xl:text-[22px] mb-2 md:mb-3 font-semibold text-dashboard-common-heading dark:text-white">
               Payment For
             </h3>
-            <select className="block w-full px-3 4xl:px-5 py-2 md:py-2.5 4xl:py-4 rounded-lg border border-default-border  outline-none bg-white dark:bg-black dark:border-border-gray ">
+            <select className="block w-full px-3 4xl:px-5 py-2 dark:text-white md:py-2.5 4xl:py-4 rounded-lg border border-default-border  outline-none bg-white dark:bg-black dark:border-border-gray ">
               <option value="">Select PNC</option>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -61,15 +61,15 @@ const DefaultTicketManagement = ({ setAppeal }) => {
                       }`}
                   >
                     <div className="flex gap-3 items-end mb-3">
-                      <h3 className="font-bold text-2xl md:text-3xl 4xl:text-4xl">
+                      <h3 className="font-bold dark:text-white text-2xl md:text-3xl 4xl:text-4xl">
                         {offer.price}
                         <span className="text-sm">/mo</span>
                       </h3>
-                      <p className="text-theme-orange font-medium text-[15px]">
+                      <p className="text-theme-orange dark:text-white font-medium text-[15px]">
                         {offer.charge}
                       </p>
                     </div>
-                    <p className="4xl:text-lg font-semibold">{offer.description}</p>
+                    <p className="4xl:text-lg font-semibold dark:text-gray-300">{offer.description}</p>
                     <p className="bg-theme-orange text-sm md:text-base text-white py-2 md:py-3 ps-3 md:ps-5 rounded-l-lg pr-4 md:pr-12 absolute top-3.5 md:top-5 right-0">
                       {offer.duration}
                     </p>
@@ -85,7 +85,7 @@ const DefaultTicketManagement = ({ setAppeal }) => {
         <div className="xl:col-span-5">
           <div className="p-4 md:p-5 3xl:p-7 4xl:p-10 rounded-lg border border-default-border dark:border-border-gray dark:bg-black bg-white grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-5 md:gap-y-10 mb-5">
             <div className="">
-              <h3 className="text-dashboard-common-heading dark:text-whitemd:text-lg font-semibold mb-1">
+              <h3 className="text-dashboard-common-heading dark:text-white md:text-lg font-semibold mb-1">
                 Issue Date:
               </h3>
               <p className="text-dashboard-common-heading dark:text-white  text-sm">

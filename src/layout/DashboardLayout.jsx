@@ -43,7 +43,7 @@ const DashboardLayout = () => {
   return (
     <section className="h-screen flex flex-col">
       {/* Header */}
-      <header className="2xl:hidden py-1 px-5 md:px-10 border-b fixed h-[70px] xl:h-[80px] w-full left-0 top-0 z-50 bg-white">
+      <header className="dark:bg-black 2xl:hidden py-1 px-5 md:px-10 border-b dark:border-b-[#05acc0] fixed h-[70px] xl:h-[80px] w-full left-0 top-0 z-50 bg-white">
         <nav className="w-full h-full flex justify-between items-center">
           {/* Logo */}
           <Link to="/">
@@ -139,7 +139,7 @@ const DashboardLayout = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="text-center border border-default-border py-7 px-7 rounded-xl">
+            <div className="text-center border border-default-border dark:border-gray-600 py-7 px-7 rounded-xl">
               <img src={sideLogoTwo} alt="logo" className="mx-auto" />
               <h3 className="text-xl 4xl:text-2xl text-dashboard-common-heading dark:text-white py-3 font-bold">
                 Car Screen Wash Coupon
@@ -194,7 +194,7 @@ const DashboardLayout = () => {
       </div>
 
       {/* Mobile Sidebar */}
-      <aside className={`${isOpen ? 'translate-x-0' : '-translate-x-full'} duration-500 transition-transform fixed top-0 z-[999] left-0 bg-white p-4 xl:p-5 overflow-y-auto  border-r border-default-border dark:border-gray-700 max-h-screen min-h-screen w-[275px] xl:w-[290px] 2xl:hidden scrollbar-hide`}>
+      <aside className={`${isOpen ? 'translate-x-0' : '-translate-x-full'} duration-500 transition-transform fixed top-0 z-[999] left-0 bg-white dark:bg-black p-4 xl:p-5 overflow-y-auto  border-r border-default-border dark:border-gray-700 max-h-screen min-h-screen w-[275px] xl:w-[290px] 2xl:hidden scrollbar-hide`}>
 
         {/* Logo */}
         <Link to="/">
@@ -272,7 +272,7 @@ const DashboardLayout = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="text-center border border-default-border py-5 xl:py-7 px-7 rounded-xl">
+          <div className="text-center border border-default-border dark:border-gray-600 py-5 xl:py-7 px-7 rounded-xl">
             <img src={sideLogoTwo} alt="logo" className="mx-auto" />
             <h3 className="text-lg xl:text-xl 4xl:text-2xl text-dashboard-common-heading dark:text-white py-3 font-bold">
               Car Screen Wash Coupon

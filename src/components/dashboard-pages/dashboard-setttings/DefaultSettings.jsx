@@ -41,10 +41,10 @@ const DefaultSettings = ({ setChangePassword, setEditProfile, theme, handleTheme
             <h3 className="font-medium text-dashboard-common-heading dark:text-white text-2xl mb-2 xl:mb-3">
               Musfiq
             </h3>
-            <p className="ext-dashboard-common-heading mb-1">
+            <p className="ext-dashboard-common-heading mb-1 dark:text-gray-300">
               Mail: email@mail.com
             </p>
-            <p className="ext-dashboard-common-heading mb-5 xl:mb-7">
+            <p className="text-dashboard-common-heading mb-5 xl:mb-7 dark:text-gray-300">
               Phone:+923787248724872
             </p>
             <button
@@ -119,10 +119,10 @@ const DefaultSettings = ({ setChangePassword, setEditProfile, theme, handleTheme
           </h3>
 
           <div className="border p-4 xl:p-6 4xl:p-11 rounded-lg relative cursor-pointer transition-all duration-300  border-default-border bg-white dark:bg-black dark:border-border-gray">
-            <h3 className="font-bold text-2xl xl:text-3xl 3xl:text-4xl mb-1 xl:mb-3 3xl:mb-4">
+            <h3 className="font-bold text-2xl xl:text-3xl 3xl:text-4xl mb-1 xl:mb-3 3xl:mb-4 dark:text-white">
               £26.99<span className="text-sm">/yr</span>
             </h3>
-            <p className="xl:text-lg font-semibold mb-7 xl:mb-10 4xl:mb-20">ParkClear Pro Driver </p>
+            <p className="xl:text-lg font-semibold mb-7 xl:mb-10 4xl:mb-20 dark:text-white">ParkClear Pro Driver </p>
             <p className="bg-theme-orange text-white py-2 xl:py-3 ps-5 rounded-l-lg pr-10 xl:pr-16 absolute top-5 right-0">
               Pro
             </p>
@@ -148,7 +148,7 @@ const DefaultSettings = ({ setChangePassword, setEditProfile, theme, handleTheme
             onClick={() => setChangePassword(true)}
             className="flex justify-between items-center border cursor-pointer rounded p-4 xl:p-7 rounded-lg border-default-border dark:border-border-gray bg-white dark:bg-black"
           >
-            <div className="flex gap-3 items-center">
+            <div className="flex gap-3 items-center dark:text-white">
               <ChangePassSvg />
               <span className="text-dashboard-common-heading dark:text-white">
                 Change Password
@@ -164,7 +164,7 @@ const DefaultSettings = ({ setChangePassword, setEditProfile, theme, handleTheme
             Notification{" "}
           </h3>
           <div className="flex justify-between items-center border rounded p-4 xl:p-7 rounded-lg border-default-border dark:border-border-gray bg-white dark:bg-black">
-            <div className="flex gap-3 items-center">
+            <div className="flex gap-3 items-center dark:text-white">
               <NotificationSvg />
               <span className="text-dashboard-common-heading dark:text-white">
                 Allow Aleart message
@@ -177,7 +177,7 @@ const DefaultSettings = ({ setChangePassword, setEditProfile, theme, handleTheme
 
       <div className="grid xl:grid-cols-2 gap-5 mt-7">
         {/* Our Policies */}
-        <div>
+        <div className="dark:text-white">
           <h3 className="text-xl xl:text-2xl mb-3 xl:mb-5 text-dashboard-common-heading dark:text-white font-medium">
             Our Policies{" "}
           </h3>

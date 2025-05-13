@@ -14,7 +14,7 @@ const HomePage = () => {
     <>
       <HeroSection />
       <WhyUseSection />
-      <div className="py-[64px]">
+      <div className="md:py-[64px]">
         <SubscriptionSection />
       </div>
       <ParkPlanSection />

@@ -21,12 +21,13 @@ const ChangePassword = ({ setChangePassword }) => {
             <span className="text-theme-orange font-medium">Go Back</span>
           </button>
         </div>
-        <h3 className="text-2xl 2xl:text-3xl font-bold mb-1 2xl:mb-2">Change Password</h3>
+
+        <h3 className="text-2xl 2xl:text-3xl font-bold mb-1 2xl:mb-2 dark:text-white">Change Password</h3>
         <p className="text-text-gray mb-7">
           Please fill your information below
         </p>
 
-        <div className="space-y-4 2xl:space-y-5">
+        <div className="space-y-4 2xl:space-y-5 dark:text-white">
           {/* {/ Current Password /} */}
           <div className="relative">
             <input
