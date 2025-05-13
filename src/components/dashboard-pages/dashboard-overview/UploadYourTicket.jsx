@@ -160,29 +160,29 @@ const UploadYourTicket = () => {
               <input
                 type="text"
                 placeholder="PCN Number"
-                className="block w-full px-3 4xl:px-5 py-2.5 4xl:py-4 rounded-[6px] 4xl:rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black"
+                className="block w-full px-3 4xl:px-5 py-2.5 4xl:py-4 rounded-[6px] 4xl:rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black dark:text-white"
               />
               <input
                 type="text"
                 placeholder="Issue Date"
-                className="block w-full px-3 4xl:px-5 py-2.5 4xl:py-4 rounded-[6px] 4xl:rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black"
+                className="block w-full px-3 4xl:px-5 py-2.5 4xl:py-4 rounded-[6px] 4xl:rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black dark:text-white"
               />
               <input
                 type="text"
                 placeholder="End Date"
-                className="block w-full px-3 4xl:px-5 py-2.5 4xl:py-4 rounded-[6px] 4xl:rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black"
+                className="block w-full px-3 4xl:px-5 py-2.5 4xl:py-4 rounded-[6px] 4xl:rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black dark:text-white"
               />
               <input
                 type="text"
                 placeholder="Vehicle Registration"
-                className="block w-full px-3 4xl:px-5 py-2.5 4xl:py-4 rounded-[6px] 4xl:rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black"
+                className="block w-full px-3 4xl:px-5 py-2.5 4xl:py-4 rounded-[6px] 4xl:rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black dark:text-white"
               />
             </>
           ) : (
             <>
               <div>
                 <select
-                  className="block w-full px-3 4xl:px-5 py-2.5 4xl:py-4 rounded-[6px] 4xl:rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black"
+                  className="block w-full px-3 4xl:px-5 py-2.5 4xl:py-4 rounded-[6px] 4xl:rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black dark:text-white"
                   onChange={handleChange}
                   value={selectedOption}
                 >
@@ -206,17 +206,17 @@ const UploadYourTicket = () => {
               <input
                 type="text"
                 placeholder="Location"
-                className="block w-full px-3 4xl:px-5 py-2.5 4xl:py-4 rounded-[6px] 4xl:rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black"
+                className="block w-full px-3 4xl:px-5 py-2.5 4xl:py-4 rounded-[6px] 4xl:rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black dark:text-white"
               />
               <input
                 type="text"
                 placeholder="End Date"
-                className="block w-full px-3 4xl:px-5 py-2.5 4xl:py-4 rounded-[6px] 4xl:rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black"
+                className="block w-full px-3 4xl:px-5 py-2.5 4xl:py-4 rounded-[6px] 4xl:rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black dark:text-white"
               />
               <input
                 type="text"
                 placeholder="Authorities"
-                className="block w-full px-3 4xl:px-5 py-2.5 4xl:py-4 rounded-[6px] 4xl:rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black"
+                className="block w-full px-3 4xl:px-5 py-2.5 4xl:py-4 rounded-[6px] 4xl:rounded-lg border border-default-border dark:border-border-gray dark:outline-none outline-theme-orange bg-white dark:bg-black dark:text-white"
               />
             </>
           )}
@@ -230,7 +230,7 @@ const UploadYourTicket = () => {
 
       {/* File Preview */}
       {selectedFile && (
-        <div className="mt-4 bg-white shadow rounded-lg p-2 3xl:p-4 flex items-center justify-between">
+        <div className="mt-4 bg-white dark:bg-black border shadow rounded-lg p-2 3xl:p-4 flex items-center justify-between">
           <div className="flex items-center gap-3 3xl:gap-4">
             {previewUrl ? (
               <img
@@ -244,8 +244,8 @@ const UploadYourTicket = () => {
               </div>
             )}
             <div>
-              <p className="text-sm 3xl:text-base 3xl:font-medium dark:text-gray-700">{selectedFile.name}</p>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm 3xl:text-base 3xl:font-medium dark:text-gray-200">{selectedFile.name}</p>
+              <p className="text-sm text-gray-500 dark:text-gray-300">
                 {formatFileSize(selectedFile.size)}
               </p>
             </div>

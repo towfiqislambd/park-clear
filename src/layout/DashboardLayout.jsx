@@ -139,7 +139,7 @@ const DashboardLayout = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="text-center border border-default-border py-7 px-7 rounded-xl">
+            <div className="text-center border border-default-border dark:border-gray-600 py-7 px-7 rounded-xl">
               <img src={sideLogoTwo} alt="logo" className="mx-auto" />
               <h3 className="text-xl 4xl:text-2xl text-dashboard-common-heading dark:text-white py-3 font-bold">
                 Car Screen Wash Coupon
@@ -272,7 +272,7 @@ const DashboardLayout = () => {
           </div>
 
           {/* Card 2 */}
-          <div className="text-center border border-default-border py-5 xl:py-7 px-7 rounded-xl">
+          <div className="text-center border border-default-border dark:border-gray-600 py-5 xl:py-7 px-7 rounded-xl">
             <img src={sideLogoTwo} alt="logo" className="mx-auto" />
             <h3 className="text-lg xl:text-xl 4xl:text-2xl text-dashboard-common-heading dark:text-white py-3 font-bold">
               Car Screen Wash Coupon

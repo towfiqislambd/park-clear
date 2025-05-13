@@ -77,7 +77,7 @@ const DefaultAppeal = ({ setProceed, setAppeal }) => {
 
             {/* Preview Section */}
             {selectedFile && (
-              <div className="mt-4 bg-white dark:bg-black shadow rounded-lg p-4 flex items-center justify-between">
+              <div className="mt-4 bg-white dark:bg-black shadow rounded-lg p-4 flex items-center justify-between border dark:border-gray-500">
                 <div className="flex items-center gap-4">
                   {previewUrl && selectedFile.type.startsWith("image/") ? (
                     <img
