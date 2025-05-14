@@ -19,7 +19,7 @@ const offers = [
 const DefaultTicketManagement = ({ setAppeal }) => {
   const [selectedOfferIndex, setSelectedOfferIndex] = useState(null);
   return (
-    <div>
+    <div className="mb-14 xl:mb-5">
       <DashboardHeader title=" Parking Ticket Payment" />
       <div className="grid xl:grid-cols-12 mt-5 xl:mt-10 gap-3 xl:gap-0">
         {/* Left Side */}

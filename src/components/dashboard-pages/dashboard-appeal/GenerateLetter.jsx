@@ -2,7 +2,7 @@ import DashboardHeader from "../../common/DashboardHeader";
 
 const GenerateLetter = () => {
   return (
-    <div>
+    <div className="mb-10 xl:mb-5">
       <DashboardHeader title="Appeal" />
       <div className="mt-5 border border-default-border p-4 md:p-5 3xl:p-7 4xl:p-10 rounded-lg bg-white dark:bg-black dark:border-border-gray max-w-[1550px] mx-auto">
         <p className="text-sm md:text-base dark:text-gray-200">
