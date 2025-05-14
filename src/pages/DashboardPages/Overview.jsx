@@ -7,7 +7,7 @@ import ParkingTicketTable from './../../components/dashboard-pages/dashboard-ove
 
 const Overview = () => {
     return (
-        <>
+        <div className="mb-14 xl:mb-5">
             <DashboardHeader title='TickeTracker Dashboard' />
             <OverviewCards />
             <div className="grid xl:grid-cols-12 gap-5 md:gap-10 xl:gap-5 3xl:gap-10 mt-5 md:mt-10">
@@ -16,7 +16,7 @@ const Overview = () => {
             </div>
             <ParkingTicketTable />
             <AppealDataTable />
-        </>
+        </div>
     );
 };
 

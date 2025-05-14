@@ -38,7 +38,7 @@ const DefaultAppeal = ({ setProceed, setAppeal }) => {
   };
 
   return (
-    <div>
+    <div className="mb-14 xl:mb-5">
       <DashboardHeader title="Appeal Management" />
       <div className="grid xl:grid-cols-12 mt-5 md:mt-10 gap-3 xl:gap-0">
         {/* Left Side */}
