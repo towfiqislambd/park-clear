@@ -4,7 +4,7 @@ import { StripeSvg } from "../../svg-container/SvgContainer";
 
 const ProceedWithParkClear = () => {
     return (
-        <div>
+        <div className="mb-5">
             <DashboardHeader title='Appeal Management' />
             <div className="grid xl:grid-cols-12 mt-5 xl:mt-10 max-w-[1550px] gap-5 xl:gap-0">
 

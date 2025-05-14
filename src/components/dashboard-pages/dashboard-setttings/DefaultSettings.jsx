@@ -23,7 +23,7 @@ const DefaultSettings = ({ setChangePassword, setEditProfile, theme, handleTheme
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
   return (
-    <section>
+    <section className="mb-14 xl:mb-5">
       <DashboardHeader title="Settings" />
 
       {/* Profile Overview */}

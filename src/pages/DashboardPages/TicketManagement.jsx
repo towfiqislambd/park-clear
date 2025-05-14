@@ -6,7 +6,7 @@ const TicketManagement = () => {
     const [appeal, setAppeal] = useState(false)
 
     return (
-        <div>
+        <>
             {
                 appeal
                     ?
@@ -14,7 +14,7 @@ const TicketManagement = () => {
                     :
                     <DefaultTicketManagement setAppeal={setAppeal} />
             }
-        </div>
+        </>
     );
 };
 
