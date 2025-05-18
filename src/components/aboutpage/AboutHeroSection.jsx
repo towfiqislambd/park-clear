@@ -1,21 +1,89 @@
-import React from 'react';
-import Container from '../container/Container';
+import React from "react";
+import Container from "../container/Container";
 
 const AboutHeroSection = () => {
   return (
-    <section className='py-10 2xl:py-20 3xl:py-[130px]'>
+    <section className="py-10 2xl:py-20 3xl:py-[130px]">
       <Container>
         <div>
-          <p className='title--sm' data-aos="fade-up">Learn more about who we are and what we do.</p>
-          <h1 className='title--xxl m-2' data-aos="fade-up" data-aos-delay="100">About <span className='text-theme-orange'>Us</span></h1>
-          <p className='max-w-[544px] text-text-gray mt-6' data-aos="fade-up" data-aos-delay="200">Please review our terms and conditions to understand your rights, responsibilities, and usage guidelines</p>
+          <p className="title--sm" data-aos="fade-up">
+            Learn more about who we are and what we do.
+          </p>
+          <h1
+            className="title--xxl m-2"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            About <span className="text-theme-orange">Us</span>
+          </h1>
+          <p
+            className="max-w-[544px] text-text-gray mt-6"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            Driving Simplicity Into Car Ownership
+          </p>
           <div>
-            <p className='mt-5 sm:mt-7 2xl:mt-12 text-sm md:text-base' data-aos="fade-up" data-aos-delay="300">By using ParkClear, you acknowledge and agree to utilize the platform in a responsible and ethical manner, ensuring that all information you provide is accurate, truthful, and up-to-date. Access to certain features, tools, or functionalities of the platform may be contingent upon having an active subscription, and the availability of these features is subject to the terms and conditions set forth by ParkClear. We maintain the right to update, modify, enhance, or discontinue any of our services, tools, or features at our discretion, without prior notice.
-              Furthermore, we take the handling of your data seriously and adhere strictly to our established privacy policy to ensure that your information is managed securely and appropriately. By continuing to use and interact with the platform, you signify your acceptance and agreement with the terms outlined here, as well as any amendments that may be made to them in the future.</p>
-            <p className='mt-5 2xl:mt-12 text-sm md:text-base' data-aos="fade-up" data-aos-delay="400">By using ParkClear, you acknowledge and agree to utilize the platform in a responsible and ethical manner, ensuring that all information you provide is accurate, truthful, and up-to-date. Access to certain features, tools, or functionalities of the platform may be contingent upon having an active subscription, and the availability of these features is subject to the terms and conditions set forth by ParkClear. We maintain the right to update, modify, enhance, or discontinue any of our services, tools, or features at our discretion, without prior notice.
-              Furthermore, we take the handling of your data seriously and adhere strictly to our established privacy policy to ensure that your information is managed securely and appropriately. By continuing to use and interact with the platform, you signify your acceptance and agreement with the terms outlined here, as well as any amendments that may be made to them in the future.</p>
-            <p className='mt-5 2xl:mt-12 text-sm md:text-base' data-aos="fade-up" data-aos-delay="500">By using ParkClear, you acknowledge and agree to utilize the platform in a responsible and ethical manner, ensuring that all information you provide is accurate, truthful, and up-to-date. Access to certain features, tools, or functionalities of the platform may be contingent upon having an active subscription, and the availability of these features is subject to the terms and conditions set forth by ParkClear. We maintain the right to update, modify, enhance, or discontinue any of our services, tools, or features at our discretion, without prior notice.
-              Furthermore, we take the handling of your data seriously and adhere strictly to our established privacy policy to ensure that your information is managed securely and appropriately. By continuing to use and interact with the platform, you signify your acceptance and agreement with the terms outlined here, as well as any amendments that may be made to them in the future.</p>
+            <p
+              className="mt-5 sm:mt-7 mb-10 2xl:mt-12 text-sm md:text-base font-medium"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              At ParkClear, we're on a mission to make managing your car easier,
+              faster, and less stressful. From handling penalty charge notices
+              (PCNs) to tracking your MOT and servicing schedule, ParkClear
+              gives you the tools to stay in control of your vehicle — all in
+              one place.
+              <br />
+              <br />
+              We’re building a smarter platform for UK drivers who are tired of
+              wasting time, money, and energy dealing with everyday car admin.
+            </p>
+            <hr className="py-3" />
+            <h2 className="font-semibold text-xl mb-2">What We Do</h2>
+            <p className="font-medium mb-3 text-lg">ParkClear helps drivers:</p>
+            <ul className="list-disc list-inside font-medium space-y-5 text-lg">
+              <li>Stay on top of PCNs with clear guidance and next steps</li>
+              <li>Track MOT, servicing, and general maintenance</li>
+              <li>
+                Access useful links to council payment portals, DVLA tools, and
+                driver legal resources
+              </li>
+              <li>
+                Discover exclusive partner offers on car care and services
+              </li>
+              <li>
+                Manage their vehicle through a clean, easy-to-use online
+                dashboard
+              </li>
+            </ul>
+
+            <p className="font-medium mt-5 mb-10">
+              Whether you're a daily commuter, a new driver, or managing
+              multiple vehicles, ParkClear is designed to simplify every aspect
+              of ownership.
+            </p>
+
+            <h2 className="font-semibold text-xl mb-5">Built for Drivers</h2>
+            <p className="font-medium">
+              ParkClear is built around real driving pain points — the forgotten
+              service date, the surprise PCN, the scramble to find a reliable
+              mechanic. Our goal is to centralise your vehicle admin and connect
+              you with trusted resources and offers, without the noise.
+              <br />
+              <br />
+              We believe in delivering value through tech-first tools, clear
+              information, and partnerships that improve the day-to-day driving
+              experience.
+            </p>
+
+            <h2 className="font-semibold text-xl mb-5 mt-10">
+              Join the Platform
+            </h2>
+            <p className="font-medium">
+              If you own a car in the UK, ParkClear is here to help you run it
+              better.
+            </p>
           </div>
         </div>
       </Container>
