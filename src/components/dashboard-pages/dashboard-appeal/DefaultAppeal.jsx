@@ -3,7 +3,7 @@ import { ChooseFileSvg } from "@/components/svg-container/SvgContainer";
 import DashboardHeader from "../../common/DashboardHeader";
 
 // Helper function to format file size
-const formatFileSize = (bytes) => {
+const formatFileSize = bytes => {
   if (bytes < 1024) return `${bytes} B`;
   else if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
   else return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
@@ -25,7 +25,7 @@ const DefaultAppeal = ({ setProceed, setAppeal }) => {
     return () => URL.revokeObjectURL(objectUrl);
   }, [selectedFile]);
 
-  const handleFileChange = (e) => {
+  const handleFileChange = e => {
     const file = e.target.files[0];
     if (file) {
       setSelectedFile(file);
@@ -49,7 +49,7 @@ const DefaultAppeal = ({ setProceed, setAppeal }) => {
               Appeal For
             </h3>
             <select className="block w-full px-3 3xl:px-5 py-2 dark:text-white md:py-2.5 3xl:py-4 rounded-lg border border-default-border  outline-none bg-white dark:bg-black dark:border-border-gray ">
-              <option value="">Select PNC</option>
+              <option value="">Select PCN</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -65,7 +65,9 @@ const DefaultAppeal = ({ setProceed, setAppeal }) => {
             <label htmlFor="uploadAttachment" className="w-full block">
               <div className="block border border-dashed w-full h-[160px] md:h-[180px] 3xl:h-[220px] flex justify-center flex-col items-center gap-2.5 md:gap-4 border-default-border rounded-xl cursor-pointer border-2">
                 <ChooseFileSvg />
-                <p className="text-black md:text-lg dark:text-white">Upload attachment</p>
+                <p className="text-black md:text-lg dark:text-white">
+                  Upload attachment
+                </p>
               </div>
               <input
                 type="file"
@@ -91,7 +93,9 @@ const DefaultAppeal = ({ setProceed, setAppeal }) => {
                     </div>
                   )}
                   <div>
-                    <p className="font-medium dark:text-gray-200">{selectedFile.name}</p>
+                    <p className="font-medium dark:text-gray-200">
+                      {selectedFile.name}
+                    </p>
                     <p className="text-sm text-gray-500 dark:text-gray-400">
                       {formatFileSize(selectedFile.size)}
                     </p>
@@ -124,24 +128,44 @@ const DefaultAppeal = ({ setProceed, setAppeal }) => {
         <div className="xl:col-span-5">
           <div className="p-5 3xl:p-10 rounded-lg border border-default-border  dark:border-gray-700 bg-white dark:bg-black grid grid-cols-2 md:grid-cols-3 gap-x-3 md:gap-x-5 gap-y-5 md:gap-y-10 mb-5">
             <div>
-              <h3 className="text-dashboard-common-heading dark:text-white md:text-lg font-semibold mb-1">Issue Date:</h3>
-              <p className="text-dashboard-common-heading dark:text-white text-sm">Data</p>
+              <h3 className="text-dashboard-common-heading dark:text-white md:text-lg font-semibold mb-1">
+                Issue Date:
+              </h3>
+              <p className="text-dashboard-common-heading dark:text-white text-sm">
+                20/5/25
+              </p>
             </div>
             <div>
-              <h3 className="text-dashboard-common-heading dark:text-white md:text-lg font-semibold mb-1">PCN No:</h3>
-              <p className="text-dashboard-common-heading dark:text-white text-sm">Data</p>
+              <h3 className="text-dashboard-common-heading dark:text-white md:text-lg font-semibold mb-1">
+                PCN No:
+              </h3>
+              <p className="text-dashboard-common-heading dark:text-white text-sm">
+                XG21334345
+              </p>
             </div>
             <div>
-              <h3 className="text-dashboard-common-heading dark:text-white md:text-lg font-semibold mb-1">Location:</h3>
-              <p className="text-dashboard-common-heading dark:text-white text-sm">Data</p>
+              <h3 className="text-dashboard-common-heading dark:text-white md:text-lg font-semibold mb-1">
+                Location:
+              </h3>
+              <p className="text-dashboard-common-heading dark:text-white text-sm">
+                Stephenson Street
+              </p>
             </div>
             <div>
-              <h3 className="text-dashboard-common-heading dark:text-white md:text-lg font-semibold mb-1">Last Date:</h3>
-              <p className="text-dashboard-common-heading dark:text-white text-sm">Data</p>
+              <h3 className="text-dashboard-common-heading dark:text-white md:text-lg font-semibold mb-1">
+                Last Date:
+              </h3>
+              <p className="text-dashboard-common-heading dark:text-white text-sm">
+                20/6/25
+              </p>
             </div>
             <div>
-              <h3 className="text-dashboard-common-heading dark:text-white md:text-lg font-semibold mb-1">Car Model:</h3>
-              <p className="text-dashboard-common-heading dark:text-white text-sm">Data</p>
+              <h3 className="text-dashboard-common-heading dark:text-white md:text-lg font-semibold mb-1">
+                Vehicle Reg:
+              </h3>
+              <p className="text-dashboard-common-heading dark:text-white text-sm">
+                LS71DUN
+              </p>
             </div>
           </div>
 
@@ -149,7 +173,9 @@ const DefaultAppeal = ({ setProceed, setAppeal }) => {
             <h3 className="text-lg md:text-[22px] mb-1 md:mb-2 font-semibold text-dashboard-common-heading dark:text-white">
               If You proceed with us
             </h3>
-            <h2 className="font-bold text-sidebar-card-headingOne text-2xl md:text-3xl 3xl:text-4xl">$3.99</h2>
+            <h2 className="font-bold text-sidebar-card-headingOne text-2xl md:text-3xl 3xl:text-4xl">
+              £3.99
+            </h2>
           </div>
 
           {/* Btns */}

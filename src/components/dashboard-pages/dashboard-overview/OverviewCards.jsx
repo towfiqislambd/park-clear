@@ -9,7 +9,7 @@ const overviewCardData = [
     id: 1,
     title: "Total PCN",
     sub_title: "Last 6 month",
-    amount: "240",
+    amount: "940",
     icon: <DashboardOverviewCardOne />,
   },
   {
@@ -23,7 +23,7 @@ const overviewCardData = [
     id: 3,
     title: "Appeal on Process",
     sub_title: "Last 6 month",
-    amount: "240",
+    amount: "405",
     icon: <DashboardOverviewCardThree />,
   },
 ];

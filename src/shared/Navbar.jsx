@@ -19,7 +19,7 @@ const menuItems = [
   {
     id: 3,
     name: "Driver Knowledge Hub",
-    path: "https://parkclear.org",
+    path: "https://parkclear-nwxx.vercel.app",
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ const menuItems = [
   {
     id: 5,
     name: "FlexiRide",
-    path: "/flexi-ride",
+    path: "https://joelmfuri-rcsxdu.mysharetribe-test.com/",
   },
 ];
 
@@ -92,7 +92,7 @@ const Navbar = ({ isOpen, setOpen }) => {
             <PrimaryButton
               text="Fleet Solutions"
               className="bg-theme-sky-blue hover:text-theme-sky-blue text-white hover:bg-transparent hover:border-theme-sky-blue"
-              pathname="/fleet-solution"
+              pathname="https://parkclear-fleet-hub.lovable.app/"
             />
             <PrimaryButton
               text="Log in / Register"

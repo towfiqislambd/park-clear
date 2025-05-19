@@ -1,10 +1,18 @@
 import DashboardHeader from "../../common/DashboardHeader";
+import { FaEdit } from "react-icons/fa";
 
 const GenerateLetter = () => {
   return (
     <div className="mb-10 xl:mb-5">
       <DashboardHeader title="Appeal" />
-      <div className="mt-5 border border-default-border p-4 md:p-5 3xl:p-7 4xl:p-10 rounded-lg bg-white dark:bg-black dark:border-border-gray max-w-[1550px] mx-auto">
+      <div className="mt-5 border border-default-border p-4 md:p-5 3xl:p-7 4xl:p-10 rounded-lg bg-white dark:bg-black dark:border-border-gray max-w-[1550px] mx-auto relative">
+        {/* Edit btn */}
+
+        <button className="px-5 py-2.5 text-lg rounded font-medium text-white bg-theme-orange flex gap-3 items-center absolute right-4 top-4 cursor-pointer transition-all hover:bg-transparent duration-300 hover:text-theme-orange border border-theme-orange">
+          <span>Edit</span>
+          <FaEdit className="text-lg" />
+        </button>
+
         <p className="text-sm md:text-base dark:text-gray-200">
           Subject: Appeal Against Penalty Charge Notice
           <br />

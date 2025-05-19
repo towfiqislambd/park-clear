@@ -30,7 +30,7 @@ const PlanCard = ({ item }) => {
       </div>
       <div className="mt-5">
         <PrimaryButton
-          pathname="/payment"
+          pathname="/subscription-plan"
           text="Select This Plan"
           icon={<FaArrowRightLong />}
           className={`justify-center bg-transparent ${
