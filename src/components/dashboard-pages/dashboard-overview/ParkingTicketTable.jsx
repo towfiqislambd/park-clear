@@ -10,10 +10,10 @@ const ParkingTicketTable = () => {
   const [selectedLocation, setSelectedLocation] = useState(null);
 
   const data = [
-    { id: 1, status: "Unpaid", charge: "$766" },
-    { id: 2, status: "Paid", charge: "$766" },
-    { id: 3, status: "Paid", charge: "$766" },
-    { id: 4, status: "Unpaid", charge: "$766" },
+    { id: 1, status: "Unpaid", charge: "£766" },
+    { id: 2, status: "Paid", charge: "£766" },
+    { id: 3, status: "Paid", charge: "£766" },
+    { id: 4, status: "Unpaid", charge: "£766" },
   ];
 
   const locations = [
@@ -27,18 +27,18 @@ const ParkingTicketTable = () => {
     { id: 8, name: "M6 Toll", link: "https://example.com/8" },
   ];
 
-  const toggleRow = (id) => {
-    setSelectedRows((prev) =>
-      prev.includes(id) ? prev.filter((rowId) => rowId !== id) : [...prev, id]
+  const toggleRow = id => {
+    setSelectedRows(prev =>
+      prev.includes(id) ? prev.filter(rowId => rowId !== id) : [...prev, id]
     );
   };
 
-  const handleLocationSelect = (id) => {
-    setSelectedLocation((prev) => (prev === id ? null : id));
+  const handleLocationSelect = id => {
+    setSelectedLocation(prev => (prev === id ? null : id));
   };
 
   const handleNext = () => {
-    const selected = locations.find((item) => item.id === selectedLocation);
+    const selected = locations.find(item => item.id === selectedLocation);
     if (selected?.link) {
       window.open(selected.link, "_blank");
     }
@@ -93,7 +93,7 @@ const ParkingTicketTable = () => {
           </thead>
 
           <tbody className="text-sm">
-            {data.map((row) => (
+            {data.map(row => (
               <tr
                 key={row.id}
                 className="border-b border-default-border dark:border-border-gray text-nowrap"
@@ -107,11 +107,15 @@ const ParkingTicketTable = () => {
                   />
                 </td>
                 <td className="px-2 md:px-3 py-4 md:py-5">{row.id}</td>
-                <td className="px-2 md:px-3 py-4 md:py-5">Data</td>
-                <td className="px-2 md:px-3 py-4 md:py-5">Data</td>
-                <td className="px-2 md:px-3 py-4 md:py-5">Data</td>
-                <td className="px-2 md:px-3 py-4 md:py-5">Data</td>
-                <td className="px-2 md:px-3 py-4 md:py-5 font-medium">{row.charge}</td>
+                <td className="px-2 md:px-3 py-4 md:py-5">XG21334345</td>
+                <td className="px-2 md:px-3 py-4 md:py-5">10/04/2025</td>
+                <td className="px-2 md:px-3 py-4 md:py-5">15/04/2025</td>
+                <td className="px-2 md:px-3 py-4 md:py-5">
+                  Transport For London
+                </td>
+                <td className="px-2 md:px-3 py-4 md:py-5 font-medium">
+                  {row.charge}
+                </td>
                 <td className="px-2 md:px-3 py-4 md:py-5">Data</td>
                 <td className="px-2 md:px-3 py-4 md:py-5">
                   <select className="px-3 border-none outline-none dark:bg-black">
@@ -130,13 +134,20 @@ const ParkingTicketTable = () => {
                       <PopoverContent className="w-[250px] max-h-[400px] overflow-hidden p-0 dark:bg-gray-950 dark:border-gray-500">
                         <div className="flex flex-col h-full">
                           <div className="overflow-y-auto px-4 pt-4 pb-2 flex-1">
-                            {locations.map((location) => (
-                              <div key={location.id} className="flex items-center justify-between py-2">
-                                <span className="text-sm text-sky-600 dark:text-white">{location.name}</span>
+                            {locations.map(location => (
+                              <div
+                                key={location.id}
+                                className="flex items-center justify-between py-2"
+                              >
+                                <span className="text-sm text-sky-600 dark:text-white">
+                                  {location.name}
+                                </span>
                                 <input
                                   type="checkbox"
                                   checked={selectedLocation === location.id}
-                                  onChange={() => handleLocationSelect(location.id)}
+                                  onChange={() =>
+                                    handleLocationSelect(location.id)
+                                  }
                                   className="w-4 h-4"
                                 />
                               </div>
@@ -173,7 +184,9 @@ const ParkingTicketTable = () => {
             </span>
           </div>
           <div className="flex items-center gap-5 text-sm">
-            <span className="text-gray-desc dark:text-white">Rows per page:</span>
+            <span className="text-gray-desc dark:text-white">
+              Rows per page:
+            </span>
             <select className="border text-gray-500 dark:text-white dark:bg-black border-default-border dark:border-border-gray outline-none px-2 py-1 rounded">
               <option>05</option>
               <option>10</option>

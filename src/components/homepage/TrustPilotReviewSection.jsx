@@ -18,14 +18,21 @@ const TrustPilotReviewSection = () => {
               alt="TrustPilotLogo"
               data-aos="zoom-out"
             />
-            <h3 className="title--xxl sm:mt-3 lg:mt-5 2xl:mt-10" data-aos="fade-up" data-aos-delay="100">
-              Why Our Users <span className="text-theme-orange">Trust</span> Us
+            <h3
+              className="text-xl sm:text-2xl md:text-3xl xl:text-[40px] font-bold text-theme-sky-blue sm:mt-3 lg:mt-5 2xl:mt-10"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              One Dashboard. Everything a driver needs
             </h3>
-            <p className="mt-3 text-sm sm:text-base sm:mt-5" data-aos="fade-up" data-aos-delay="200">
-              Take the stress out of driving with ParkClear Planner, your
-              all-in-one subscription for managing life on the road. We’ve
-              bundled everything you need to stay organized, prepared, and
-              worry-free—all in one convenient place.
+            <p
+              className="mt-3 text-sm sm:text-base sm:mt-5"
+              data-aos-delay="200"
+            >
+              No more juggling apps, websites, and paperwork. ParkClear brings
+              together your MOT, servicing, PCNs, and car admin into a single,
+              easy-to-use dashboard — so you stay on top of everything that
+              matters.
             </p>
             {/* <PrimaryButton text="See Our community" icon={<FaArrowRightLong />} className="mt-12 bg-theme-orange text-white hover:bg-transparent hover:text-theme-orange w-fit" /> */}
           </div>
