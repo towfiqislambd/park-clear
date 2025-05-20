@@ -1,5 +1,5 @@
 import DashboardHeader from "@/components/common/DashboardHeader";
-import profile_img from "../../../assets/images/asian_man.png";
+// import profile_img from "../../../assets/images/asian_man.png";
 import {
   ChangePassSvg,
   DarkModeSvg,
@@ -17,8 +17,14 @@ import { useState } from "react";
 import LogoutModal from "@/components/modals/LogoutModal";
 import DeleteAccountModal from "@/components/modals/DeleteAccountModal";
 import { Link } from "react-router-dom";
+import { FaUserAlt } from "react-icons/fa";
 
-const DefaultSettings = ({ setChangePassword, setEditProfile, theme, handleThemeChange }) => {
+const DefaultSettings = ({
+  setChangePassword,
+  setEditProfile,
+  theme,
+  handleThemeChange,
+}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
@@ -30,22 +36,25 @@ const DefaultSettings = ({ setChangePassword, setEditProfile, theme, handleTheme
       <div className="flex gap-3 md:gap-0 flex-col md:flex-row justify-between md:items-end px-5 py-4 mt-5 mb-5 md:mb-10 rounded-xl bg-white dark:bg-black border border-default-border dark:border-border-gray">
         {/* Left */}
         <div className="flex flex-col lg:flex-row gap-5">
-          <figure className="w-[170px] xl:w-[190px] h-[160px] xl:h-[180px] rounded-lg">
+          <p className="w-[170px] xl:w-[190px] h-[160px] xl:h-[180px] grid place-items-center rounded-lg bg-gray-700 text-white">
+            <FaUserAlt className="text-5xl" />
+          </p>
+          {/* <figure className="w-[170px] xl:w-[190px] h-[160px] xl:h-[180px] rounded-lg">
             <img
               src={profile_img}
               alt="profile_img"
               className="w-full h-full object-cover rounded-lg"
             />
-          </figure>
+          </figure> */}
           <div className="">
             <h3 className="font-medium text-dashboard-common-heading dark:text-white text-2xl mb-2 xl:mb-3">
-              Musfiq
+              John Doe
             </h3>
             <p className="ext-dashboard-common-heading mb-1 dark:text-gray-300">
               Mail: email@mail.com
             </p>
             <p className="text-dashboard-common-heading mb-5 xl:mb-7 dark:text-gray-300">
-              Phone:+923787248724872
+              Phone:+447912340000
             </p>
             <button
               onClick={() => setEditProfile(true)}
@@ -120,9 +129,11 @@ const DefaultSettings = ({ setChangePassword, setEditProfile, theme, handleTheme
 
           <div className="border p-4 xl:p-6 4xl:p-11 rounded-lg relative cursor-pointer transition-all duration-300  border-default-border bg-white dark:bg-black dark:border-border-gray">
             <h3 className="font-bold text-2xl xl:text-3xl 3xl:text-4xl mb-1 xl:mb-3 3xl:mb-4 dark:text-white">
-              £26.99<span className="text-sm">/yr</span>
+              £4.99<span className="text-sm">/yr</span>
             </h3>
-            <p className="xl:text-lg font-semibold mb-7 xl:mb-10 4xl:mb-20 dark:text-white">ParkClear Pro Driver </p>
+            <p className="xl:text-lg font-semibold mb-7 xl:mb-10 4xl:mb-20 dark:text-white">
+              ParkClear Pro Driver{" "}
+            </p>
             <p className="bg-theme-orange text-white py-2 xl:py-3 ps-5 rounded-l-lg pr-10 xl:pr-16 absolute top-5 right-0">
               Pro
             </p>
@@ -130,9 +141,7 @@ const DefaultSettings = ({ setChangePassword, setEditProfile, theme, handleTheme
               <p className="text-sidebar-card-headingOne font-medium">
                 Change Plan
               </p>
-              <p className="text-theme-orange font-medium">
-                Cancel The Subscription
-              </p>
+              <p className="text-theme-orange font-medium">Remove</p>
             </div>
           </div>
         </div>
@@ -167,7 +176,7 @@ const DefaultSettings = ({ setChangePassword, setEditProfile, theme, handleTheme
             <div className="flex gap-3 items-center dark:text-white">
               <NotificationSvg />
               <span className="text-dashboard-common-heading dark:text-white">
-                Allow Aleart message
+                Allow Alert message
               </span>
             </div>
             <Switch />
@@ -182,7 +191,10 @@ const DefaultSettings = ({ setChangePassword, setEditProfile, theme, handleTheme
             Our Policies{" "}
           </h3>
           <div className="space-y-4">
-            <Link to='/terms-condition' className="flex justify-between items-center border  p-4 xl:p-7 rounded-lg border-default-border dark:border-border-gray bg-white dark:bg-black">
+            <Link
+              to="/terms-condition"
+              className="flex justify-between items-center border  p-4 xl:p-7 rounded-lg border-default-border dark:border-border-gray bg-white dark:bg-black"
+            >
               <div className="flex gap-3 items-center">
                 <PrivacySvg />
                 <span className="text-dashboard-common-heading dark:text-white ">
@@ -191,7 +203,10 @@ const DefaultSettings = ({ setChangePassword, setEditProfile, theme, handleTheme
               </div>
               <RightArrowSvg />
             </Link>
-            <Link to='/terms-condition' className="flex justify-between items-center border p-4 xl:p-7 rounded-lg border-default-border dark:border-border-gray bg-white dark:bg-black">
+            <Link
+              to="/terms-condition"
+              className="flex justify-between items-center border p-4 xl:p-7 rounded-lg border-default-border dark:border-border-gray bg-white dark:bg-black"
+            >
               <div className="flex gap-3 items-center">
                 <TermsSvg />
                 <span className="text-dashboard-common-heading dark:text-white">
@@ -214,7 +229,10 @@ const DefaultSettings = ({ setChangePassword, setEditProfile, theme, handleTheme
                 <LogoutSvg />
                 <span className="text-red-500">Log Out</span>
               </div>
-              <button onClick={() => setIsModalOpen(true)} className="px-4 py-2 cursor-pointer bg-red-500 text-white rounded-[6px] font-medium">
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="px-4 py-2 cursor-pointer bg-red-500 text-white rounded-[6px] font-medium"
+              >
                 Log Out
               </button>
 
@@ -226,12 +244,18 @@ const DefaultSettings = ({ setChangePassword, setEditProfile, theme, handleTheme
                 <DeleteSvg />
                 <span className="text-red-500">Delete Account</span>
               </div>
-              <button onClick={() => setIsDeleteModalOpen(true)} className="px-5 py-2 cursor-pointer bg-red-500 text-white rounded-[6px] font-medium">
+              <button
+                onClick={() => setIsDeleteModalOpen(true)}
+                className="px-5 py-2 cursor-pointer bg-red-500 text-white rounded-[6px] font-medium"
+              >
                 Delete
               </button>
 
               {/* Modal */}
-              <DeleteAccountModal open={isDeleteModalOpen} onOpenChange={setIsDeleteModalOpen} />
+              <DeleteAccountModal
+                open={isDeleteModalOpen}
+                onOpenChange={setIsDeleteModalOpen}
+              />
             </div>
           </div>
         </div>

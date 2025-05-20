@@ -5,7 +5,6 @@ import s1 from "../assets/images/s1.png";
 import s2 from "../assets/images/s2.png";
 import sideLogoOne from "../assets/logo/sidebarLogoOne.png";
 import sideLogoTwo from "../assets/logo/sidebarLogoTwo.png";
-
 import {
   DashboardAppeal,
   DashboardChatBot,
@@ -18,6 +17,7 @@ import {
 import { FaBars } from "react-icons/fa6";
 import { useState } from "react";
 import { RxCross2 } from "react-icons/rx";
+import CuponModal from "@/components/modals/CuponModal";
 
 const navItems = [
   { to: "/dashboard/overview", label: "Overview", Icon: DashboardOverview },
@@ -27,18 +27,32 @@ const navItems = [
     label: "Ticket Management",
     Icon: DashboardTicketManagement,
   },
-  { to: "https://parkclear.org", label: "Virtual Assistant", Icon: DashboardChatBot },
+  {
+    to: "https://joelmfuri-rcsxdu.mysharetribe-test.com",
+    label: "Virtual Assistant",
+    Icon: DashboardChatBot,
+  },
   {
     to: "/dashboard/subscription-services",
     label: "Subscription Services",
     Icon: DashboardSubscription,
   },
-  { to: "/vehicle-management", label: "Vehicle Management", Icon: VehicleManagement },
+  {
+    to: "/vehicle-management",
+    label: "Vehicle Management",
+    Icon: VehicleManagement,
+  },
   { to: "/dashboard/settings", label: "Settings", Icon: DashboardSettings },
 ];
 
 const DashboardLayout = () => {
   const [isOpen, setOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleDiscount = () => {
+    setOpen(false);
+    setIsModalOpen(true);
+  };
 
   return (
     <section className="h-screen flex flex-col">
@@ -75,7 +89,7 @@ const DashboardLayout = () => {
           {/* Navigation Links */}
           <ul className="space-y-6 mt-7">
             {navItems.map(({ to, label, Icon }) => {
-              const isExternal = to.startsWith('http');
+              const isExternal = to.startsWith("http");
 
               return (
                 <li key={to}>
@@ -93,9 +107,10 @@ const DashboardLayout = () => {
                     <NavLink
                       to={to}
                       className={({ isActive }) =>
-                        `flex gap-2 items-center w-full text-[17px] font-medium py-2.5 px-3 4xl:px-4 rounded transition-all duration-300 ease-in-out ${isActive
-                          ? 'bg-theme-orange text-white'
-                          : 'text-menu-color dark:text-white dark:hover:bg-gray-800 hover:bg-gray-100 hover:shadow'
+                        `flex gap-2 items-center w-full text-[17px] font-medium py-2.5 px-3 4xl:px-4 rounded transition-all duration-300 ease-in-out ${
+                          isActive
+                            ? "bg-theme-orange text-white"
+                            : "text-menu-color dark:text-white dark:hover:bg-gray-800 hover:bg-gray-100 hover:shadow"
                         }`
                       }
                     >
@@ -110,7 +125,6 @@ const DashboardLayout = () => {
                 </li>
               );
             })}
-
           </ul>
 
           {/* Sidebar Cards */}
@@ -130,8 +144,8 @@ const DashboardLayout = () => {
                 ParkClear Pro
               </h3>
               <p className="font-inter text-[15px] mb-7 text-white font-medium max-w-[155.966px] mx-auto">
-                Get <span className="text-lg font-semibold">15%</span> off upgrade
-                to pro Subscription
+                Get <span className="text-lg font-semibold">15%</span> off
+                upgrade to pro Subscription
               </p>
               <button className="px-10 cursor-pointer bg-white text-theme-orange text-lg font-semibold py-2 rounded-lg">
                 Get Pro
@@ -145,7 +159,8 @@ const DashboardLayout = () => {
                 Car Screen Wash Coupon
               </h3>
               <p className="text-sidebar-card-desc mb-5 dark:text-gray-300">
-                If you subscribe today you will get a free 10L of car screen wash{" "}
+                If you subscribe today you will get a free 10L of car screen
+                wash{" "}
               </p>
               <h4 className="text-sidebar-card-headingOne text-xl 4xl:text-2xl font-bold mb-2 4xl:mb-2.5">
                 12:54:00
@@ -169,12 +184,17 @@ const DashboardLayout = () => {
               <h3 className="text-white text-xl py-2 font-semibold">
                 Ultra Drive Store
               </h3>
-              <p className="font-inter text-[15px] mb-7 text-white font-medium max-w-[155.966px] mx-auto">
-                Your Coupon Code
+              <p className="font-inter text-[15px] mb-7 text-white font-medium max-w-[125.966px] mx-auto">
+                25% Off
               </p>
-              <button className="px-10 cursor-pointer bg-white text-theme-orange text-lg font-semibold py-2 rounded-lg">
-                *******
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="px-5 cursor-pointer bg-white text-theme-orange font-semibold py-2 rounded-[5px]"
+              >
+                Click To Reveal
               </button>
+              {/* Modal */}
+              <CuponModal open={isModalOpen} onOpenChange={setIsModalOpen} />
             </div>
           </section>
         </aside>
@@ -185,17 +205,21 @@ const DashboardLayout = () => {
         </main>
       </div>
 
-
       {/* ================= For Mobile Version ================ */}
       {/* Blur Overlay */}
       <div
         onClick={() => setOpen(false)}
-        className={`fixed inset-0 bg-black/30 backdrop-blur-sm transition-opacity duration-300 2xl:hidden z-[999] ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-      </div>
+        className={`fixed inset-0 bg-black/30 backdrop-blur-sm transition-opacity duration-300 2xl:hidden z-[999] ${
+          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+      ></div>
 
       {/* Mobile Sidebar */}
-      <aside className={`${isOpen ? 'translate-x-0' : '-translate-x-full'} duration-500 transition-transform fixed top-0 z-[999] left-0 bg-white dark:bg-black p-4 xl:p-5 overflow-y-auto  border-r border-default-border dark:border-gray-700 max-h-screen min-h-screen w-[275px] xl:w-[290px] 2xl:hidden scrollbar-hide`}>
-
+      <aside
+        className={`${
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        } duration-500 transition-transform fixed top-0 z-[999] left-0 bg-white dark:bg-black p-4 xl:p-5 overflow-y-auto  border-r border-default-border dark:border-gray-700 max-h-screen min-h-screen w-[275px] xl:w-[290px] 2xl:hidden scrollbar-hide`}
+      >
         {/* Logo */}
         <Link to="/">
           <figure className="w-[170px]">
@@ -206,7 +230,7 @@ const DashboardLayout = () => {
         {/* Navigation Links */}
         <ul className="space-y-4 md:space-y-5 xl:space-y-6 mt-7">
           {navItems.map(({ to, label, Icon }) => {
-            const isExternal = to.startsWith('http');
+            const isExternal = to.startsWith("http");
 
             return (
               <li key={to}>
@@ -226,9 +250,10 @@ const DashboardLayout = () => {
                     to={to}
                     onClick={() => setOpen(false)}
                     className={({ isActive }) =>
-                      `flex gap-2 items-center w-full xl:text-[17px] font-medium py-2 md:py-2.5 px-3 4xl:px-4 rounded transition-all duration-300 ease-in-out ${isActive
-                        ? 'bg-theme-orange text-white'
-                        : 'text-menu-color dark:text-white dark:hover:bg-gray-800 hover:bg-gray-100 hover:shadow'
+                      `flex gap-2 items-center w-full xl:text-[17px] font-medium py-2 md:py-2.5 px-3 4xl:px-4 rounded transition-all duration-300 ease-in-out ${
+                        isActive
+                          ? "bg-theme-orange text-white"
+                          : "text-menu-color dark:text-white dark:hover:bg-gray-800 hover:bg-gray-100 hover:shadow"
                       }`
                     }
                   >
@@ -243,7 +268,6 @@ const DashboardLayout = () => {
               </li>
             );
           })}
-
         </ul>
 
         {/* Sidebar Cards */}
@@ -303,16 +327,22 @@ const DashboardLayout = () => {
               Ultra Drive Store
             </h3>
             <p className="font-inter text-[15px] mb-7 text-white font-medium max-w-[155.966px] mx-auto">
-              Your Coupon Code
+              25% Off
             </p>
-            <button className="px-10 cursor-pointer bg-white text-theme-orange text-lg font-semibold py-2 rounded-lg">
-              *******
+            <button
+              onClick={handleDiscount}
+              className="px-5 cursor-pointer bg-white text-theme-orange font-semibold py-2 rounded-[5px]"
+            >
+              Click To Reveal
             </button>
           </div>
         </section>
 
         {/* Close btn */}
-        <button onClick={() => setOpen(false)} className="absolute top-3 right-3">
+        <button
+          onClick={() => setOpen(false)}
+          className="absolute top-3 right-3"
+        >
           <RxCross2 className="text-xl" />
         </button>
       </aside>

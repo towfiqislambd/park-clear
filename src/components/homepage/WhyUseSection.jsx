@@ -11,7 +11,7 @@ const WhyUseSection = () => {
       <Container>
         {/* title  */}
         <TitleCommon
-          subTitle="Why use ParkClear Planner?"
+          subTitle="Everything a driver needs in one place!"
           paragraph="We know how stressful it can be when PCNs increase. Stay on top of parking tickets and appeals, we’ll remind you when your deadlines are to pay in our smart new dashboard."
         >
           <h2 className="title--xxl" data-aos="fade-up" data-aos-delay="100">

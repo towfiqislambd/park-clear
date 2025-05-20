@@ -3,39 +3,86 @@ import {
   Popover,
   PopoverTrigger,
   PopoverContent,
-} from "@/components/ui/popover";  // Assuming you're using Popover from your UI library
+} from "@/components/ui/popover";
 
 const AppealDataTable = () => {
   const [selectedRows, setSelectedRows] = useState([]);
   const [selectedLocation, setSelectedLocation] = useState(null);
 
+  const columns = [
+    { id: "select", label: "Select" },
+    { id: "id", label: "Sl No" },
+    { id: "pcnNo", label: "PCN No" },
+    { id: "issueDate", label: "Issue Date", sortable: true },
+    { id: "lastDate", label: "Last Date", sortable: true },
+    { id: "authorities", label: "Authorities" },
+    { id: "charge", label: "Charge", sortable: true },
+    { id: "vReg", label: "V.Reg" },
+    { id: "status", label: "Status", sortable: true },
+    { id: "action", label: "Action" },
+  ];
+
   const data = [
-    { id: 1, status: "Appeal Rejected", charge: "$766" },
-    { id: 2, status: "Appeal Accepted", charge: "$766" },
-    { id: 3, status: "Appeal Rejected", charge: "$766" },
-    { id: 4, status: "Appeal Accepted", charge: "$766" },
+    {
+      id: 1,
+      pcnNo: "XG21334345",
+      issueDate: "2024-04-01",
+      lastDate: "2024-04-30",
+      authorities: "Manchester City Council",
+      charge: "£210",
+      vReg: "BX24WBP",
+      status: "Appeal Rejected",
+    },
+    {
+      id: 2,
+      pcnNo: "CV23456123",
+      issueDate: "2024-05-01",
+      lastDate: "2024-05-31",
+      authorities: "Derby City Councl",
+      charge: "£90",
+      vReg: "BX24WBP",
+      status: "Appeal Accepted",
+    },
+    {
+      id: 3,
+      pcnNo: "ID23456789",
+      issueDate: "2024-04-01",
+      lastDate: "2024-04-30",
+      authorities: "Private Parking Company",
+      charge: "£60",
+      vReg: "BX24WBP",
+      status: "Appeal Rejected",
+    },
+    {
+      id: 4,
+      pcnNo: "DE13485749",
+      issueDate: "2024-05-01",
+      lastDate: "2024-05-31",
+      authorities: "NuPark Supermarkets",
+      charge: "£45",
+      vReg: "BX24WBP",
+      status: "Appeal Accepted",
+    },
   ];
 
   const locations = [
     { id: 1, name: "Hammersmith And Fulham", link: "https://example.com/1" },
     { id: 2, name: "M6 Toll", link: "https://example.com/2" },
-    { id: 3, name: "M6 Toll", link: "https://example.com/3" },
-    { id: 4, name: "M6 Toll", link: "https://example.com/4" },
-    { id: 5, name: "M6 Toll", link: "https://example.com/5" },
+    // Add more if needed
   ];
 
-  const toggleRow = (id) => {
-    setSelectedRows((prev) =>
-      prev.includes(id) ? prev.filter((rowId) => rowId !== id) : [...prev, id]
+  const toggleRow = id => {
+    setSelectedRows(prev =>
+      prev.includes(id) ? prev.filter(rowId => rowId !== id) : [...prev, id]
     );
   };
 
-  const handleLocationSelect = (id) => {
-    setSelectedLocation((prev) => (prev === id ? null : id));
+  const handleLocationSelect = id => {
+    setSelectedLocation(prev => (prev === id ? null : id));
   };
 
   const handleNext = () => {
-    const selected = locations.find((item) => item.id === selectedLocation);
+    const selected = locations.find(item => item.id === selectedLocation);
     if (selected?.link) {
       window.open(selected.link, "_blank");
     }
@@ -54,113 +101,118 @@ const AppealDataTable = () => {
 
       <div className="overflow-x-auto">
         <table className="w-full text-center text-dashboard-common-heading dark:text-white">
-          <thead className="bg-white dark:bg-black rounded-lg dark:text-white text-dashboard-common-heading font-semibold">
+          <thead className="bg-white dark:bg-black rounded-lg font-semibold">
             <tr className="text-nowrap">
-              <th className="px-2 md:px-3 py-4 md:py-5">Select</th>
-              <th className="px-2 md:px-3 py-4 md:py-5">Sl No</th>
-              <th className="px-2 md:px-3 py-4 md:py-5">PCN No</th>
-              <th className="px-2 md:px-3 py-4 md:py-5">
-                <div className="flex items-center justify-center gap-1">
-                  <span>Issue Date</span>
-                  <span>⇅</span>
-                </div>
-              </th>
-              <th className="px-2 md:px-3 py-4 md:py-5">
-                <div className="flex items-center justify-center gap-1">
-                  <span>Last Date</span>
-                  <span>⇅</span>
-                </div>
-              </th>
-              <th className="px-2 md:px-3 py-4 md:py-5">Authorities</th>
-              <th className="px-2 md:px-3 py-4 md:py-5">
-                <div className="flex items-center justify-center gap-1">
-                  <span>Charge</span>
-                  <span>⇅</span>
-                </div>
-              </th>
-              <th className="px-2 md:px-3 py-4 md:py-5">V.Reg</th>
-              <th className="px-2 md:px-3 py-4 md:py-5">
-                <div className="flex items-center justify-center gap-1">
-                  <span>Status</span>
-                  <span>⇅</span>
-                </div>
-              </th>
-              <th className="px-2 md:px-3 py-4 md:py-5">Action</th>
+              {columns.map(col => (
+                <th key={col.id} className="px-2 md:px-3 py-4 md:py-5">
+                  <div className="flex items-center justify-center gap-1">
+                    <span>{col.label}</span>
+                    {col.sortable && <span>⇅</span>}
+                  </div>
+                </th>
+              ))}
             </tr>
           </thead>
-
           <tbody className="text-sm">
-            {data.map((row) => (
-              <tr key={row.id} className="border-b border-default-border text-nowrap">
-                <td className="px-2 md:px-3 py-4 md:py-5">
-                  <input
-                    type="checkbox"
-                    checked={selectedRows.includes(row.id)}
-                    onChange={() => toggleRow(row.id)}
-                    className="w-4 h-4"
-                  />
-                </td>
-                <td className="px-2 md:px-3 py-4 md:py-5">{row.id}</td>
-                <td className="px-2 md:px-3 py-4 md:py-5">Data</td>
-                <td className="px-2 md:px-3 py-4 md:py-5">Data</td>
-                <td className="px-2 md:px-3 py-4 md:py-5">Data</td>
-                <td className="px-2 md:px-3 py-4 md:py-5">Data</td>
-                <td className="px-2 md:px-3 py-4 md:py-5 font-medium">{row.charge}</td>
-                <td className="px-2 md:px-3 py-4 md:py-5">Data</td>
-                <td className="px-2 md:px-3 py-4 md:py-5">
-                  <span
-                    className={`text-sm ${row.status !== "Appeal Rejected"
-                      ? "text-dashboard-status"
-                      : "text-theme-orange"
-                      }`}
-                  >
-                    {row.status}
-                  </span>
-                </td>
-                <td className="px-2 md:px-3 py-4 md:py-5">
-                  {row.status === "Appeal Accepted" ? (
-                    <p>No Action Needed</p>
-                  ) : (
-                    <Popover>
-                      <PopoverTrigger className="bg-theme-orange text-white px-5 py-2 rounded-[6px] cursor-pointer">
-                        Pay Now
-                      </PopoverTrigger>
-                      <PopoverContent className="w-[250px] max-h-[400px] overflow-hidden p-0 dark:bg-gray-950 dark:border-gray-500">
-                        <div className="flex flex-col h-full">
-                          <div className="overflow-y-auto px-4 pt-4 pb-2 flex-1">
-                            {locations.map((location) => (
-                              <div key={location.id} className="flex items-center justify-between py-2">
-                                <span className="text-sm text-sky-600 dark:text-white">{location.name}</span>
-                                <input
-                                  type="checkbox"
-                                  checked={selectedLocation === location.id}
-                                  onChange={() => handleLocationSelect(location.id)}
-                                  className="w-4 h-4"
-                                />
+            {data.map(row => (
+              <tr
+                key={row.id}
+                className="border-b border-default-border text-nowrap"
+              >
+                {columns.map(col => {
+                  if (col.id === "select") {
+                    return (
+                      <td key={col.id} className="px-2 md:px-3 py-4 md:py-5">
+                        <input
+                          type="checkbox"
+                          checked={selectedRows.includes(row.id)}
+                          onChange={() => toggleRow(row.id)}
+                          className="w-4 h-4"
+                        />
+                      </td>
+                    );
+                  }
+
+                  if (col.id === "action") {
+                    return (
+                      <td key={col.id} className="px-2 md:px-3 py-4 md:py-5">
+                        {row.status === "Appeal Accepted" ? (
+                          <p>No Action Needed</p>
+                        ) : (
+                          <Popover>
+                            <PopoverTrigger className="bg-theme-orange text-white px-5 py-2 rounded-[6px] cursor-pointer">
+                              Pay Now
+                            </PopoverTrigger>
+                            <PopoverContent className="w-[250px] max-h-[400px] overflow-hidden p-0 dark:bg-gray-950 dark:border-gray-500">
+                              <div className="flex flex-col h-full">
+                                <div className="overflow-y-auto px-4 pt-4 pb-2 flex-1">
+                                  {locations.map(location => (
+                                    <div
+                                      key={location.id}
+                                      className="flex items-center justify-between py-2"
+                                    >
+                                      <span className="text-sm text-sky-600 dark:text-white">
+                                        {location.name}
+                                      </span>
+                                      <input
+                                        type="checkbox"
+                                        checked={
+                                          selectedLocation === location.id
+                                        }
+                                        onChange={() =>
+                                          handleLocationSelect(location.id)
+                                        }
+                                        className="w-4 h-4"
+                                      />
+                                    </div>
+                                  ))}
+                                </div>
+                                <div className="p-3 border-t">
+                                  <button
+                                    onClick={handleNext}
+                                    disabled={selectedLocation === null}
+                                    className="w-full bg-orange-500 text-white py-2 rounded-md hover:bg-orange-600 transition disabled:opacity-50"
+                                  >
+                                    Next
+                                  </button>
+                                </div>
                               </div>
-                            ))}
-                          </div>
-                          <div className="p-3 border-t">
-                            <button
-                              onClick={handleNext}
-                              disabled={selectedLocation === null}
-                              className="w-full bg-orange-500 text-white py-2 rounded-md hover:bg-orange-600 transition disabled:opacity-50"
-                            >
-                              Next
-                            </button>
-                          </div>
-                        </div>
-                      </PopoverContent>
-                    </Popover>
-                  )}
-                </td>
+                            </PopoverContent>
+                          </Popover>
+                        )}
+                      </td>
+                    );
+                  }
+
+                  if (col.id === "status") {
+                    return (
+                      <td key={col.id} className="px-2 md:px-3 py-4 md:py-5">
+                        <span
+                          className={`text-sm ${
+                            row.status !== "Appeal Rejected"
+                              ? "text-dashboard-status"
+                              : "text-theme-orange"
+                          }`}
+                        >
+                          {row.status}
+                        </span>
+                      </td>
+                    );
+                  }
+
+                  return (
+                    <td key={col.id} className="px-2 md:px-3 py-4 md:py-5">
+                      {row[col.id] || "Data"}
+                    </td>
+                  );
+                })}
               </tr>
             ))}
           </tbody>
         </table>
       </div>
 
-      {/* Conditional Footer Section */}
+      {/* Conditional Footer */}
       {selectedRows.length >= 2 && (
         <div className="flex items-center justify-between mt-5">
           <div className="flex items-center gap-3">
@@ -172,13 +224,17 @@ const AppealDataTable = () => {
             </span>
           </div>
           <div className="flex items-center gap-5 text-sm">
-            <span className="text-gray-desc dark:text-white">Rows per page:</span>
+            <span className="text-gray-desc dark:text-white">
+              Rows per page:
+            </span>
             <select className="border text-gray-500 dark:text-white dark:bg-black border-default-border dark:border-border-gray outline-none px-2 py-1 rounded">
               <option>05</option>
               <option>10</option>
               <option>15</option>
             </select>
-            <span className="text-gray-desc dark:text-white">1-4 of 4</span>
+            <span className="text-gray-desc dark:text-white">
+              1-4 of {data.length}
+            </span>
             <div className="flex gap-1">
               <button className="border px-2 py-1 border-default-border dark:border-border-gray text-gray-400 dark:text-white rounded">
                 &lt;
