@@ -7,9 +7,9 @@ const UltradriveStoreSection = () => {
   return (
     <section className="bg-[#202020]">
       <Container>
-        <div className="flex flex-col lg:flex-row items-center">
+        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-0">
           {/* Left */}
-          <div className="lg:w-[56%] py-[50px] md:py-[70px] xl:py-[128px] px-[30px]">
+          <div className="w-full lg:w-[56%] sm:px-6 md:px-8 pt-10 md:py-16 xl:py-[128px]">
             <p className="title--sm" data-aos="fade-up">
               UltraDriver Store
             </p>
@@ -33,21 +33,21 @@ const UltradriveStoreSection = () => {
               <PrimaryButton
                 text="Go to UltraDriver"
                 icon={<FaArrowRightLong />}
-                className="text-white bg-theme-orange hover:bg-transparent hover:text-theme-orange border-theme-orange w-fit mt-8 2xl:mt-12"
+                className="text-white bg-theme-orange hover:bg-transparent hover:text-theme-orange border-theme-orange w-fit mt-6 md:mt-8 2xl:mt-12"
               />
             </div>
           </div>
           {/* Right */}
           <div
-            className="lg:w-[50%] hidden lg:block"
+            className="w-full lg:w-[50%] px-4 lg:px-0"
             data-aos="fade-in"
             data-aos-delay="100"
           >
-            <figure className="w-[820px] h-[430px]">
+            <figure className="w-full h-auto max-w-[820px] mx-auto lg:mx-0">
               <img
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain sm:object-cover"
                 src={driveImage}
-                alt=""
+                alt="UltraDriver promo"
               />
             </figure>
           </div>

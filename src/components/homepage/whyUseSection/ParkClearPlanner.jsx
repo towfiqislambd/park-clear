@@ -34,7 +34,7 @@ const ParkClearPlanner = () => {
 
   return (
     <div
-      className="px-7 sm:px-10 py-5 sm:py-7 md:p-[40px] 3xl:p-[70px] bg-white border border-default-border rounded-[16px]"
+      className="px-7 sm:px-10 py-5 sm:py-7 md:p-[40px] 3xl:p-[50px] bg-white border border-default-border rounded-[16px]"
       data-aos="fade-in"
       data-aos-delay="100"
     >

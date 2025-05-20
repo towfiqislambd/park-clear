@@ -19,7 +19,7 @@ const TrustPilotReviewSection = () => {
               data-aos="zoom-out"
             />
             <h3
-              className="text-xl sm:text-2xl md:text-3xl xl:text-[40px] font-bold text-theme-sky-blue sm:mt-3 lg:mt-5 2xl:mt-10"
+              className="text-xl sm:text-2xl md:text-3xl 2xl:text-[40px] font-bold text-theme-sky-blue sm:mt-3 lg:mt-5 2xl:mt-10"
               data-aos="fade-up"
               data-aos-delay="100"
             >
