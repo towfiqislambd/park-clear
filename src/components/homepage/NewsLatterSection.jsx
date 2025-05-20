@@ -8,7 +8,7 @@ const NewsLatterSection = () => {
         <div className="flex items-center 2xl:justify-between flex-wrap gap-3 md:gap-8">
           {/* Left */}
           <div
-            className="text-xl md:text-2xl md:text-3xl xl:text-[40px] 3xl:text-[64px] font-semibold max-w-[346px]"
+            className="text-xl md:text-2xl md:text-3xl 2xl:text-[40px] 3xl:text-[64px] font-semibold max-w-[346px]"
             data-aos="fade-up" data-aos-delay="100"
           >
             Join Our <span className="text-theme-orange">Newsletter</span>

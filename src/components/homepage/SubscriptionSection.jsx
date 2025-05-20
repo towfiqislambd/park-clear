@@ -33,7 +33,7 @@ const SubscriptionSection = () => {
               data-aos="fade-up"
               data-aos-delay="300"
             >
-              Offer ends 26.05.2025
+              Offer ends 26.06.2025
             </p>
             <div data-aos="zoom-out" data-aos-delay="100">
               <PrimaryButton

@@ -3,15 +3,21 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 const offers = [
   {
+    price: "£19.99",
+    duration: "3 Months",
+    charge: "2% Charge",
+    description: "Pay via credit installment",
+  },
+  {
     price: "£26.99",
-    duration: "6 Month",
+    duration: "6 Months",
     charge: "5% Charge",
     description: "Pay your debit with ParkClear",
   },
   {
-    price: "£19.99",
-    duration: "3 Month",
-    charge: "2% Charge",
+    price: "£34.99",
+    duration: "12 Months",
+    charge: "8% Charge",
     description: "Pay via credit installment",
   },
 ];
@@ -29,11 +35,11 @@ const DefaultTicketManagement = ({ setAppeal }) => {
               Payment For
             </h3>
             <select className="block w-full px-3 4xl:px-5 py-2 dark:text-white md:py-2.5 4xl:py-4 rounded-lg border border-default-border  outline-none bg-white dark:bg-black dark:border-border-gray ">
-              <option value="">Select PNC</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
+              <option value="">Select PCN</option>
+              <option value="1">XG21334345</option>
+              <option value="2">CV23456123</option>
+              <option value="3">ID23456789</option>
+              <option value="4">999977664562</option>
             </select>
           </div>
 
@@ -55,10 +61,11 @@ const DefaultTicketManagement = ({ setAppeal }) => {
                     key={index}
                     onClick={() => setSelectedOfferIndex(index)}
                     className={`border p-3 md:p-5 4xl:p-7 rounded-lg relative cursor-pointer transition-all duration-300 border-2 
-                                             ${isSelected
-                        ? "border-theme-sky-blue"
-                        : "border-default-border bg-white dark:bg-black dark:border-border-gray"
-                      }`}
+                                             ${
+                                               isSelected
+                                                 ? "border-theme-sky-blue"
+                                                 : "border-default-border bg-white dark:bg-black dark:border-border-gray"
+                                             }`}
                   >
                     <div className="flex gap-3 items-end mb-3">
                       <h3 className="font-bold dark:text-white text-2xl md:text-3xl 4xl:text-4xl">
@@ -69,7 +76,9 @@ const DefaultTicketManagement = ({ setAppeal }) => {
                         {offer.charge}
                       </p>
                     </div>
-                    <p className="4xl:text-lg font-semibold dark:text-gray-300">{offer.description}</p>
+                    <p className="4xl:text-lg font-semibold dark:text-gray-300">
+                      {offer.description}
+                    </p>
                     <p className="bg-theme-orange text-sm md:text-base text-white py-2 md:py-3 ps-3 md:ps-5 rounded-l-lg pr-4 md:pr-12 absolute top-3.5 md:top-5 right-0">
                       {offer.duration}
                     </p>
@@ -83,54 +92,56 @@ const DefaultTicketManagement = ({ setAppeal }) => {
 
         {/* Right Side */}
         <div className="xl:col-span-5">
-          <div className="p-4 md:p-5 3xl:p-7 4xl:p-10 rounded-lg border border-default-border dark:border-border-gray dark:bg-black bg-white grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-5 md:gap-y-10 mb-5">
-            <div className="">
+          <div className="p-5 3xl:p-10 rounded-lg border border-default-border  dark:border-gray-700 bg-white dark:bg-black grid grid-cols-2 md:grid-cols-3 gap-x-3 md:gap-x-5 gap-y-5 md:gap-y-10 mb-5">
+            <div>
               <h3 className="text-dashboard-common-heading dark:text-white md:text-lg font-semibold mb-1">
                 Issue Date:
               </h3>
-              <p className="text-dashboard-common-heading dark:text-white  text-sm">
-                Data
+              <p className="text-dashboard-common-heading dark:text-white text-sm">
+                20/5/25
               </p>
             </div>
-            <div className="">
+            <div>
               <h3 className="text-dashboard-common-heading dark:text-white md:text-lg font-semibold mb-1">
                 PCN No:
               </h3>
-              <p className="text-dashboard-common-heading dark:text-white  text-sm">
-                Data
+              <p className="text-dashboard-common-heading dark:text-white text-sm">
+                XG21334345
               </p>
             </div>
-            <div className="">
+            <div>
               <h3 className="text-dashboard-common-heading dark:text-white md:text-lg font-semibold mb-1">
                 Location:
               </h3>
-              <p className="text-dashboard-common-heading dark:text-white  text-sm">
-                Data
+              <p className="text-dashboard-common-heading dark:text-white text-sm">
+                Stephenson Street
               </p>
             </div>
-            <div className="">
+            <div>
               <h3 className="text-dashboard-common-heading dark:text-white md:text-lg font-semibold mb-1">
                 Last Date:
               </h3>
-              <p className="text-dashboard-common-heading dark:text-white  text-sm">
-                Data
+              <p className="text-dashboard-common-heading dark:text-white text-sm">
+                20/6/25
               </p>
             </div>
-            <div className="">
+            <div>
               <h3 className="text-dashboard-common-heading dark:text-white md:text-lg font-semibold mb-1">
-                Car Model:
+                Vehicle Reg:
               </h3>
-              <p className="text-dashboard-common-heading dark:text-white  text-sm">
-                Data
+              <p className="text-dashboard-common-heading dark:text-white text-sm">
+                LS71DUN
               </p>
             </div>
           </div>
 
           <div className="p-3 md:p-5 4xl:p-10 mb-7 4xl:mb-10 rounded-lg border border-default-border dark:border-border-gray bg-white dark:bg-black">
             <h3 className="text-lg md:text-[22px] mb-1 md:mb-2 font-semibold text-dashboard-common-heading dark:text-white">
-              Charge:
+              Pay Today:
             </h3>
-            <h2 className="font-bold text-theme-orange text-2xl md:text-3xl 4xl:text-4xl">$3.99</h2>
+            <h2 className="font-bold text-theme-orange text-2xl md:text-3xl 4xl:text-4xl">
+              £34.99
+            </h2>
           </div>
 
           {/* Btns */}

@@ -1,4 +1,4 @@
-import profile from "../../assets/images/profile.png";
+import { FaUserAlt } from "react-icons/fa";
 
 const DashboardHeader = ({ title }) => {
   return (
@@ -8,16 +8,12 @@ const DashboardHeader = ({ title }) => {
       </h2>
 
       <div className="flex gap-2 items-center">
-        <figure className="size-[40px] xl:w-[50px] xl:h-[50px] rounded-full">
-          <img
-            src={profile}
-            alt="profile"
-            className="w-full h-full object-cover rounded-full"
-          />
-        </figure>
+        <p className="size-[50px] grid place-items-center rounded-full bg-theme-orange text-white">
+          <FaUserAlt className="text-[22px]" />
+        </p>
 
         <div>
-          <h5 className="font-medium dark:text-white">Musfiq</h5>
+          <h5 className="font-medium dark:text-white">John Doe</h5>
           <p className="font-inter text-sm xl:text-[15px] dark:text-gray-300 text-gray-desc">
             user@gmail.com
           </p>
