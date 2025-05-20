@@ -36,10 +36,10 @@ const DefaultTicketManagement = ({ setAppeal }) => {
             </h3>
             <select className="block w-full px-3 4xl:px-5 py-2 dark:text-white md:py-2.5 4xl:py-4 rounded-lg border border-default-border  outline-none bg-white dark:bg-black dark:border-border-gray ">
               <option value="">Select PCN</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
+              <option value="1">XG21334345</option>
+              <option value="2">CV23456123</option>
+              <option value="3">ID23456789</option>
+              <option value="4">999977664562</option>
             </select>
           </div>
 

@@ -49,8 +49,9 @@ const DashboardLayout = () => {
   const [isOpen, setOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleAlert = () => {
-    alert("hi");
+  const handleDiscount = () => {
+    setOpen(false);
+    setIsModalOpen(true);
   };
 
   return (
@@ -188,7 +189,7 @@ const DashboardLayout = () => {
               </p>
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="px-10 cursor-pointer bg-white text-theme-orange text-lg font-semibold py-2 rounded-lg"
+                className="px-5 cursor-pointer bg-white text-theme-orange font-semibold py-2 rounded-[5px]"
               >
                 Click To Reveal
               </button>
@@ -326,10 +327,13 @@ const DashboardLayout = () => {
               Ultra Drive Store
             </h3>
             <p className="font-inter text-[15px] mb-7 text-white font-medium max-w-[155.966px] mx-auto">
-              Your Coupon Code
+              25% Off
             </p>
-            <button className="px-10 cursor-pointer bg-white text-theme-orange text-lg font-semibold py-2 rounded-lg">
-              *******
+            <button
+              onClick={handleDiscount}
+              className="px-5 cursor-pointer bg-white text-theme-orange font-semibold py-2 rounded-[5px]"
+            >
+              Click To Reveal
             </button>
           </div>
         </section>

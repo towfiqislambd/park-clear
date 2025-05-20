@@ -5,12 +5,12 @@ const GenerateLetter = () => {
   return (
     <div className="mb-10 xl:mb-5">
       <DashboardHeader title="Appeal" />
-      <div className="mt-5 border border-default-border p-4 md:p-5 3xl:p-7 4xl:p-10 rounded-lg bg-white dark:bg-black dark:border-border-gray max-w-[1550px] mx-auto relative">
+      <div className="mt-5 border border-default-border p-4 pt-10 lg:p-5 3xl:p-7 4xl:p-10 rounded-lg bg-white dark:bg-black dark:border-border-gray max-w-[1550px] mx-auto relative">
         {/* Edit btn */}
 
-        <button className="px-5 py-2.5 text-lg rounded font-medium text-white bg-theme-orange flex gap-3 items-center absolute right-4 top-4 cursor-pointer transition-all hover:bg-transparent duration-300 hover:text-theme-orange border border-theme-orange">
+        <button className="px-2 lg:px-5 py-1 lg:py-2.5 rounded font-medium text-white bg-theme-orange flex gap-2 lg:gap-3 items-center absolute right-2 lg:right-4 top-2 lg:top-4 cursor-pointer transition-all hover:bg-transparent duration-300 hover:text-theme-orange border border-theme-orange text-sm lg:text-lg">
           <span>Edit</span>
-          <FaEdit className="text-lg" />
+          <FaEdit className="lg:text-lg" />
         </button>
 
         <p className="text-sm md:text-base dark:text-gray-200">

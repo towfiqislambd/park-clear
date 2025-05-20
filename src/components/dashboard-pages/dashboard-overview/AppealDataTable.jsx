@@ -102,7 +102,7 @@ const AppealDataTable = () => {
       <div className="overflow-x-auto">
         <table className="w-full text-center text-dashboard-common-heading dark:text-white">
           <thead className="bg-white dark:bg-black rounded-lg font-semibold">
-            <tr>
+            <tr className="text-nowrap">
               {columns.map(col => (
                 <th key={col.id} className="px-2 md:px-3 py-4 md:py-5">
                   <div className="flex items-center justify-center gap-1">
