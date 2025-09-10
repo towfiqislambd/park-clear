@@ -13,6 +13,7 @@ const NewsLatterSection = () => {
           >
             Join Our <span className="text-theme-orange">Newsletter</span>
           </div>
+          
           {/* Center */}
           <p className="max-w-[361px] text-sm md:text-base" data-aos="fade-up" data-aos-delay="100">
             We’ll drop the occasional update, exclusive tools and services, and
