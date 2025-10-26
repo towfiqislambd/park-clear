@@ -117,6 +117,6 @@ npm run dev
 ## 7. Usage:
 
 Run `npm run dev` to start the project locally. The app will run on
-**http://localhost:3000**
+**http://localhost:5173**
 
 ---
